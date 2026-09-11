@@ -1,310 +1,759 @@
+import csv
+import gc
+import json
 import os
+import random
 import time
 
 import numpy as np
 import torch
 import torch.nn as nn
+import yaml
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 import eval_metrics_DF as em
-from core_scripts.startup_config import set_random_seed
 from data import DetectDataset, simple_collate_fn
 from src.model import Model, build_optimizer
-from tools.utils import parse_addarguments, readconfig
+from tools.utils import parse_addarguments
 
 
 REAL_LABEL = 1
 FAKE_LABEL = 0
 
 
-def cfg_int(config, key, default):
-    return int(config.get(key, default))
+def load_yaml(path):
+    with open(path, "r", encoding="utf-8") as f:
+        config = yaml.safe_load(f)
+
+    if not isinstance(config, dict):
+        raise ValueError(f"Invalid YAML config: {path}")
+
+    return config
 
 
-def cfg_float(config, key, default):
-    return float(config.get(key, default))
+def set_seed(seed):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+
+    torch.backends.cudnn.benchmark = False
+    torch.backends.cudnn.deterministic = True
 
 
-def cfg_bool(config, key, default):
-    value = config.get(key, default)
-    if isinstance(value, bool):
-        return value
-    if isinstance(value, str):
-        return value.lower() in {"1", "true", "yes", "y"}
-    return bool(value)
+def seed_worker(worker_id):
+    worker_seed = torch.initial_seed() % 2**32
+    np.random.seed(worker_seed)
+    random.seed(worker_seed)
 
 
-def train_epoch(loader, model, optimizer, criterion, scaler, device, grad_clip, accumulation_steps, amp):
-    model.train()
-    optimizer.zero_grad(set_to_none=True)
-
-    total_loss = 0.0
-    total_correct = 0
-    total_samples = 0
-    loop = tqdm(loader, desc="Train")
-
-    for step, batch in enumerate(loop):
-        waveform = batch["audio"].to(device, non_blocking=True)
-        labels = batch["label"].view(-1).long().to(device, non_blocking=True)
-
-        with torch.cuda.amp.autocast(enabled=amp):
-            logits = model(waveform)
-            loss = criterion(logits, labels)
-            scaled_loss = loss / accumulation_steps
-
-        scaler.scale(scaled_loss).backward()
-        should_step = (step + 1) % accumulation_steps == 0 or step + 1 == len(loader)
-
-        if should_step:
-            scaler.unscale_(optimizer)
-            if grad_clip > 0:
-                nn.utils.clip_grad_norm_(model.parameters(), grad_clip)
-            scaler.step(optimizer)
-            scaler.update()
-            optimizer.zero_grad(set_to_none=True)
-
-        batch_size = labels.size(0)
-        total_loss += loss.detach().item() * batch_size
-        total_correct += (logits.detach().argmax(dim=1) == labels).sum().item()
-        total_samples += batch_size
-        loop.set_postfix(loss=f"{total_loss / total_samples:.4f}")
-
-    return {
-        "loss": total_loss / max(1, total_samples),
-        "acc": total_correct / max(1, total_samples)
-    }
-
-
-@torch.no_grad()
-def evaluate(loader, model, criterion, device, amp, name="Eval"):
-    model.eval()
-    bona_scores = []
-    spoof_scores = []
-    total_loss = 0.0
-    total_correct = 0
-    total_samples = 0
-
-    for batch in tqdm(loader, desc=name):
-        waveform = batch["audio"].to(device, non_blocking=True)
-        labels = batch["label"].view(-1).long().to(device, non_blocking=True)
-
-        with torch.cuda.amp.autocast(enabled=amp):
-            logits = model(waveform)
-            loss = criterion(logits, labels)
-
-        scores = torch.softmax(logits.float(), dim=1)[:, REAL_LABEL]
-        labels_np = labels.cpu().numpy()
-        scores_np = scores.cpu().numpy()
-        bona_scores.extend(scores_np[labels_np == REAL_LABEL])
-        spoof_scores.extend(scores_np[labels_np == FAKE_LABEL])
-
-        batch_size = labels.size(0)
-        total_loss += loss.item() * batch_size
-        total_correct += (logits.argmax(dim=1) == labels).sum().item()
-        total_samples += batch_size
-
-    if not bona_scores or not spoof_scores:
-        raise RuntimeError("Evaluation requires at least one bona fide and one spoof sample.")
-
-    eer, threshold = em.compute_eer(np.asarray(bona_scores), np.asarray(spoof_scores))
-    return {
-        "loss": total_loss / max(1, total_samples),
-        "acc": total_correct / max(1, total_samples),
-        "eer": eer * 100.0,
-        "threshold": float(threshold)
-    }
-
-
-def save_checkpoint(path, model, optimizer, scaler, epoch, metrics, config):
-    torch.save({
-        "epoch": epoch,
-        "metrics": metrics,
-        "model": model.state_dict(),
-        "optimizer": optimizer.state_dict(),
-        "scaler": scaler.state_dict(),
-        "config": dict(config)
-    }, path)
-
-
-def main():
-    args = parse_addarguments()
-    config = readconfig(args.config)
-    seed = cfg_int(config, "seed", 1234)
-    set_random_seed(seed)
-
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    amp = cfg_bool(config, "amp", True) and device.type == "cuda"
-    print(f"Device: {device}, AMP: {amp}")
-
-    train_dataset = DetectDataset(
-        args,
-        datapath=config["train_data_path"],
-        labelspath=config["train_label_path"],
-        stage="train"
-    )
-    dev_dataset = DetectDataset(
-        args,
-        datapath=config["dev_data_path"],
-        labelspath=config["dev_label_path"],
-        stage="test"
-    )
-    test_dataset = DetectDataset(
-        args,
-        datapath=config["test_data_path"],
-        labelspath=config["test_label_path"],
-        stage="test"
-    )
-
-    num_workers = cfg_int(config, "num_workers", 4)
+def make_train_loader(dataset, batch_size, seed, num_workers, device):
     generator = torch.Generator()
     generator.manual_seed(seed)
 
-    train_loader = DataLoader(
-        train_dataset,
-        batch_size=cfg_int(config, "batch_size", 16),
+    return DataLoader(
+        dataset,
+        batch_size=batch_size,
         shuffle=True,
         num_workers=num_workers,
         collate_fn=simple_collate_fn,
         pin_memory=device.type == "cuda",
         drop_last=False,
+        worker_init_fn=seed_worker,
+        generator=generator,
         persistent_workers=num_workers > 0,
-        generator=generator
-    )
-    dev_loader = DataLoader(
-        dev_dataset,
-        batch_size=cfg_int(config, "eval_batch_size", 16),
-        shuffle=False,
-        num_workers=num_workers,
-        collate_fn=simple_collate_fn,
-        pin_memory=device.type == "cuda",
-        drop_last=False,
-        persistent_workers=num_workers > 0
-    )
-    test_loader = DataLoader(
-        test_dataset,
-        batch_size=cfg_int(config, "eval_batch_size", 16),
-        shuffle=False,
-        num_workers=num_workers,
-        collate_fn=simple_collate_fn,
-        pin_memory=device.type == "cuda",
-        drop_last=False,
-        persistent_workers=num_workers > 0
     )
 
-    model = Model(device, config).to(device)
-    criterion = nn.CrossEntropyLoss(weight=torch.tensor([
-        cfg_float(config, "fake_weight", 0.1),
-        cfg_float(config, "real_weight", 0.9)
-    ], device=device))
-    optimizer = build_optimizer(
+
+def make_eval_loader(dataset, batch_size, num_workers, device):
+    return DataLoader(
+        dataset,
+        batch_size=batch_size,
+        shuffle=False,
+        num_workers=num_workers,
+        collate_fn=simple_collate_fn,
+        pin_memory=device.type == "cuda",
+        drop_last=False,
+        persistent_workers=num_workers > 0,
+    )
+
+
+def compute_eer(real_scores, fake_scores):
+    if len(real_scores) == 0 or len(fake_scores) == 0:
+        return float("nan"), float("nan")
+
+    eer, threshold = em.compute_eer(
+        np.asarray(real_scores, dtype=np.float64),
+        np.asarray(fake_scores, dtype=np.float64),
+    )
+
+    return 100.0 * float(eer), float(threshold)
+
+
+def write_csv(path, rows):
+    if not rows:
+        return
+
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+
+    fieldnames = []
+    for row in rows:
+        for key in row:
+            if key not in fieldnames:
+                fieldnames.append(key)
+
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+        f.flush()
+        os.fsync(f.fileno())
+
+
+def train_one_epoch(
+    model,
+    loader,
+    optimizer,
+    criterion,
+    scaler,
+    device,
+    amp,
+    lambda_relation,
+    grad_clip,
+):
+    model.train()
+
+    total_loss = 0.0
+    total_cls = 0.0
+    total_ce_a = 0.0
+    total_ce_b = 0.0
+    total_relation = 0.0
+
+    total_correct_a = 0
+    total_correct_b = 0
+    total_samples = 0
+
+    loop = tqdm(loader, desc="Train")
+
+    for batch in loop:
+        waveform = batch["audio"].to(device, non_blocking=True)
+        labels = batch["label"].view(-1).long().to(device, non_blocking=True)
+
+        optimizer.zero_grad(set_to_none=True)
+
+        with torch.cuda.amp.autocast(enabled=amp):
+            logits_a, logits_b, embedding_a, embedding_b, relation_loss = (
+                model.forward_train(waveform)
+            )
+
+        ce_a = criterion(logits_a.float(), labels)
+        ce_b = criterion(logits_b.float(), labels)
+
+        classification_loss = 0.5 * (ce_a + ce_b)
+        loss = classification_loss + lambda_relation * relation_loss
+
+        scaler.scale(loss).backward()
+        scaler.unscale_(optimizer)
+
+        if grad_clip > 0:
+            nn.utils.clip_grad_norm_(model.detector.parameters(), grad_clip)
+
+        scaler.step(optimizer)
+        scaler.update()
+
+        batch_size = labels.size(0)
+
+        total_loss += loss.detach().item() * batch_size
+        total_cls += classification_loss.detach().item() * batch_size
+        total_ce_a += ce_a.detach().item() * batch_size
+        total_ce_b += ce_b.detach().item() * batch_size
+        total_relation += relation_loss.detach().item() * batch_size
+
+        total_correct_a += (
+            logits_a.detach().argmax(dim=1) == labels
+        ).sum().item()
+
+        total_correct_b += (
+            logits_b.detach().argmax(dim=1) == labels
+        ).sum().item()
+
+        total_samples += batch_size
+
+        loop.set_postfix(
+            loss=f"{loss.item():.4f}",
+            cls=f"{classification_loss.item():.4f}",
+            rel=f"{relation_loss.item():.4f}",
+            acc_a=f"{100.0 * total_correct_a / total_samples:.2f}%",
+            acc_b=f"{100.0 * total_correct_b / total_samples:.2f}%",
+        )
+
+    return {
+        "train_loss": total_loss / total_samples,
+        "train_cls_loss": total_cls / total_samples,
+        "train_ce_a": total_ce_a / total_samples,
+        "train_ce_b": total_ce_b / total_samples,
+        "train_relation_loss": total_relation / total_samples,
+        "train_acc_a": 100.0 * total_correct_a / total_samples,
+        "train_acc_b": 100.0 * total_correct_b / total_samples,
+    }
+
+
+@torch.no_grad()
+def evaluate_head(
+    model,
+    loader,
+    criterion,
+    device,
+    amp,
+    desc,
+    inference_head,
+):
+    model.eval()
+
+    old_head = model.inference_head
+    model.inference_head = inference_head
+
+    total_loss = 0.0
+    total_correct = 0
+    total_samples = 0
+
+    real_scores = []
+    fake_scores = []
+
+    try:
+        for batch in tqdm(loader, desc=desc, leave=False):
+            waveform = batch["audio"].to(device, non_blocking=True)
+            labels = batch["label"].view(-1).long().to(device, non_blocking=True)
+
+            with torch.cuda.amp.autocast(enabled=amp):
+                logits = model(waveform)
+
+            logits = logits.float()
+            loss = criterion(logits, labels)
+
+            scores = torch.softmax(logits, dim=1)[:, REAL_LABEL]
+
+            labels_np = labels.cpu().numpy()
+            scores_np = scores.cpu().numpy()
+
+            real_scores.extend(scores_np[labels_np == REAL_LABEL].tolist())
+            fake_scores.extend(scores_np[labels_np == FAKE_LABEL].tolist())
+
+            total_loss += loss.item() * labels.size(0)
+
+            total_correct += (
+                logits.argmax(dim=1) == labels
+            ).sum().item()
+
+            total_samples += labels.size(0)
+
+    finally:
+        model.inference_head = old_head
+
+    eer, threshold = compute_eer(real_scores, fake_scores)
+
+    return {
+        "loss": total_loss / total_samples,
+        "acc": 100.0 * total_correct / total_samples,
+        "eer": eer,
+        "threshold": threshold,
+        "samples": total_samples,
+    }
+
+
+def build_domain_metrics(
+    model,
+    loader,
+    criterion,
+    device,
+    amp,
+    domain,
+):
+    head_a = evaluate_head(
         model,
-        ssl_lr=cfg_float(config, "ssl_lr", 5e-7),
-        head_lr=cfg_float(config, "head_lr", 1e-4),
-        layer_decay=cfg_float(config, "layer_decay", 0.95),
-        weight_decay=cfg_float(config, "weight_decay", 1e-4)
+        loader,
+        criterion,
+        device,
+        amp,
+        f"{domain} Head-A",
+        "a",
     )
-    scaler = torch.cuda.amp.GradScaler(enabled=amp)
 
-    epochs = cfg_int(config, "epochs", 20)
-    patience = cfg_int(config, "patience", 3)
-    grad_clip = cfg_float(config, "grad_clip", 5.0)
-    accumulation_steps = max(1, cfg_int(config, "accumulation_steps", 1))
-    save_dir = os.path.join("models", config["exp_name"] + "_xlsr_transition")
-    os.makedirs(save_dir, exist_ok=True)
+    head_b = evaluate_head(
+        model,
+        loader,
+        criterion,
+        device,
+        amp,
+        f"{domain} Head-B",
+        "b",
+    )
 
-    best_dev_eer = float("inf")
-    best_test_eer = float("inf")
-    test_eer_at_best_dev = float("nan")
-    bad_epochs = 0
+    ensemble = evaluate_head(
+        model,
+        loader,
+        criterion,
+        device,
+        amp,
+        f"{domain} Ensemble",
+        "ensemble",
+    )
+
+    return {
+        "a": head_a,
+        "b": head_b,
+        "ensemble": ensemble,
+    }
+
+
+def summarize_epoch(rows):
+    summary = []
+
+    epochs = sorted(set(row["epoch"] for row in rows))
+
+    metrics = (
+        "dev_a_eer",
+        "test_a_eer",
+        "dev_b_eer",
+        "test_b_eer",
+        "dev_ensemble_eer",
+        "test_ensemble_eer",
+        "a_joint_eer",
+        "a_worst_domain_eer",
+        "a_domain_gap",
+    )
+
+    for epoch in epochs:
+        current = [row for row in rows if row["epoch"] == epoch]
+
+        for metric in metrics:
+            values = np.asarray(
+                [row[metric] for row in current],
+                dtype=np.float64,
+            )
+
+            summary.append({
+                "epoch": epoch,
+                "metric": metric,
+                "mean": float(values.mean()),
+                "std": float(values.std(ddof=1)) if len(values) > 1 else 0.0,
+                "min": float(values.min()),
+                "max": float(values.max()),
+                "range": float(values.max() - values.min()),
+            })
+
+    return summary
+
+
+def summarize_seed(rows):
+    summary = []
+
+    seeds = sorted(set(row["seed"] for row in rows))
+
+    for seed in seeds:
+        current = sorted(
+            [row for row in rows if row["seed"] == seed],
+            key=lambda x: x["epoch"],
+        )
+
+        joint = np.asarray(
+            [row["a_joint_eer"] for row in current],
+            dtype=np.float64,
+        )
+
+        worst = np.asarray(
+            [row["a_worst_domain_eer"] for row in current],
+            dtype=np.float64,
+        )
+
+        gap = np.asarray(
+            [row["a_domain_gap"] for row in current],
+            dtype=np.float64,
+        )
+
+        best_joint_idx = int(np.argmin(joint))
+        best_worst_idx = int(np.argmin(worst))
+        best_gap_idx = int(np.argmin(gap))
+
+        summary.append({
+            "seed": seed,
+
+            "best_joint_epoch": current[best_joint_idx]["epoch"],
+            "best_joint_eer": float(joint[best_joint_idx]),
+            "dev_at_best_joint": current[best_joint_idx]["dev_a_eer"],
+            "test_at_best_joint": current[best_joint_idx]["test_a_eer"],
+
+            "best_worst_epoch": current[best_worst_idx]["epoch"],
+            "best_worst_domain_eer": float(worst[best_worst_idx]),
+            "dev_at_best_worst": current[best_worst_idx]["dev_a_eer"],
+            "test_at_best_worst": current[best_worst_idx]["test_a_eer"],
+
+            "smallest_gap_epoch": current[best_gap_idx]["epoch"],
+            "smallest_domain_gap": float(gap[best_gap_idx]),
+            "dev_at_smallest_gap": current[best_gap_idx]["dev_a_eer"],
+            "test_at_smallest_gap": current[best_gap_idx]["test_a_eer"],
+        })
+
+    return summary
+
+
+def main():
+    args = parse_addarguments()
+    config = load_yaml(args.config)
+
+    device = torch.device(
+        "cuda" if torch.cuda.is_available() else "cpu"
+    )
+
+    amp = bool(config.get("amp", True)) and device.type == "cuda"
+
+    batch_size = int(config.get("batch_size", 16))
+    eval_batch_size = int(config.get("eval_batch_size", batch_size))
+    num_workers = int(config.get("num_workers", 4))
+
+    lr = float(config.get("lr", 1e-4))
+    weight_decay = float(config.get("weight_decay", 1e-4))
+    grad_clip = float(config.get("grad_clip", 5.0))
+    lambda_relation = float(config.get("lambda_relation", 0.1))
+
+    epochs = int(config.get("epochs", 3))
+    seeds = [int(seed) for seed in config.get("seeds", [1000, 1001, 1003])]
+
+    output_dir = config.get(
+        "output_dir",
+        os.path.join(
+            "models",
+            config["exp_name"] + "_dual_transition_consistency",
+        ),
+    )
+
+    os.makedirs(output_dir, exist_ok=True)
+
+    print("=" * 100)
+    print("Dual Transition Relation-Consistency Validation")
+    print("Train: ASVspoof2019-LA")
+    print("Dev:   DECRO-CH")
+    print("Test:  MLAAD-DE")
+    print(f"Epochs: {epochs}")
+    print(f"Seeds: {seeds}")
+    print(f"lambda_relation: {lambda_relation}")
+    print(f"Output: {output_dir}")
+    print("=" * 100)
+
+    train_dataset = DetectDataset(
+        args,
+        datapath=config["train_data_path"],
+        labelspath=config["train_label_path"],
+        stage="train",
+    )
+
+    dev_dataset = DetectDataset(
+        args,
+        datapath=config["dev_data_path"],
+        labelspath=config["dev_label_path"],
+        stage="test",
+    )
+
+    test_dataset = DetectDataset(
+        args,
+        datapath=config["test_data_path"],
+        labelspath=config["test_label_path"],
+        stage="test",
+    )
+
+    dev_loader = make_eval_loader(
+        dev_dataset,
+        eval_batch_size,
+        num_workers,
+        device,
+    )
+
+    test_loader = make_eval_loader(
+        test_dataset,
+        eval_batch_size,
+        num_workers,
+        device,
+    )
+
+    criterion = nn.CrossEntropyLoss(
+        weight=torch.tensor(
+            [
+                float(config.get("fake_weight", 0.1)),
+                float(config.get("real_weight", 0.9)),
+            ],
+            dtype=torch.float32,
+            device=device,
+        )
+    )
+
+    all_rows = []
+
+    for seed_index, seed in enumerate(seeds, start=1):
+        print()
+        print("#" * 100)
+        print(f"Seed [{seed_index}/{len(seeds)}]: {seed}")
+        print("#" * 100)
+
+        gc.collect()
+
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+
+        set_seed(seed)
+
+        train_loader = make_train_loader(
+            train_dataset,
+            batch_size,
+            seed,
+            num_workers,
+            device,
+        )
+
+        model = Model(device, config).to(device)
+
+        optimizer = build_optimizer(
+            model,
+            lr=lr,
+            weight_decay=weight_decay,
+        )
+
+        scaler = torch.cuda.amp.GradScaler(enabled=amp)
+
+        for epoch in range(1, epochs + 1):
+            print()
+            print("=" * 100)
+            print(f"seed={seed} | epoch={epoch}/{epochs}")
+            print("=" * 100)
+
+            start_time = time.time()
+
+            train_metrics = train_one_epoch(
+                model,
+                train_loader,
+                optimizer,
+                criterion,
+                scaler,
+                device,
+                amp,
+                lambda_relation,
+                grad_clip,
+            )
+
+            dev = build_domain_metrics(
+                model,
+                dev_loader,
+                criterion,
+                device,
+                amp,
+                "DECRO-CH",
+            )
+
+            test = build_domain_metrics(
+                model,
+                test_loader,
+                criterion,
+                device,
+                amp,
+                "MLAAD-DE",
+            )
+
+            a_joint_eer = (dev["a"]["eer"] + test["a"]["eer"]) / 2.0
+            a_worst_domain_eer = max(dev["a"]["eer"], test["a"]["eer"])
+            a_domain_gap = abs(dev["a"]["eer"] - test["a"]["eer"])
+
+            b_joint_eer = (dev["b"]["eer"] + test["b"]["eer"]) / 2.0
+
+            ensemble_joint_eer = (
+                dev["ensemble"]["eer"] + test["ensemble"]["eer"]
+            ) / 2.0
+
+            row = {
+                "seed": seed,
+                "epoch": epoch,
+                **train_metrics,
+
+                "dev_a_eer": dev["a"]["eer"],
+                "dev_a_acc": dev["a"]["acc"],
+                "dev_a_loss": dev["a"]["loss"],
+
+                "test_a_eer": test["a"]["eer"],
+                "test_a_acc": test["a"]["acc"],
+                "test_a_loss": test["a"]["loss"],
+
+                "dev_b_eer": dev["b"]["eer"],
+                "dev_b_acc": dev["b"]["acc"],
+                "dev_b_loss": dev["b"]["loss"],
+
+                "test_b_eer": test["b"]["eer"],
+                "test_b_acc": test["b"]["acc"],
+                "test_b_loss": test["b"]["loss"],
+
+                "dev_ensemble_eer": dev["ensemble"]["eer"],
+                "dev_ensemble_acc": dev["ensemble"]["acc"],
+
+                "test_ensemble_eer": test["ensemble"]["eer"],
+                "test_ensemble_acc": test["ensemble"]["acc"],
+
+                "a_joint_eer": a_joint_eer,
+                "a_worst_domain_eer": a_worst_domain_eer,
+                "a_domain_gap": a_domain_gap,
+
+                "b_joint_eer": b_joint_eer,
+                "ensemble_joint_eer": ensemble_joint_eer,
+
+                "seconds": time.time() - start_time,
+            }
+
+            all_rows.append(row)
+
+            print(
+                f"Head A | CH={dev['a']['eer']:.4f}% | "
+                f"DE={test['a']['eer']:.4f}% | "
+                f"joint={a_joint_eer:.4f}% | "
+                f"worst={a_worst_domain_eer:.4f}% | "
+                f"gap={a_domain_gap:.4f}%"
+            )
+
+            print(
+                f"Head B | CH={dev['b']['eer']:.4f}% | "
+                f"DE={test['b']['eer']:.4f}% | "
+                f"joint={b_joint_eer:.4f}%"
+            )
+
+            print(
+                f"Ensemble | CH={dev['ensemble']['eer']:.4f}% | "
+                f"DE={test['ensemble']['eer']:.4f}% | "
+                f"joint={ensemble_joint_eer:.4f}%"
+            )
+
+            print(
+                f"Train | loss={train_metrics['train_loss']:.6f} | "
+                f"CE-A={train_metrics['train_ce_a']:.6f} | "
+                f"CE-B={train_metrics['train_ce_b']:.6f} | "
+                f"relation={train_metrics['train_relation_loss']:.6f}"
+            )
+
+            write_csv(
+                os.path.join(output_dir, "epoch_results.csv"),
+                all_rows,
+            )
+
+            if bool(config.get("save_each_epoch", False)):
+                checkpoint_dir = os.path.join(output_dir, "checkpoints")
+                os.makedirs(checkpoint_dir, exist_ok=True)
+
+                torch.save(
+                    {
+                        "seed": seed,
+                        "epoch": epoch,
+                        "detector": model.detector.state_dict(),
+                        "optimizer": optimizer.state_dict(),
+                        "metrics": row,
+                        "config": config,
+                    },
+                    os.path.join(
+                        checkpoint_dir,
+                        f"seed_{seed}_epoch_{epoch}.pth",
+                    ),
+                )
+
+        del model
+        del optimizer
+        del scaler
+        del train_loader
+
+        gc.collect()
+
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+
+    epoch_summary = summarize_epoch(all_rows)
+    seed_summary = summarize_seed(all_rows)
+
+    write_csv(
+        os.path.join(output_dir, "epoch_summary.csv"),
+        epoch_summary,
+    )
+
+    write_csv(
+        os.path.join(output_dir, "seed_summary.csv"),
+        seed_summary,
+    )
+
+    with open(
+        os.path.join(output_dir, "experiment.json"),
+        "w",
+        encoding="utf-8",
+    ) as f:
+        json.dump(
+            {
+                "train": "ASVspoof2019-LA",
+                "dev": "DECRO-CH",
+                "test": "MLAAD-DE",
+                "epochs": epochs,
+                "seeds": seeds,
+                "lambda_relation": lambda_relation,
+                "primary_inference": "Head A",
+                "auxiliary_inference": ["Head B", "Ensemble"],
+                "model": "Dual Transition Heads + Embedding Relation Consistency",
+            },
+            f,
+            indent=2,
+            ensure_ascii=False,
+        )
+
+    print()
+    print("=" * 100)
+    print("FINAL HEAD-A SUMMARY")
+    print("=" * 100)
 
     for epoch in range(1, epochs + 1):
-        train_result = train_epoch(
-            train_loader,
-            model,
-            optimizer,
-            criterion,
-            scaler,
-            device,
-            grad_clip,
-            accumulation_steps,
-            amp
+        current = [row for row in all_rows if row["epoch"] == epoch]
+
+        ch = np.asarray([row["dev_a_eer"] for row in current], dtype=np.float64)
+        de = np.asarray([row["test_a_eer"] for row in current], dtype=np.float64)
+        joint = np.asarray([row["a_joint_eer"] for row in current], dtype=np.float64)
+        worst = np.asarray(
+            [row["a_worst_domain_eer"] for row in current],
+            dtype=np.float64,
         )
-        dev_result = evaluate(dev_loader, model, criterion, device, amp, name="Dev")
-        test_result = evaluate(test_loader, model, criterion, device, amp, name="Test")
+        gap = np.asarray([row["a_domain_gap"] for row in current], dtype=np.float64)
 
-        dev_improved = dev_result["eer"] < best_dev_eer
-        test_improved = test_result["eer"] < best_test_eer
-        if dev_improved:
-            best_dev_eer = dev_result["eer"]
-            test_eer_at_best_dev = test_result["eer"]
-            bad_epochs = 0
-        else:
-            bad_epochs += 1
-        if test_improved:
-            best_test_eer = test_result["eer"]
-
-        metrics = {
-            "dev_eer": dev_result["eer"],
-            "test_eer": test_result["eer"],
-            "best_dev_eer": best_dev_eer,
-            "best_test_eer_oracle": best_test_eer,
-            "test_eer_at_best_dev": test_eer_at_best_dev
-        }
-
-        save_checkpoint(
-            os.path.join(save_dir, "last.pth"),
-            model,
-            optimizer,
-            scaler,
-            epoch,
-            metrics,
-            config
-        )
-        if dev_improved:
-            save_checkpoint(
-                os.path.join(save_dir, "best_dev.pth"),
-                model,
-                optimizer,
-                scaler,
-                epoch,
-                metrics,
-                config
-            )
-        if test_improved:
-            save_checkpoint(
-                os.path.join(save_dir, "best_test_oracle.pth"),
-                model,
-                optimizer,
-                scaler,
-                epoch,
-                metrics,
-                config
-            )
+        ch_std = ch.std(ddof=1) if len(ch) > 1 else 0.0
+        de_std = de.std(ddof=1) if len(de) > 1 else 0.0
+        joint_std = joint.std(ddof=1) if len(joint) > 1 else 0.0
+        worst_std = worst.std(ddof=1) if len(worst) > 1 else 0.0
+        gap_std = gap.std(ddof=1) if len(gap) > 1 else 0.0
 
         print(
-            f"epoch:{epoch} "
-            f"train_loss:{train_result['loss']:.6f} "
-            f"train_acc:{train_result['acc'] * 100:.2f}% "
-            f"dev_loss:{dev_result['loss']:.6f} "
-            f"dev_acc:{dev_result['acc'] * 100:.2f}% "
-            f"dev_eer:{dev_result['eer']:.4f}% "
-            f"test_loss:{test_result['loss']:.6f} "
-            f"test_acc:{test_result['acc'] * 100:.2f}% "
-            f"test_eer:{test_result['eer']:.4f}% "
-            f"best_dev_eer:{best_dev_eer:.4f}% "
-            f"best_test_eer_oracle:{best_test_eer:.4f}% "
-            f"time:{time.ctime()}"
+            f"epoch={epoch:02d} | "
+            f"CH={ch.mean():.4f}±{ch_std:.4f} | "
+            f"DE={de.mean():.4f}±{de_std:.4f} | "
+            f"joint={joint.mean():.4f}±{joint_std:.4f} | "
+            f"worst={worst.mean():.4f}±{worst_std:.4f} | "
+            f"gap={gap.mean():.4f}±{gap_std:.4f}"
         )
 
-        if patience > 0 and bad_epochs >= patience:
-            print(f"Early stopping after {bad_epochs} epochs without EER improvement.")
-            break
+    print()
+    print("=" * 100)
+    print("PER-SEED BEST HEAD-A RESULTS")
+    print("=" * 100)
 
-    print(f"Training finished. Best dev EER: {best_dev_eer:.4f}%")
-    print(f"Test EER at best dev: {test_eer_at_best_dev:.4f}%")
-    print(f"Best test EER (oracle, diagnostic only): {best_test_eer:.4f}%")
-    print(f"Checkpoints: {save_dir}")
+    for row in seed_summary:
+        print(
+            f"seed={row['seed']} | "
+            f"best joint: epoch {row['best_joint_epoch']} "
+            f"= {row['best_joint_eer']:.4f} "
+            f"(CH={row['dev_at_best_joint']:.4f}, "
+            f"DE={row['test_at_best_joint']:.4f}) | "
+            f"best worst: epoch {row['best_worst_epoch']} "
+            f"= {row['best_worst_domain_eer']:.4f} | "
+            f"smallest gap: epoch {row['smallest_gap_epoch']} "
+            f"= {row['smallest_domain_gap']:.4f}"
+        )
 
 
 if __name__ == "__main__":

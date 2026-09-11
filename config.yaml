@@ -33,7 +33,7 @@ test_label_path: /root/rivermind-data/data/exp/mlaad_eval_de.txt
 # test_label_path: /root/rivermind-data/data/exp/ASVspoof2019.LA.cm.dev.trl.txt
 ##########################################################################
 
-xlsr_ckpt_path: /root/rivermind-fs/xlsr2_300m.pt
+ssl_checkpoint: /root/rivermind-fs/xlsr2_300m.pt
 exp_name: TL
 
 freeze_ssl: true

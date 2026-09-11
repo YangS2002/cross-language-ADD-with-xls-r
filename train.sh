@@ -11,7 +11,7 @@
 
 
 CUDA_VISIBLE_DEVICES=$1 python train.py --config ./config.yaml
-shutdown
+# shutdown
     # --track=DECRO_en_train --lr=0.000001 --batch_size=8 --loss=WCE  --num_epochs=3 \
     # --protocols_path=/data/ys/petrichorwq-DECRO-dataset-6fc9884/en_train.txt \
     # --database_path=/data/ys/petrichorwq-DECRO-dataset-6fc9884/en_train \
