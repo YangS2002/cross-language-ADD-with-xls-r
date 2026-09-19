@@ -194,7 +194,12 @@ class TransitionHead(nn.Module):
         nn.init.normal_(self.layer_cls, mean=0.0, std=0.02)
         nn.init.normal_(self.layer_position, mean=0.0, std=0.02)
 
-    def forward(self, transitions, return_details=False):
+    def forward(
+        self,
+        transitions,
+        return_details=False,
+        embedding_residual=None,
+    ):
         transitions = self.transition_norm(transitions)
 
         transition_tokens, temporal_attention = self.temporal_pool(transitions)
@@ -208,6 +213,14 @@ class TransitionHead(nn.Module):
         encoded = self.layer_encoder(sequence)
 
         embedding = self.output(encoded[:, 0])
+        if embedding_residual is not None:
+            if embedding_residual.shape != embedding.shape:
+                raise RuntimeError(
+                    "Embedding residual shape mismatch: "
+                    f"expected {tuple(embedding.shape)}, "
+                    f"got {tuple(embedding_residual.shape)}"
+                )
+            embedding = embedding + embedding_residual
         logits = self.classifier(embedding)
 
         if not return_details:
@@ -366,22 +379,248 @@ class DualTransitionConsistencyDetector(nn.Module):
         raise ValueError(f"Unknown inference_head: {inference_head}")
 
 
+class LowHighConsistencyBranch(nn.Module):
+    def __init__(
+        self,
+        num_layers,
+        input_dim=1024,
+        embedding_dim=192,
+        split_after_layer=21,
+    ):
+        super().__init__()
+
+        if not 1 <= split_after_layer < num_layers:
+            raise ValueError(
+                f"split_after_layer must be in [1, {num_layers - 1}], "
+                f"got {split_after_layer}"
+            )
+
+        self.num_layers = int(num_layers)
+        self.split_after_layer = int(split_after_layer)
+        self.layer_norm = nn.LayerNorm(input_dim)
+        self.output = nn.Sequential(
+            nn.LayerNorm(4 * input_dim),
+            nn.Linear(4 * input_dim, embedding_dim),
+            nn.GELU(),
+            nn.LayerNorm(embedding_dim),
+        )
+
+    @staticmethod
+    def temporal_mean_std(view):
+        mean = view.mean(dim=1)
+        std = view.var(dim=1, unbiased=False).add(1e-6).sqrt()
+        return mean, std
+
+    def forward(self, layers):
+        if len(layers) != self.num_layers:
+            raise RuntimeError(
+                f"Expected {self.num_layers} XLS-R layers, got {len(layers)}"
+            )
+
+        normalized = [self.layer_norm(layer) for layer in layers]
+        low_view = torch.stack(
+            normalized[:self.split_after_layer],
+            dim=0,
+        ).mean(dim=0)
+        high_view = torch.stack(
+            normalized[self.split_after_layer:],
+            dim=0,
+        ).mean(dim=0)
+
+        difference = high_view - low_view
+        agreement = high_view * low_view
+        difference_mean, difference_std = self.temporal_mean_std(difference)
+        agreement_mean, agreement_std = self.temporal_mean_std(agreement)
+
+        statistics = torch.cat(
+            [
+                difference_mean,
+                difference_std,
+                agreement_mean,
+                agreement_std,
+            ],
+            dim=-1,
+        )
+        return self.output(statistics), {
+            "low_view": low_view,
+            "high_view": high_view,
+            "difference_mean": difference_mean,
+            "difference_std": difference_std,
+            "agreement_mean": agreement_mean,
+            "agreement_std": agreement_std,
+        }
+
+
+class DualTransitionLowHighConsistencyDetector(
+    DualTransitionConsistencyDetector
+):
+    def __init__(
+        self,
+        num_layers,
+        input_dim=1024,
+        hidden_dim=192,
+        embedding_dim=192,
+        num_heads=6,
+        num_encoder_layers=2,
+        feedforward_dim=384,
+        dropout=0.1,
+        split_after_layer=21,
+        residual_scale=0.1,
+    ):
+        super().__init__(
+            num_layers=num_layers,
+            input_dim=input_dim,
+            hidden_dim=hidden_dim,
+            embedding_dim=embedding_dim,
+            num_heads=num_heads,
+            num_encoder_layers=num_encoder_layers,
+            feedforward_dim=feedforward_dim,
+            dropout=dropout,
+        )
+
+        if residual_scale <= 0:
+            raise ValueError("residual_scale must be positive")
+
+        self.residual_scale = float(residual_scale)
+        self.residual_gate = nn.Parameter(torch.zeros(()))
+        self.consistency_branch = LowHighConsistencyBranch(
+            num_layers=num_layers,
+            input_dim=input_dim,
+            embedding_dim=embedding_dim,
+            split_after_layer=split_after_layer,
+        )
+
+    def current_residual_strength(self):
+        return self.residual_scale * torch.tanh(self.residual_gate)
+
+    def build_residual(self, layers):
+        consistency_embedding, consistency_details = self.consistency_branch(
+            layers
+        )
+        residual = self.current_residual_strength() * consistency_embedding
+        return residual, consistency_embedding, consistency_details
+
+    def forward_train(self, layers, return_details=False):
+        transitions = self.build_transitions(layers)
+        residual, consistency_embedding, consistency_details = self.build_residual(
+            layers
+        )
+
+        logits_a, embedding_a, details_a = self.head_a(
+            transitions,
+            return_details=True,
+            embedding_residual=residual,
+        )
+        logits_b, embedding_b, details_b = self.head_b(
+            transitions,
+            return_details=True,
+            embedding_residual=residual,
+        )
+        relation_loss = self.relation_consistency_loss(
+            embedding_a,
+            embedding_b,
+        )
+
+        if not return_details:
+            return logits_a, logits_b, embedding_a, embedding_b, relation_loss
+
+        return (
+            logits_a,
+            logits_b,
+            embedding_a,
+            embedding_b,
+            relation_loss,
+            {
+                "relation_loss": relation_loss,
+                "embedding_a": embedding_a,
+                "embedding_b": embedding_b,
+                "temporal_attention_a": details_a["temporal_attention"],
+                "temporal_attention_b": details_b["temporal_attention"],
+                "transition_tokens_a": details_a["transition_tokens"],
+                "transition_tokens_b": details_b["transition_tokens"],
+                "consistency_embedding": consistency_embedding,
+                "consistency_details": consistency_details,
+                "residual_strength": self.current_residual_strength(),
+            },
+        )
+
+    def forward(self, layers, inference_head="a", return_details=False):
+        transitions = self.build_transitions(layers)
+        residual, consistency_embedding, consistency_details = self.build_residual(
+            layers
+        )
+
+        if inference_head in {"a", "b"}:
+            head = self.head_a if inference_head == "a" else self.head_b
+            logits, embedding, details = head(
+                transitions,
+                return_details=True,
+                embedding_residual=residual,
+            )
+            if return_details:
+                details.update({
+                    "consistency_embedding": consistency_embedding,
+                    "consistency_details": consistency_details,
+                    "residual_strength": self.current_residual_strength(),
+                })
+                return logits, embedding, details
+            return logits
+
+        if inference_head == "ensemble":
+            logits_a, embedding_a = self.head_a(
+                transitions,
+                embedding_residual=residual,
+            )
+            logits_b, embedding_b = self.head_b(
+                transitions,
+                embedding_residual=residual,
+            )
+            logits = (logits_a + logits_b) / 2.0
+            embedding = (embedding_a + embedding_b) / 2.0
+
+            if return_details:
+                return logits, embedding, {
+                    "logits_a": logits_a,
+                    "logits_b": logits_b,
+                    "embedding_a": embedding_a,
+                    "embedding_b": embedding_b,
+                    "consistency_embedding": consistency_embedding,
+                    "consistency_details": consistency_details,
+                    "residual_strength": self.current_residual_strength(),
+                }
+            return logits
+
+        raise ValueError(f"Unknown inference_head: {inference_head}")
+
+
 class Model(nn.Module):
     def __init__(self, device, config):
         super().__init__()
 
         self.ssl_model = XLSRBackbone(config["ssl_checkpoint"])
 
-        self.detector = DualTransitionConsistencyDetector(
-            num_layers=self.ssl_model.num_layers,
-            input_dim=self.ssl_model.hidden_dim,
-            hidden_dim=int(config.get("hidden_dim", 192)),
-            embedding_dim=int(config.get("embedding_dim", 192)),
-            num_heads=int(config.get("num_heads", 6)),
-            num_encoder_layers=int(config.get("num_encoder_layers", 2)),
-            feedforward_dim=int(config.get("feedforward_dim", 384)),
-            dropout=float(config.get("dropout", 0.1)),
-        )
+        self.detector_type = str(config.get("detector_type", "dual_transition"))
+        common_arguments = {
+            "num_layers": self.ssl_model.num_layers,
+            "input_dim": self.ssl_model.hidden_dim,
+            "hidden_dim": int(config.get("hidden_dim", 192)),
+            "embedding_dim": int(config.get("embedding_dim", 192)),
+            "num_heads": int(config.get("num_heads", 6)),
+            "num_encoder_layers": int(config.get("num_encoder_layers", 2)),
+            "feedforward_dim": int(config.get("feedforward_dim", 384)),
+            "dropout": float(config.get("dropout", 0.1)),
+        }
+
+        if self.detector_type == "dual_transition":
+            self.detector = DualTransitionConsistencyDetector(**common_arguments)
+        elif self.detector_type == "dual_transition_low_high_consistency":
+            self.detector = DualTransitionLowHighConsistencyDetector(
+                **common_arguments,
+                split_after_layer=int(config.get("split_after_layer", 21)),
+                residual_scale=float(config.get("residual_scale", 0.1)),
+            )
+        else:
+            raise ValueError(f"Unknown detector_type: {self.detector_type}")
 
         self.inference_head = str(config.get("inference_head", "a"))
 

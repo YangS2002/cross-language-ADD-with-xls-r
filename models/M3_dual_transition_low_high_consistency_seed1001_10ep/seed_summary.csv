@@ -1,0 +1,2 @@
+seed,best_joint_epoch,best_joint_eer,dev_at_best_joint,test_at_best_joint,best_worst_epoch,best_worst_domain_eer,dev_at_best_worst,test_at_best_worst,smallest_gap_epoch,smallest_domain_gap,dev_at_smallest_gap,test_at_smallest_gap
+1001,5,13.813926047690869,8.87219943259936,18.755652662782378,1,18.134053971174485,11.228482948178147,18.134053971174485,1,6.905571022996337,11.228482948178147,18.134053971174485

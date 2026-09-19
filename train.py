@@ -113,6 +113,13 @@ def write_csv(path, rows):
         os.fsync(f.fileno())
 
 
+def save_checkpoint(path, payload):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    temporary_path = f"{path}.tmp"
+    torch.save(payload, temporary_path)
+    os.replace(temporary_path, path)
+
+
 def train_one_epoch(
     model,
     loader,
@@ -521,6 +528,7 @@ def main():
         )
 
         scaler = torch.cuda.amp.GradScaler(enabled=amp)
+        best_train_loss = float("inf")
 
         for epoch in range(1, epochs + 1):
             print()
@@ -570,6 +578,11 @@ def main():
                 dev["ensemble"]["eer"] + test["ensemble"]["eer"]
             ) / 2.0
 
+            current_train_loss = float(train_metrics["train_loss"])
+            is_best_train_loss = current_train_loss < best_train_loss
+            if is_best_train_loss:
+                best_train_loss = current_train_loss
+
             row = {
                 "seed": seed,
                 "epoch": epoch,
@@ -604,8 +617,16 @@ def main():
                 "b_joint_eer": b_joint_eer,
                 "ensemble_joint_eer": ensemble_joint_eer,
 
+                "is_best_train_loss": is_best_train_loss,
+                "best_train_loss_so_far": best_train_loss,
+
                 "seconds": time.time() - start_time,
             }
+
+            if hasattr(model.detector, "current_residual_strength"):
+                row["residual_strength"] = float(
+                    model.detector.current_residual_strength().detach().cpu()
+                )
 
             all_rows.append(row)
 
@@ -635,17 +656,43 @@ def main():
                 f"CE-B={train_metrics['train_ce_b']:.6f} | "
                 f"relation={train_metrics['train_relation_loss']:.6f}"
             )
+            if "residual_strength" in row:
+                print(
+                    "Residual strength | "
+                    f"{row['residual_strength']:.6f}"
+                )
 
             write_csv(
                 os.path.join(output_dir, "epoch_results.csv"),
                 all_rows,
             )
 
+            if is_best_train_loss:
+                checkpoint_dir = os.path.join(output_dir, "checkpoints")
+                save_checkpoint(
+                    os.path.join(
+                        checkpoint_dir,
+                        f"seed_{seed}_best_train_loss.pth",
+                    ),
+                    {
+                        "seed": seed,
+                        "epoch": epoch,
+                        "selection_metric": "train_loss",
+                        "selection_value": best_train_loss,
+                        "detector": model.detector.state_dict(),
+                        "optimizer": optimizer.state_dict(),
+                        "metrics": row,
+                        "config": config,
+                    },
+                )
+
             if bool(config.get("save_each_epoch", False)):
                 checkpoint_dir = os.path.join(output_dir, "checkpoints")
-                os.makedirs(checkpoint_dir, exist_ok=True)
-
-                torch.save(
+                save_checkpoint(
+                    os.path.join(
+                        checkpoint_dir,
+                        f"seed_{seed}_epoch_{epoch}.pth",
+                    ),
                     {
                         "seed": seed,
                         "epoch": epoch,
@@ -654,10 +701,6 @@ def main():
                         "metrics": row,
                         "config": config,
                     },
-                    os.path.join(
-                        checkpoint_dir,
-                        f"seed_{seed}_epoch_{epoch}.pth",
-                    ),
                 )
 
         del model
@@ -698,7 +741,7 @@ def main():
                 "lambda_relation": lambda_relation,
                 "primary_inference": "Head A",
                 "auxiliary_inference": ["Head B", "Ensemble"],
-                "model": "Dual Transition Heads + Embedding Relation Consistency",
+                "model": config.get("detector_type", "dual_transition"),
             },
             f,
             indent=2,

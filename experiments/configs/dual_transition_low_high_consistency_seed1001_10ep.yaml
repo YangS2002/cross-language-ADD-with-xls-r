@@ -1,0 +1,36 @@
+exp_name: M3_dual_transition_low_high_consistency_seed1001_10ep
+output_dir: models/M3_dual_transition_low_high_consistency_seed1001_10ep
+
+train_data_path: /root/rivermind-data/data/asv2019_la_train
+train_label_path: /root/rivermind-data/data/exp/ASVspoof2019.LA.cm.train.trn.txt
+dev_data_path: /root/rivermind-data/data
+dev_label_path: /root/rivermind-data/data/exp/decro_ch_eval.txt
+test_data_path: /root/rivermind-data/data/mlaad
+test_label_path: /root/rivermind-data/data/exp/mlaad_eval_de.txt
+
+ssl_checkpoint: /root/rivermind-fs/xlsr2_300m.pt
+detector_type: dual_transition_low_high_consistency
+hidden_dim: 192
+embedding_dim: 192
+num_heads: 6
+num_encoder_layers: 2
+feedforward_dim: 384
+dropout: 0.1
+split_after_layer: 21
+residual_scale: 0.1
+inference_head: ensemble
+
+seeds: [1001]
+epochs: 10
+batch_size: 16
+eval_batch_size: 8
+num_workers: 4
+
+lr: 0.0001
+weight_decay: 0.0001
+lambda_relation: 0.1
+fake_weight: 0.1
+real_weight: 0.9
+grad_clip: 5.0
+amp: true
+save_each_epoch: false
