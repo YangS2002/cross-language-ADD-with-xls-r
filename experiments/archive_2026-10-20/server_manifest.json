@@ -4856,6 +4856,11 @@
       "path": "tools/localize_uk_query_degradation.py",
       "bytes": 17375,
       "sha256": "c2362209066bf82e839ca9ff72d439aa95ca8bcc9667ca1c15170783bb030cce"
+    },
+    {
+      "path": "experiments/logs/e2_raw_vs_transition.log",
+      "bytes": 32157219,
+      "sha256": "1695263f7273eca501799be910e1d93cdd8fc5f2d8efb9d55bc5d05ab0aeb798"
     }
   ],
   "excluded": [
@@ -5034,10 +5039,6 @@
     {
       "path": "experiments/logs/dual_transition_seed20.pid",
       "bytes": 5
-    },
-    {
-      "path": "experiments/logs/e2_raw_vs_transition.log",
-      "bytes": 32157219
     },
     {
       "path": "experiments/logs/M2_dual_transition_second_order_residual_seed20_10ep.pid",

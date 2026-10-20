@@ -1,7 +1,7 @@
 {
   "server_head": "e360311c30d09a12bf6638f5b6ccbfdd2be9827a",
   "local_head": "0a2d3e92e776c246465ead7a7790d386f7d59f7b",
-  "server_files": 971,
+  "server_files": 972,
   "local_supplement": [
     "experiments/CROSS_LINGUAL_CORE_READING_2026-10-03.md",
     "experiments/CROSS_LINGUAL_READING_CORRECTION_2026-10-03.md",
