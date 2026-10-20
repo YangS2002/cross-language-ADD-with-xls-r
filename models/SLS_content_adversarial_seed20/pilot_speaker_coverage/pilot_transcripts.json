@@ -1,0 +1,1218 @@
+[
+  {
+    "file": "LA_T_9874922.flac",
+    "speaker": "LA_0079",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "BEFORE|THE|GAME|WE|WENT|FOR|A|PINT|BEFORE",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9746491.flac",
+    "speaker": "LA_0081",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "IT|LOOKS|LIKE|PARADISE|IT|LOOKS|LIKE|P",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_3068473.flac",
+    "speaker": "LA_0082",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "AND|HE|GOES|WITH|IT|AND|HE|GOES|WITH|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1970201.flac",
+    "speaker": "LA_0084",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "IT|WAS|A|LOVELY|SUNSET|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_7843393.flac",
+    "speaker": "LA_0085",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "YOU|HAVE|TO|BE|PATIENT|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_8220892.flac",
+    "speaker": "LA_0087",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "YOU|COULD|FEEL|THE|HEAT|YOU|COULD|FEEL|THE|HEAT|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_6630920.flac",
+    "speaker": "LA_0088",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "I'M|SORRY|TO|HEAR|THIS|NEWS|I'M|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_2598025.flac",
+    "speaker": "LA_0089",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "ON|THURSDAY|MISTER|BLEER|WILL|ADDRESS|THE|INSTITUTE|OF|PU",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9110555.flac",
+    "speaker": "LA_0091",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "WE|BELIEVE|THE|SQUAD|WILL|STAY|TOGETHER|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1636151.flac",
+    "speaker": "LA_0092",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "SO|WHAT|HAPPENS|NEXT|SO|WHAT",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_4668575.flac",
+    "speaker": "LA_0093",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THE|GERMAN|HAD|A|POINT|TO|MAKE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_2807421.flac",
+    "speaker": "LA_0096",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "I|ALWAYS|SAYG|NO|I|ALWAYS|SAY",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9508923.flac",
+    "speaker": "LA_0097",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "HE|MADE|NO|BIG|MISTAKES|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9126862.flac",
+    "speaker": "LA_0098",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "IT|LOOKS|AS|THOUGH|HE|WILL|BE|RIGHT|IT|LOOKS|AS|THOUGH|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_3346004.flac",
+    "speaker": "LA_0079",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "WE|DIDN'T|ENJOY|THE|FIRST|GAME|BUT|TO|DAY|THEY|WERE|EXCELLEN",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_5192765.flac",
+    "speaker": "LA_0081",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "WHETHER|THIS|RETURN|WAS|TOO|SOON|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1830509.flac",
+    "speaker": "LA_0082",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "A|NEW|SCHOOL|WHERE|WE|BUILT|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1590181.flac",
+    "speaker": "LA_0084",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "LUCKILY|OUR|PATIENT|WAS|STABLE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_8814910.flac",
+    "speaker": "LA_0085",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "WE|HAVE|TO|CREATE|A|CLIMATE|OF|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_6861216.flac",
+    "speaker": "LA_0087",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "IT|WAS|THE|CLIMAX|OF|THE|THING|IT|WAS|THE|CLIMAX|O",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9474664.flac",
+    "speaker": "LA_0088",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "IT|CAME|INTO|THIS|WORLD|WITH|NOTHING|IT|CAM",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9389215.flac",
+    "speaker": "LA_0089",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "IT'S|QUITE|A|LANE|UP|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_5417170.flac",
+    "speaker": "LA_0091",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "NOW|IT|IS|OFFICIAL|BURY|FERGUSON|IS|STAYING|WITH|THE|RE",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1846342.flac",
+    "speaker": "LA_0092",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "BRETON|IS|GOING|TO|CALEBRATE|IN|STYLE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_4297429.flac",
+    "speaker": "LA_0093",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "I|HAVE|NO|PROBLEM|WITH|WHAT|THEY|SAID|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_2239255.flac",
+    "speaker": "LA_0096",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "PUBLIC|CONFIDENCE|WAS|UNDERMINED|BY|THE|TERRIBLE|TRAGEDY|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9901878.flac",
+    "speaker": "LA_0097",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "FOR|THE|OTHER|PARTIES|IT|IS|BACK|TO|BUSINE",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9987202.flac",
+    "speaker": "LA_0098",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "MALONY|IS|AN|ENGAGING|TALENT|MALONY|IS",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_5337549.flac",
+    "speaker": "LA_0079",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "MAYBE|HIS|TIME|HAS|GONE|MAYBE|HIS|T",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_4170168.flac",
+    "speaker": "LA_0081",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THEY|ARE|THE|HEROES|THEY|ARE|THE|H",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_8040847.flac",
+    "speaker": "LA_0082",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "IT|IS|HARD|ONE|IT|IS|HARD|ONE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9002298.flac",
+    "speaker": "LA_0084",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "YOU|ARE|A|GREAT|PLAYER|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_5806387.flac",
+    "speaker": "LA_0085",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "HE|WAS|GOOD|BUT|NOT|NOT|GOOD|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_4694969.flac",
+    "speaker": "LA_0087",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "WE|SHALL|NOT|BE|MOVED|WE|SHALL|NOT|BE",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9937911.flac",
+    "speaker": "LA_0088",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THERE|IS|NO|SMOKING|GUN|THERE|IS|NO|S",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1473061.flac",
+    "speaker": "LA_0089",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "TO|DAY|WE|BEGIN|TO|ANSWER|THAT|QUESTION|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_3455098.flac",
+    "speaker": "LA_0091",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "SEVERAL|PEOPLE|WERE|OUT|IN|THE|STREET|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1207505.flac",
+    "speaker": "LA_0092",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THE|BOYS|ARE|MENTALLY|FORCASSED|THE|BOYS",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_2682425.flac",
+    "speaker": "LA_0093",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THIS|ILL|BE|NO|EASY|OPTION|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_6505103.flac",
+    "speaker": "LA_0096",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "IT|IS|A|CAUSE|FOR|CONCERN|IT|IS|A|CAUSE|FOR|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9569208.flac",
+    "speaker": "LA_0097",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "TECHNICALLY|IT|WAS|A|VERY|GOOD|PERFORMANCE|BY",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_3913974.flac",
+    "speaker": "LA_0098",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "LET'S|HOPE|IT'S|AN|INVESTMENT|IN|THE|FUTURE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9789409.flac",
+    "speaker": "LA_0079",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THIS|DOES|NOT|CREATE|ANY|PRECEDENT|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_8893973.flac",
+    "speaker": "LA_0081",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "PARTITION|IS|NOT|AN|OPTION|PART",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_7327413.flac",
+    "speaker": "LA_0082",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "EQUITY|DECLINES|TO|COMMENT|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_3624315.flac",
+    "speaker": "LA_0084",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THEREAFTER|THEY|WERE|ALLOWED|TO|PROCEED|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_3891170.flac",
+    "speaker": "LA_0085",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "DO|THEY|THINK|ANYONE|ELSE|WANTS|THEM|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_4720967.flac",
+    "speaker": "LA_0087",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THAT|IS|THE|GENERAL|FEELING|THAT|IS|THE|GENERAL|F",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_6816591.flac",
+    "speaker": "LA_0088",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "OUR|NUMBER|ONE|GOLL|OF|PREVENTION|OUR|NUMBE",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_6190702.flac",
+    "speaker": "LA_0089",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "HE|WAS|ADAMANT|THAT|HE|WAS|STILL|A|HATE|ON|EVERYTHING|THAT|MATTERS|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_2601192.flac",
+    "speaker": "LA_0091",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "A|REVIEW|GRUPLL|REPORT|ON|TUESDAY|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_5109896.flac",
+    "speaker": "LA_0092",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "SUCH|AN|ATTACK|AS|BIZAAR|SUCH|AN|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_4868237.flac",
+    "speaker": "LA_0093",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "I|THINK|WE|HAVE|GOT|THE|BALANCE|RIGHT|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_5585550.flac",
+    "speaker": "LA_0096",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "HIS|SILENCE|ON|THE|ISSUE|ITS|INTERESTING|HIS|S",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_8702524.flac",
+    "speaker": "LA_0097",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "BUT|THEIR|BODIES|WERE|FOUND|AT|LUNCH|TIME|YESTERDAY|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_6354141.flac",
+    "speaker": "LA_0098",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "IN|SHORT|THE|SCOTTISH|EXCESS|IS|NOT|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_2759900.flac",
+    "speaker": "LA_0079",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "LAST|YEAR|IT|WAS|LIGAMENTS|IN|HIS|KNEE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_5570263.flac",
+    "speaker": "LA_0081",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "I|DON'T|THINK|WE|COULD|HAVE|EXPECTED|BETTER|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_6441166.flac",
+    "speaker": "LA_0082",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THAT|WAS|ABONUS|BUT|IT|WAS|NOT|THE|MAIN|OBJECTIVE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_6710807.flac",
+    "speaker": "LA_0084",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THE|QUESTION|IS|WHETHER|PRIVATE|INVESTORS|SHOULD|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_8042177.flac",
+    "speaker": "LA_0085",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THE|TICKETS|WILL|BE|ON|SALE|TO|DAY|AT|THE|TICKET|OFFICE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_7108923.flac",
+    "speaker": "LA_0087",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "YOU|ILL|NEVER|GUET|A|CONVICTION|YOU|WILL|NE",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9793995.flac",
+    "speaker": "LA_0088",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "EVERY|ONE|HAS|HIS|SHARE|OF|TROUBLE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_5702907.flac",
+    "speaker": "LA_0089",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "LOOK|AT|THE|WITNESSES|LOOK|AT|THE|WITNESSES|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_3306464.flac",
+    "speaker": "LA_0091",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "EVERYTHING|WAS|UP|FOR|GRABS|EVERYTHING|WAS|UP|F",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_5613911.flac",
+    "speaker": "LA_0092",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "IT|WAS|A|MINOR|INCIDENT|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_3927701.flac",
+    "speaker": "LA_0093",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "IT'S|UNUSUAL|TO|SAY|THE|LEAST|IT'S|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_2945120.flac",
+    "speaker": "LA_0096",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "ITS|FANTASTIC|TO|HAVE|FINALLY|WON|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9206457.flac",
+    "speaker": "LA_0097",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "BROWN|IS|A|INTERESTING|MAN|BUT|HE'S|NOT|DES",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9378967.flac",
+    "speaker": "LA_0098",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "HOWEVER|THIS|SUGGESTION|WAS|TURNED|DOWN|BY|THE|PLAYER|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9596913.flac",
+    "speaker": "LA_0079",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THEY|COULD|NOT|IGNORE|THE|WIRL|OF|PARLIAMENT|HE|CLAIMED|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_7944618.flac",
+    "speaker": "LA_0081",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "HE|HAS|LOST|CONFIDENCE|IN|WEIGHT|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_4710044.flac",
+    "speaker": "LA_0082",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "IT|SHOULD|BE|EQUAL|IT|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_4565832.flac",
+    "speaker": "LA_0084",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THAT|REMAINS|THE|UNANSWERED|QUESTION|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1114980.flac",
+    "speaker": "LA_0085",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "I|IN|THE|MEANTIME|HAD|BEEN|FAR|FROM|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_2202252.flac",
+    "speaker": "LA_0087",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "AREVEU|IS|UNDERWAY|AREVEU|IS|UN",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_2101210.flac",
+    "speaker": "LA_0088",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "HE|PLANNED|TO|RELOCATE|TO|SCOTLAND|PROBABLY|EDINBURGH|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_6082276.flac",
+    "speaker": "LA_0089",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "PLANS|TO|CELEBRATE|THE|QUEENS|GOLDING|JUBILE|WILL|PROCEED|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9807464.flac",
+    "speaker": "LA_0091",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THAT|MIGHT|HAPPEN|IN|PACKASTAN|BUT|IN|BRITAIN|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_7223887.flac",
+    "speaker": "LA_0092",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "IS|A|STROK|OF|GENIUS|IS|A|STR",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_4891261.flac",
+    "speaker": "LA_0093",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THEY|ARE|NOT|ALWAYS|THE|SAME|PERSON|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_6744421.flac",
+    "speaker": "LA_0096",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "SHE|HAS|BEEN|IN|GERMANY|FOR|MEDICAL|TREATMENT|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1563149.flac",
+    "speaker": "LA_0097",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THEY|DON'T|KNOW|EACH|OTHER|BUT|THEY|H",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1379329.flac",
+    "speaker": "LA_0098",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "A|DEAD|LINE|IS|STILL|ESSENTIAL|A|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_2938316.flac",
+    "speaker": "LA_0079",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THAT|PERID|WAS|A|STRUGGLE|THAT|PERIOD|WAS||",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_5639776.flac",
+    "speaker": "LA_0081",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "BUT|LET'S|NOT|GET|CARRIED|AWAY|B",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_5443164.flac",
+    "speaker": "LA_0082",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "KIDS|ARE|TERRIBLE|KIDS|ARE|TERRIB",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_4460814.flac",
+    "speaker": "LA_0084",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "WE|WILL|TURN|THE|CORNER|WE|WILL|TURN|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_4043474.flac",
+    "speaker": "LA_0085",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "AND|THERE|WE|BEING|PAID|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_5865772.flac",
+    "speaker": "LA_0087",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "I|AM|STILL|WAITING|FOR|A|REPLY|I|AM|STILL|W",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_8083939.flac",
+    "speaker": "LA_0088",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THERE|WILL|HAVE|TO|BE|A|FULL|INQUIRY|THERE|WILL|HAVE|TO",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_4707993.flac",
+    "speaker": "LA_0089",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THE|SCOTTISH|PRISON|SERVICE|SAID|IT|COULD|NOT|COMMENT|ON|THE|VIS",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9124804.flac",
+    "speaker": "LA_0091",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "ISRAEL|HAS|DONE|VERY|LITTLE|UNTIL|NOW|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_7009144.flac",
+    "speaker": "LA_0092",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "THE|PROJECTIONS|ARE|VERY|POSITIVE|FOR|SOUTH|AFRICA|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9329650.flac",
+    "speaker": "LA_0093",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "IT|MAY|NOT|BE|LIFE|LONG|IT|M",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_3732188.flac",
+    "speaker": "LA_0096",
+    "attack": "bonafide",
+    "split": "fit",
+    "transcript": "DO|NOT|GO|INTO|GOVERNMENT|BUILDINGS|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_5052270.flac",
+    "speaker": "LA_0080",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "THERE|WILL|BE|GOOD|PROSPECTS|AHEAD|THEE|WILL|BE|GOOD|PRO",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1745865.flac",
+    "speaker": "LA_0083",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "NEITHER|POLICE|NOR|HOTEL|MANAGEMENT|HAD|ANY|RECORD|OF|THE|INCIDENT|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_2113561.flac",
+    "speaker": "LA_0086",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "IN|ADDITION|CERTAIN|AREAS|ARE|CLOSED|AT|CERTAIN|TIMES|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_5776532.flac",
+    "speaker": "LA_0090",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "THEY|ARE|INTERIOR|DESIGNERS|AND|ARCHITECTS|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_2504535.flac",
+    "speaker": "LA_0094",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "WHAT|WOULD|BE|THE|TIME|TEBBLE|FOR|HE|THROL|WHAT|WOULD|BE|THE|T",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_7939231.flac",
+    "speaker": "LA_0095",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "THE|EFFECT|WAS|ALMOST|MAGICAL|THE|EFFECT|WAS|ALMO",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_6306026.flac",
+    "speaker": "LA_0080",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "IT|IS|A|LARGE|NUMBER|IT|IS|A|LARGE|NUMBER|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9673436.flac",
+    "speaker": "LA_0083",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "THE|REPORT|WOULD|GOING|BEFORE|THE|SCOTTISH|PARLIAMENT|PROBABLY|IN|EARLY|AU",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1836557.flac",
+    "speaker": "LA_0086",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "THERE|WERE|NO|CASUALTIES|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9711208.flac",
+    "speaker": "LA_0090",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "BROWN|HAS|ALWAYS|PROTESTED|HIS|INNOCENCE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_7697985.flac",
+    "speaker": "LA_0094",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "HE|WILL|ADDRESS|THE|NATION|THIS|EVENING|HE|WILL|ADRESS|THE",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_3465911.flac",
+    "speaker": "LA_0095",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "I|INTENDED|TO|LOOK|FOR|ANOTHER|CLUB|ON|LOAN|I|INT",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_6631167.flac",
+    "speaker": "LA_0080",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "THE|REMOVAL|WOULD|TAKE|PLACE|IN|FRANCE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_3060760.flac",
+    "speaker": "LA_0083",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "POLICY|MAKING|WOULD|BECOME|A|ROLL|FOR|MINISTERS|AND|THEIR|OFF",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_4298489.flac",
+    "speaker": "LA_0086",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "OUR|OBJECTIVE|IS|A|TACKAPOVERTY|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9678657.flac",
+    "speaker": "LA_0090",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "TRUTH|IS|THE|CHILD|OF|TIME|TRUTH|IS|THE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_5034418.flac",
+    "speaker": "LA_0094",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "BT|SHE|WAS|BUT|SHE|WAS|BUT|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_8280464.flac",
+    "speaker": "LA_0095",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "HE|WILL|GO|ALONG|WHERE|HE|WILL|GO|ALONG|WHERE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_3315434.flac",
+    "speaker": "LA_0080",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "SHE|WILL|ATTEND|IN|JULY|SHE|WILL|ATTEND|IN|JULY|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9644594.flac",
+    "speaker": "LA_0083",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "IF|NOT|A|DEAL|COULD|TAKE|MANY|MONTHS|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_4565780.flac",
+    "speaker": "LA_0086",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "IN|FACT|HE|WAS|TALKING|ABOUT|THE|SURVIVAL|BUSINESS|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_6642565.flac",
+    "speaker": "LA_0090",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "NOT|MANY|PEOPLE|LIKE|TO|DO|THAT|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9730601.flac",
+    "speaker": "LA_0094",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "BY|THEN|OUR|MASSIVELY|RALL|BATTLE|IS|LIKELY|TO|HAVE|STARTED|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_4559826.flac",
+    "speaker": "LA_0095",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "HE|COULD|SEE|NO|OTHER|BIDDER|HE|COULD|SE",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_6957393.flac",
+    "speaker": "LA_0080",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "IT|WOULD|EFFECT|THEIR|WORK|IT|WOULD|EFFECT|THEIR|WORK|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1126222.flac",
+    "speaker": "LA_0083",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "ITS|WORK|INCLUDES|DEALING|WITH|CHILD|ABUSE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_2815613.flac",
+    "speaker": "LA_0086",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "THE|TEAM|FOR|THE|FIRST|GAME|COULD|BE|THIS|ONE|THE",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_5112094.flac",
+    "speaker": "LA_0090",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "IT|WAS|ONLY|LATER|THAT|THE|CONDITION|WAS|DIAGNOZED|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_2123366.flac",
+    "speaker": "LA_0094",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "WE|ARE|A|PEACEFUL|PEOPLE|WE|ARE|A|PEACEFUL|PEOPLE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_9169770.flac",
+    "speaker": "LA_0095",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "JOB|LOSSES|WERE|ALSO|ANNOUNCED|JOB|LOSSES|WERE|ALSO|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_4176612.flac",
+    "speaker": "LA_0080",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "THE|PREMYE|LEAGUE|HAS|BEEN|A|HUED|SUCCESS|THE|PREME|LEAGUE|HAS|BEEN",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_5900964.flac",
+    "speaker": "LA_0083",
+    "attack": "bonafide",
+    "split": "check",
+    "transcript": "FOR|THAT|REASON|COVER|SHOULD|NOT|BE|GIVEN|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1004644.flac",
+    "speaker": "LA_0079",
+    "attack": "A01",
+    "split": "fake_audit",
+    "transcript": "I|DID|NOT|THINK|ABOUT|THE|RIDER|CAP|I|DID|NOT|THINK|ABOUT|THE|RIDER|CAP|I|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1056709.flac",
+    "speaker": "LA_0079",
+    "attack": "A01",
+    "split": "fake_audit",
+    "transcript": "I|DID|NOT|CONCENTRATE|ON|MY|PERFORMANCE|I|DID|NOT|CONCENTRATE|ON|MY",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1195221.flac",
+    "speaker": "LA_0079",
+    "attack": "A01",
+    "split": "fake_audit",
+    "transcript": "THAT|IS|NOT|LIKE|YOU|THAT|IS|NOT|LIKE|YOU|THAT|IS|NOT|LIKE|YOU|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1265032.flac",
+    "speaker": "LA_0079",
+    "attack": "A01",
+    "split": "fake_audit",
+    "transcript": "ONE|TEAM|IS|IN|THE|BOTTOM|OF|THE|BUS|AND|THE|OTHER|TEAM|IS|IN|THE|TOP|OF|THE|BUS|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1025525.flac",
+    "speaker": "LA_0079",
+    "attack": "A02",
+    "split": "fake_audit",
+    "transcript": "ANALYSIS|BY|WESTMEN'S|TE|PARTY|ALLEGIANCE|ALSO|SUGG",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1090966.flac",
+    "speaker": "LA_0079",
+    "attack": "A02",
+    "split": "fake_audit",
+    "transcript": "THEY|ARE|BECOMING|MORE|SOCIALLY|INTERRECTIVE|AND|PERHAPS|DISI",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1148535.flac",
+    "speaker": "LA_0079",
+    "attack": "A02",
+    "split": "fake_audit",
+    "transcript": "THE|NUMBER|OF|PACES|OF|RASISM|REPORTED|TO|THE|POLICE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1191378.flac",
+    "speaker": "LA_0079",
+    "attack": "A02",
+    "split": "fake_audit",
+    "transcript": "THE|GOOD|HOPE|IS|THE|LITTLE|BOAT|A|CAMPAINING|PLEA|THAT|BROAT|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1007408.flac",
+    "speaker": "LA_0079",
+    "attack": "A03",
+    "split": "fake_audit",
+    "transcript": "WE|ARE|MEANT|TO|CONNECT|THEM|IN|A|NARRATIVE|WE|ARE|M",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1017386.flac",
+    "speaker": "LA_0079",
+    "attack": "A03",
+    "split": "fake_audit",
+    "transcript": "THERE|IS|NO|MORE|TO|BE|DONE|THERE|IS|NO|MORE|TO|B",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1069388.flac",
+    "speaker": "LA_0079",
+    "attack": "A03",
+    "split": "fake_audit",
+    "transcript": "WE|DO|NOT|AS|A|SOCIETY|BELIEVE|THAT|THE|PRESEN",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1081570.flac",
+    "speaker": "LA_0079",
+    "attack": "A03",
+    "split": "fake_audit",
+    "transcript": "I|DON'T|MAKE|IT|MISTICAL|I|DON'T|MAKE|IT|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1006715.flac",
+    "speaker": "LA_0079",
+    "attack": "A04",
+    "split": "fake_audit",
+    "transcript": "I|DON'T|THINK|IT'S|THE|AREA|I|DON'T|THINK|IT'S|THE|AREA",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1030843.flac",
+    "speaker": "LA_0079",
+    "attack": "A04",
+    "split": "fake_audit",
+    "transcript": "ERTAINLY|THERE|IS|MUCH|ON|THE|GENDER|SRTINLY|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1033159.flac",
+    "speaker": "LA_0079",
+    "attack": "A04",
+    "split": "fake_audit",
+    "transcript": "WHY|NOT|MAKE|THE|EFFORT|TO|BE|FACTUAL|WHY|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1081350.flac",
+    "speaker": "LA_0079",
+    "attack": "A04",
+    "split": "fake_audit",
+    "transcript": "THIS|IS|A|MEASURE|PART|OF|A|GAME|THIS|IS|A|MEASURE|PART|OF||G",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1029621.flac",
+    "speaker": "LA_0079",
+    "attack": "A05",
+    "split": "fake_audit",
+    "transcript": "MENTL|VOICE|IS|ON|GENERAL|RELEASE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1192399.flac",
+    "speaker": "LA_0079",
+    "attack": "A05",
+    "split": "fake_audit",
+    "transcript": "HE|SHOULD|HAVE|WON|HE|SHOULD|HAVE|WON|HE|SHOULD|HAVE|WON",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1208274.flac",
+    "speaker": "LA_0079",
+    "attack": "A05",
+    "split": "fake_audit",
+    "transcript": "THE|ASTERDAY|WER|FIRMLY|WE|TLP|SOUGHT|TO|SPEAK|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1241073.flac",
+    "speaker": "LA_0079",
+    "attack": "A05",
+    "split": "fake_audit",
+    "transcript": "WE|HAVE|JUST|GOP|TO|TEEP|HIS|FEETE|ON|THE|GONE|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1033197.flac",
+    "speaker": "LA_0079",
+    "attack": "A06",
+    "split": "fake_audit",
+    "transcript": "AXESS|ITSELF|WAS|CREATED|FROM|THAT|EXERC",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1060877.flac",
+    "speaker": "LA_0079",
+    "attack": "A06",
+    "split": "fake_audit",
+    "transcript": "YOU'D|HAS|TO|WORK|WITH|WHAT|YOU'VE|GOT|",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1100628.flac",
+    "speaker": "LA_0079",
+    "attack": "A06",
+    "split": "fake_audit",
+    "transcript": "HE|SAID|HE'S|IMPRESSED|BY|THE|SET|UP|AT|SELTIC|HE|SAD|HE'S|IM",
+    "ctc_usable": true
+  },
+  {
+    "file": "LA_T_1268827.flac",
+    "speaker": "LA_0079",
+    "attack": "A06",
+    "split": "fake_audit",
+    "transcript": "OBVIOUSLY|SOME|ONE|IS|NOT|TO|EXERT|JAW|PROPERLY|",
+    "ctc_usable": true
+  }
+]

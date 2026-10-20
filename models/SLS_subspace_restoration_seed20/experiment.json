@@ -1,0 +1,69 @@
+{
+  "config": {
+    "exp_name": "SLS_subspace_restoration_seed20",
+    "output_dir": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_subspace_restoration_seed20",
+    "seed": 20,
+    "rank": 16,
+    "train_data_path": "/root/rivermind-data/data/asv2019_la_train",
+    "train_label_path": "/root/rivermind-data/data/exp/ASVspoof2019.LA.cm.train.trn.txt",
+    "ssl_checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/pretrained/xlsr2_300m.pt",
+    "expected_pretrained_sha256": "b08927597f2c9eb2ebd7dcc3ac78ee4b5f6021cbac4b3a6c5a9deec445d80ed9",
+    "shared_warmup": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_conditional_residual_seed20/warmup.pth",
+    "expected_warmup_sha256": "32454f00414be2172ca7d84bfa631c3a8b551f45d415816354b0597645904742",
+    "matched_baseline_results": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_conditional_residual_seed20/evaluation_results.csv",
+    "warmup_epochs": 3,
+    "epochs": 10,
+    "milestones": [
+      4,
+      8,
+      10
+    ],
+    "batch_size": 16,
+    "eval_batch_size": 16,
+    "num_workers": 4,
+    "head_lr": 1e-06,
+    "ssl_lr": 1e-06,
+    "weight_decay": 0.0001,
+    "maximum_estimated_minutes": 90,
+    "domains": {
+      "ch": {
+        "label": "/root/rivermind-data/data/exp/decro_ch_eval.txt",
+        "root": "/root/rivermind-data/data"
+      },
+      "de": {
+        "label": "/root/rivermind-data/data/exp/mlaad_eval_de.txt",
+        "root": "/root/rivermind-data/data/mlaad"
+      },
+      "uk": {
+        "label": "/root/rivermind-data/datasets/mlaad_eval/mlaad_eval_uk.txt",
+        "archive": "/root/rivermind-data/datasets/mlaad_eval/mlaad_eval_uk_clip.zip",
+        "prefix": "data/ys/"
+      },
+      "es": {
+        "label": "/root/rivermind-data/datasets/mlaad_eval/mlaad_eval_es.txt",
+        "archive": "/root/rivermind-data/datasets/mlaad_eval/mlaad_eval_es_clip.zip",
+        "prefix": "data/ys/"
+      },
+      "itw": {
+        "label": "/root/rivermind-data/data/exp/itw.txt",
+        "archive": "/root/rivermind-data/datasets/itw/release_in_the_wild.zip",
+        "prefix": "release_in_the_wild/"
+      }
+    }
+  },
+  "signature": {
+    "config": "c1c5acc41595c36cad7672d1990b3243f7acb234f66b3872633feb9ec3adb4ea",
+    "model": "2f3fe561577363f7fa469752457b4b9941931c4defcf764223792758c349eb28",
+    "trainer": "346e13da24bbbf666d683b4bcb68cdb6c10d2e7d65b4aed6d042573aa8ff130f",
+    "test": "3998522023932a80e6fad72912300cef95583c512fb7b1308b482ded5c3260dd",
+    "original": "b08927597f2c9eb2ebd7dcc3ac78ee4b5f6021cbac4b3a6c5a9deec445d80ed9",
+    "warmup": "32454f00414be2172ca7d84bfa631c3a8b551f45d415816354b0597645904742",
+    "loader": "179789bbdb58de59c1eabcd3448f7b89e46b82e64dbeccc34b7812355340a234",
+    "data": "5a06d003f018d746ba62fdacf3b970b0dfcc6a0f1e4bc4cd7ea590d682fb064a",
+    "shared_model": "6bd7da7c52572044b4e30beb17e3ea8f2faa8cf95743d708dcf1ed10e486b1f0",
+    "source_labels": "06c2862679851d816173fbea8c0919012a68f95134529b705c049beef1276d2e",
+    "baseline": "71c37bfba45911ee0d8f42a2a3c42a14f704b6d7199794c3fc407f72ec1e8aab"
+  },
+  "policy": "all epochs4-10; min source classification loss; NO target early stop; NO automatic restart",
+  "original_subspace": "per utterance PCA; no target labels/cohort statistics; not verified pure content"
+}

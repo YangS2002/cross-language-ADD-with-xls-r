@@ -1,0 +1,57 @@
+PREFLIGHT {"signature": {"config": "c1c5acc41595c36cad7672d1990b3243f7acb234f66b3872633feb9ec3adb4ea", "model": "2f3fe561577363f7fa469752457b4b9941931c4defcf764223792758c349eb28", "trainer": "346e13da24bbbf666d683b4bcb68cdb6c10d2e7d65b4aed6d042573aa8ff130f", "test": "3998522023932a80e6fad72912300cef95583c512fb7b1308b482ded5c3260dd", "original": "b08927597f2c9eb2ebd7dcc3ac78ee4b5f6021cbac4b3a6c5a9deec445d80ed9", "warmup": "32454f00414be2172ca7d84bfa631c3a8b551f45d415816354b0597645904742", "loader": "179789bbdb58de59c1eabcd3448f7b89e46b82e64dbeccc34b7812355340a234", "data": "5a06d003f018d746ba62fdacf3b970b0dfcc6a0f1e4bc4cd7ea590d682fb064a", "shared_model": "6bd7da7c52572044b4e30beb17e3ea8f2faa8cf95743d708dcf1ed10e486b1f0", "source_labels": "06c2862679851d816173fbea8c0919012a68f95134529b705c049beef1276d2e", "baseline": "71c37bfba45911ee0d8f42a2a3c42a14f704b6d7199794c3fc407f72ec1e8aab"}, "training_minutes": 32.33628848179069, "evaluation_compute_minutes": 24.481233621394495, "io_margin_minutes": 10.0, "startup_save_margin_minutes": 5.0, "estimated_total_minutes": 71.81752210318518, "maximum_minutes": 90, "within_budget": true, "disk_budget_bytes": 3280811893, "free_bytes": 6184185856, "pressure": {"batch": 16, "rank": 16, "steps": 4, "initial_logprob_error": 0.0, "cache_equivalence_error": 0.003891468048095703, "source_cache_bytes_per_input": 490060, "evaluation_cache_bytes_per_input": 78412, "restoration_ratio_last": 0.2532794773578644, "seconds_per_step": 0.1590218404890038, "cold_training_seconds_per_batch": 0.2684129450353794, "inference_seconds_per_batch": 0.04986493496107869, "cold_inference_seconds_per_batch": 0.15855640004156157, "cache_bytes": 16936512, "reserved_gib": 12.587890625, "model_bytes": 1338507796, "signature": {"config": "c1c5acc41595c36cad7672d1990b3243f7acb234f66b3872633feb9ec3adb4ea", "model": "2f3fe561577363f7fa469752457b4b9941931c4defcf764223792758c349eb28", "test": "3998522023932a80e6fad72912300cef95583c512fb7b1308b482ded5c3260dd", "warmup": "32454f00414be2172ca7d84bfa631c3a8b551f45d415816354b0597645904742"}}, "reference_cache_bytes": 19570313556, "ram_limit_bytes": 107374182400, "ram_current_bytes": 37706493952, "policy": "one seed20 candidate; no baseline rerun, no target early stop, no optimizer recovery"}
+{'bonafide': 0, 'A01': 1, 'A02': 2, 'A03': 3, 'A04': 4, 'A05': 5, 'A06': 6} {'en'} 25380
+SLS_subspace_restoration_seed20
+/root/rivermind-data/cross-language-ADD-with-xls-r/fairseq-a54021305d6b3c4c5959ac9395135f63202db8f1/fairseq/checkpoint_utils.py:313: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(f, map_location=torch.device("cpu"))
+/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+PROGRESS 4 200 3200 0.054709065172355624
+PROGRESS 4 400 6400 0.03468816748165409
+PROGRESS 4 600 9600 0.024924155185362906
+PROGRESS 4 800 12800 0.019160795788998257
+PROGRESS 4 1000 16000 0.01555405167419849
+PROGRESS 4 1200 19200 0.013580080284007938
+PROGRESS 4 1400 22400 0.011721362079116652
+EPOCH {"arm": "psr", "seed": 20, "epoch": 4, "train_loss": 0.012428662073864873, "accuracy": 0.9983845547675335, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "seconds": 447.48305352800526, "reserved_gib": 11.453125, "grad_norm_last": 0.009517550468444824, "restoration_ratio_real": 0.29665589477260446, "restoration_ratio_fake": 0.3056426784030178, "parallel_fraction_real": 0.39892144077565783, "parallel_fraction_fake": 0.44111398816631553, "difference_ratio_real": 0.4945730918628532, "difference_ratio_fake": 0.46803479574751433, "explained": 0.7590134398593407, "protected_error": 0.0014823813673176336, "effective_rank": 16.0, "nll_real": 0.019811256576325244, "nll_fake": 0.005752706052016149, "selected": true, "free_bytes": 4845506560}
+EVAL {"arm": "psr", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "ch", "eer": 14.97958743255331, "threshold": -3.580028533935547, "samples": 18124, "seconds": 185.11294727097265}
+EVAL {"arm": "psr", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "de", "eer": 18.82348461617091, "threshold": -0.9547401666641235, "samples": 17696, "seconds": 179.2652686399524}
+EVAL {"arm": "psr", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "uk", "eer": 21.382291356976, "threshold": -1.3018629550933838, "samples": 9709, "seconds": 100.03887718095211}
+EVAL {"arm": "psr", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "es", "eer": 10.069523451754856, "threshold": -0.5359705686569214, "samples": 13655, "seconds": 138.97732541000005}
+EVAL {"arm": "psr", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "itw", "eer": 9.682350398338484, "threshold": -5.931125640869141, "samples": 31779, "seconds": 322.89921839302406}
+PROGRESS 5 200 3200 6.396064883574581e-05
+PROGRESS 5 400 6400 0.004402611908252538
+PROGRESS 5 600 9600 0.0029796339181492235
+PROGRESS 5 800 12800 0.0025207682569569558
+PROGRESS 5 1000 16000 0.0020269992245455343
+PROGRESS 5 1200 19200 0.0017411054518712869
+PROGRESS 5 1400 22400 0.0015660682424395744
+EPOCH {"arm": "psr", "seed": 20, "epoch": 5, "train_loss": 0.0013893805714131511, "accuracy": 0.9998817966903073, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "seconds": 264.1970784389996, "reserved_gib": 11.453125, "grad_norm_last": 0.000508542696479708, "restoration_ratio_real": 0.3432155381570491, "restoration_ratio_fake": 0.3564262628293874, "parallel_fraction_real": 0.30460388960186824, "parallel_fraction_fake": 0.38522774602760346, "difference_ratio_real": 0.635251785329608, "difference_ratio_fake": 0.5759388798579835, "explained": 0.7590134408926758, "protected_error": 0.001589951674575742, "effective_rank": 16.0, "nll_real": 0.003147083117400473, "nll_fake": 0.00030165993677257034, "selected": true, "free_bytes": 4845486080}
+PROGRESS 6 200 3200 0.01051935876242169
+PROGRESS 6 400 6400 0.0052755043357137765
+PROGRESS 6 600 9600 0.0035221275034168307
+PROGRESS 6 800 12800 0.0026449132267453023
+PROGRESS 6 1000 16000 0.0021184763026856216
+PROGRESS 6 1200 19200 0.0017696541410361514
+PROGRESS 6 1400 22400 0.0015178861057367904
+EPOCH {"arm": "psr", "seed": 20, "epoch": 6, "train_loss": 0.0013403156840148531, "accuracy": 0.9999605988967691, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "seconds": 262.7152492130408, "reserved_gib": 11.453125, "grad_norm_last": 0.0003965559008065611, "restoration_ratio_real": 0.3414681784404341, "restoration_ratio_fake": 0.3600683305190321, "parallel_fraction_real": 0.2903090928933879, "parallel_fraction_fake": 0.36328148504098257, "difference_ratio_real": 0.6475100777523463, "difference_ratio_fake": 0.5994941760991749, "explained": 0.7590134415878284, "protected_error": 0.0015984300537940505, "effective_rank": 16.0, "nll_real": 0.0021806638438392582, "nll_fake": 2.5150714690218527e-05, "selected": true, "free_bytes": 4845486080}
+PROGRESS 7 200 3200 4.296142319333285e-06
+PROGRESS 7 400 6400 4.303923645920804e-06
+PROGRESS 7 600 9600 4.011420874595236e-06
+PROGRESS 7 800 12800 0.0006844658581101903
+PROGRESS 7 1000 16000 0.000549451915577734
+PROGRESS 7 1200 19200 0.00045915013896368135
+PROGRESS 7 1400 22400 0.00039425236653436004
+EPOCH {"arm": "psr", "seed": 20, "epoch": 7, "train_loss": 0.00034844183538551376, "accuracy": 0.9999605988967691, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "seconds": 264.59486561699305, "reserved_gib": 11.453125, "grad_norm_last": 4.7877747419988737e-05, "restoration_ratio_real": 0.3608192207508309, "restoration_ratio_fake": 0.3784059110231567, "parallel_fraction_real": 0.3064341038321109, "parallel_fraction_fake": 0.3503722156244412, "difference_ratio_real": 0.6638766749884731, "difference_ratio_fake": 0.6412959021539019, "explained": 0.7590134397372192, "protected_error": 0.001669638093606436, "effective_rank": 16.0, "nll_real": 0.0009316810134009647, "nll_fake": 1.148562520415808e-05, "selected": true, "free_bytes": 4845473792}
+PROGRESS 8 200 3200 2.8257784346408245e-06
+PROGRESS 8 400 6400 3.137149391818639e-06
+PROGRESS 8 600 9600 2.684234219406297e-06
+PROGRESS 8 800 12800 3.399725351121319e-05
+PROGRESS 8 1000 16000 2.7500596927296784e-05
+PROGRESS 8 1200 19200 2.3087390373248695e-05
+PROGRESS 8 1400 22400 2.0006556986196244e-05
+EPOCH {"arm": "psr", "seed": 20, "epoch": 8, "train_loss": 1.8636950993491264e-05, "accuracy": 1.0, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "seconds": 263.51881024899194, "reserved_gib": 11.453125, "grad_norm_last": 9.429260899196379e-06, "restoration_ratio_real": 0.3750546740700108, "restoration_ratio_fake": 0.388386332288123, "parallel_fraction_real": 0.3123464177918527, "parallel_fraction_fake": 0.3430359677735128, "difference_ratio_real": 0.682686920267667, "difference_ratio_fake": 0.6647524322543228, "explained": 0.7590134396526736, "protected_error": 0.0017087198949291996, "effective_rank": 16.0, "nll_real": 3.65654002634202e-05, "nll_fake": 3.2875247829292025e-06, "selected": true, "free_bytes": 4845469696}
+EVAL {"arm": "psr", "seed": 20, "milestone": 8, "checkpoint_epoch": 8, "domain": "ch", "eer": 15.470653226000374, "threshold": -8.426000595092773, "samples": 18124, "seconds": 62.59969965304481}
+EVAL {"arm": "psr", "seed": 20, "milestone": 8, "checkpoint_epoch": 8, "domain": "de", "eer": 17.12251865480936, "threshold": -4.758614540100098, "samples": 17696, "seconds": 61.42882951098727}
+EVAL {"arm": "psr", "seed": 20, "milestone": 8, "checkpoint_epoch": 8, "domain": "uk", "eer": 27.96386069229136, "threshold": -6.140827178955078, "samples": 9709, "seconds": 35.44770918204449}
+EVAL {"arm": "psr", "seed": 20, "milestone": 8, "checkpoint_epoch": 8, "domain": "es", "eer": 11.973693248899862, "threshold": -4.495595932006836, "samples": 13655, "seconds": 48.247621797956526}
+EVAL {"arm": "psr", "seed": 20, "milestone": 8, "checkpoint_epoch": 8, "domain": "itw", "eer": 9.01243701490954, "threshold": -9.648502349853516, "samples": 31779, "seconds": 109.51031095004873}

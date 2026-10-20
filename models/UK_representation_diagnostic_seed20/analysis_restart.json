@@ -1,0 +1,8 @@
+{
+  "pid": 2108,
+  "process_create_time": 1791461954.77,
+  "reason": "Materialize lazy NPZ once and CUDA CKA acceleration",
+  "features_reused": true,
+  "encoder_rerun": false,
+  "old_pid": 1978
+}

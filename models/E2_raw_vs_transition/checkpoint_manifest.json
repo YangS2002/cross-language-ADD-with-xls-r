@@ -1,0 +1,12 @@
+{
+  "transition_seed20": "models/E2_raw_vs_transition/transition_seed20/best_train_loss.pth",
+  "raw_layers_seed20": "models/E2_raw_vs_transition/raw_layers_seed20/best_train_loss.pth",
+  "transition_seed1001": "models/E2_raw_vs_transition/transition_seed1001/best_train_loss.pth",
+  "raw_layers_seed1001": "models/E2_raw_vs_transition/raw_layers_seed1001/best_train_loss.pth",
+  "transition_seed7": "models/E2_raw_vs_transition/transition_seed7/best_train_loss.pth",
+  "raw_layers_seed7": "models/E2_raw_vs_transition/raw_layers_seed7/best_train_loss.pth",
+  "transition_seed42": "models/E2_raw_vs_transition/transition_seed42/best_train_loss.pth",
+  "raw_layers_seed42": "models/E2_raw_vs_transition/raw_layers_seed42/best_train_loss.pth",
+  "transition_seed2026": "models/E2_raw_vs_transition/transition_seed2026/best_train_loss.pth",
+  "raw_layers_seed2026": "models/E2_raw_vs_transition/raw_layers_seed2026/best_train_loss.pth"
+}

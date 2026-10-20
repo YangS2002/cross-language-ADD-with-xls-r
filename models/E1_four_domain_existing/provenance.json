@@ -1,0 +1,42 @@
+{
+  "models": {
+    "M3_seed20": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M3_dual_transition_low_high_consistency_seed20_10ep/checkpoints/seed_20_best_train_loss.pth",
+      "checkpoint_sha256": "b6a2e3fd704b0045b914effb8fa653f2410bf4484071076d46fedfd7ddbd1174",
+      "seed": 20,
+      "epoch": 10,
+      "selection_metric": "train_loss",
+      "detector_type": "dual_transition_low_high_consistency"
+    },
+    "M3_seed1001": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M3_dual_transition_low_high_consistency_seed1001_10ep/checkpoints/seed_1001_best_train_loss.pth",
+      "checkpoint_sha256": "2c0a11213a506fd7f8e0686b409415870b42d6db31423d54a964df8994c4e9d8",
+      "seed": 1001,
+      "epoch": 10,
+      "selection_metric": "train_loss",
+      "detector_type": "dual_transition_low_high_consistency"
+    },
+    "M4_seed20": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M4_dual_transition_low_high_vector_adapter_seed20_10ep/checkpoints/seed_20_best_train_loss.pth",
+      "checkpoint_sha256": "4005e02952c6aec2fc7f5d8fdc3db74b696832b2a2aaf365bc634d99ac09489a",
+      "seed": 20,
+      "epoch": 10,
+      "selection_metric": "train_loss",
+      "detector_type": "dual_transition_low_high_vector_adapter"
+    },
+    "M4_seed1001": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M4_dual_transition_low_high_vector_adapter_seed1001_10ep/checkpoints/seed_1001_best_train_loss.pth",
+      "checkpoint_sha256": "a65cb6d83a79071d8a166b35a06da26e183e50df031390121f8f11fdde0a5993",
+      "seed": 1001,
+      "epoch": 9,
+      "selection_metric": "train_loss",
+      "detector_type": "dual_transition_low_high_vector_adapter"
+    }
+  },
+  "ssl_checkpoint": "/root/rivermind-fs/xlsr2_300m.pt",
+  "input_protocol": "torchaudio.load, data.pad first 64600 samples or repeat; no resampling; no augmentation",
+  "main_score": "softmax(mean(head_a_logits, head_b_logits))[:,1]",
+  "heads": "A and B diagnostics only; no selection",
+  "batch_size": 8,
+  "workers": 4
+}

@@ -1,0 +1,49 @@
+{
+  "status": "complete",
+  "started_at": "2026-10-11T19:55:21.6774025+08:00",
+  "archive_verified": true,
+  "candidates": [
+    {
+      "path": "C:\\Users\\26600\\Desktop\\研究生\\工作2\\cross_language_deepfake_audio_detection_with_xls-r\\cross-language-ADD-with-xls-r\\models\\M1a_local_transition_preservation_seed20_10ep\\checkpoints\\seed_20_best_train_loss.pth",
+      "bytes": 20134082,
+      "last_write_ticks": 639253479864179991,
+      "sha256": "8f3b734da91d7be37af59703a9d22c9ddf4a7d256be6de3f5d1805576b42724d"
+    },
+    {
+      "path": "C:\\Users\\26600\\Desktop\\研究生\\工作2\\cross_language_deepfake_audio_detection_with_xls-r\\cross-language-ADD-with-xls-r\\models\\M2_dual_transition_second_order_residual_seed20_10ep\\checkpoints\\seed_20_best_train_loss.pth",
+      "bytes": 32492810,
+      "last_write_ticks": 639254167809546557,
+      "sha256": "b1a8692fa0868aa3236c05c5c86d495c69240ea70ef3de59545b25d4466134f0"
+    },
+    {
+      "path": "C:\\Users\\26600\\Desktop\\研究生\\工作2\\cross_language_deepfake_audio_detection_with_xls-r\\cross-language-ADD-with-xls-r\\models\\M2_dual_transition_second_order_residual_seed1001_10ep\\checkpoints\\seed_1001_best_train_loss.pth",
+      "bytes": 32493914,
+      "last_write_ticks": 639254167961550561,
+      "sha256": "bb2f01a2ba04379b9b4a4a40f39c90a26bc8168ff474ba8a7781e619479876c8"
+    }
+  ],
+  "deleted": [
+    {
+      "path": "C:\\Users\\26600\\Desktop\\研究生\\工作2\\cross_language_deepfake_audio_detection_with_xls-r\\cross-language-ADD-with-xls-r\\models\\M1a_local_transition_preservation_seed20_10ep\\checkpoints\\seed_20_best_train_loss.pth",
+      "bytes": 20134082,
+      "last_write_ticks": 639253479864179991,
+      "sha256": "8f3b734da91d7be37af59703a9d22c9ddf4a7d256be6de3f5d1805576b42724d"
+    },
+    {
+      "path": "C:\\Users\\26600\\Desktop\\研究生\\工作2\\cross_language_deepfake_audio_detection_with_xls-r\\cross-language-ADD-with-xls-r\\models\\M2_dual_transition_second_order_residual_seed20_10ep\\checkpoints\\seed_20_best_train_loss.pth",
+      "bytes": 32492810,
+      "last_write_ticks": 639254167809546557,
+      "sha256": "b1a8692fa0868aa3236c05c5c86d495c69240ea70ef3de59545b25d4466134f0"
+    },
+    {
+      "path": "C:\\Users\\26600\\Desktop\\研究生\\工作2\\cross_language_deepfake_audio_detection_with_xls-r\\cross-language-ADD-with-xls-r\\models\\M2_dual_transition_second_order_residual_seed1001_10ep\\checkpoints\\seed_1001_best_train_loss.pth",
+      "bytes": 32493914,
+      "last_write_ticks": 639254167961550561,
+      "sha256": "bb2f01a2ba04379b9b4a4a40f39c90a26bc8168ff474ba8a7781e619479876c8"
+    }
+  ],
+  "deleted_bytes": 85120806,
+  "recovery": "Deleted training binaries were not archived and cannot be recovered from this records bundle",
+  "ended_at": "2026-10-11T19:55:21.7204779+08:00",
+  "remaining": []
+}

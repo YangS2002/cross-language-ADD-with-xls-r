@@ -1,0 +1,90 @@
+{
+  "models": {
+    "transition_seed20": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/transition_seed20/best_train_loss.pth",
+      "checkpoint_sha256": "bea6047fdd2604caed339659a9e57bdcb80a8f3cad4b181462e09454fa6cf905",
+      "seed": 20,
+      "epoch": 8,
+      "selection_metric": "train_loss",
+      "detector_type": "dual_transition"
+    },
+    "raw_layers_seed20": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/raw_layers_seed20/best_train_loss.pth",
+      "checkpoint_sha256": "2fc693c4e06ecc44947c48009a0d2db5258b032e0c16a5f631e24604db7899d8",
+      "seed": 20,
+      "epoch": 10,
+      "selection_metric": "train_loss",
+      "detector_type": "dual_transition"
+    },
+    "transition_seed1001": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/transition_seed1001/best_train_loss.pth",
+      "checkpoint_sha256": "9777a53b92441e3fc65cc4d8e2106e9b69e6fdf21836665bf8f4df71b8e82daa",
+      "seed": 1001,
+      "epoch": 8,
+      "selection_metric": "train_loss",
+      "detector_type": "dual_transition"
+    },
+    "raw_layers_seed1001": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/raw_layers_seed1001/best_train_loss.pth",
+      "checkpoint_sha256": "a57b5d247873bf9e37e1dc8fd3ca07a7c55b3bca54d8e612b38e26cafb1bb566",
+      "seed": 1001,
+      "epoch": 10,
+      "selection_metric": "train_loss",
+      "detector_type": "dual_transition"
+    },
+    "transition_seed7": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/transition_seed7/best_train_loss.pth",
+      "checkpoint_sha256": "bb3de2f14d431738ca7e57956babfe1d217dd6b5f3686edb19644d609937176c",
+      "seed": 7,
+      "epoch": 8,
+      "selection_metric": "train_loss",
+      "detector_type": "dual_transition"
+    },
+    "raw_layers_seed7": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/raw_layers_seed7/best_train_loss.pth",
+      "checkpoint_sha256": "d281b0b88ca006cc9a00d80249aa5df6cc82d7137f40730d73118dc2cd7ed694",
+      "seed": 7,
+      "epoch": 10,
+      "selection_metric": "train_loss",
+      "detector_type": "dual_transition"
+    },
+    "transition_seed42": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/transition_seed42/best_train_loss.pth",
+      "checkpoint_sha256": "ca4b7885671cec47cc1a96e6e3cd50cf3dd029ddbe9cbfeab6c13db78c131bb7",
+      "seed": 42,
+      "epoch": 10,
+      "selection_metric": "train_loss",
+      "detector_type": "dual_transition"
+    },
+    "raw_layers_seed42": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/raw_layers_seed42/best_train_loss.pth",
+      "checkpoint_sha256": "18f6d2d103c667093e7026d7e56cef78a19ca9214347da09b450007d40284d5b",
+      "seed": 42,
+      "epoch": 10,
+      "selection_metric": "train_loss",
+      "detector_type": "dual_transition"
+    },
+    "transition_seed2026": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/transition_seed2026/best_train_loss.pth",
+      "checkpoint_sha256": "c9cfbf34bdd0aceb5e898bf2932bb96a5c86972cbd5d6283906ac912f0e7b225",
+      "seed": 2026,
+      "epoch": 8,
+      "selection_metric": "train_loss",
+      "detector_type": "dual_transition"
+    },
+    "raw_layers_seed2026": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/raw_layers_seed2026/best_train_loss.pth",
+      "checkpoint_sha256": "ff236a1b2e99decf8a01a101c59c76e2ccefd4490be03aa037b5326a378ba933",
+      "seed": 2026,
+      "epoch": 10,
+      "selection_metric": "train_loss",
+      "detector_type": "dual_transition"
+    }
+  },
+  "ssl_checkpoint": "/root/rivermind-fs/xlsr2_300m.pt",
+  "input_protocol": "torchaudio.load, data.pad first 64600 samples or repeat; no resampling; no augmentation",
+  "main_score": "softmax(mean(head_a_logits, head_b_logits))[:,1]",
+  "heads": "A and B diagnostics only; no selection",
+  "batch_size": 8,
+  "workers": 4
+}

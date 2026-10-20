@@ -1,0 +1,12 @@
+DELETE_WEIGHT 1432228316 /root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_reference_variation_seed20/reference_variation/stage4_source_best.pth
+DELETE_WEIGHT 1432228316 /root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_reference_variation_seed20/reference_variation/best.pth
+DELETE_WEIGHT 1338645858 /root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_bounded_relation_seed20/bounded_relation/source_best_at_epoch4.pth
+DELETE_WEIGHT 1338645858 /root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_bounded_relation_seed20/bounded_relation/best.pth
+DELETE_WEIGHT 1338643170 /root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_conditional_residual_seed20/sls/best.pth
+DELETE_WEIGHT 1237866834 /root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_pretrained_query_seed20/pretrained_query/best.pth
+DELETE_WEIGHT 1137089154 /root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_pretrained_attention_seed20/pretrained_attention/source_best_at_epoch4.pth
+DELETE_WEIGHT 1137089154 /root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_pretrained_attention_seed20/pretrained_attention/best.pth
+DELETED_BYTES 10392436660 FILES 8
+KEPT original XLS-R, seed20 warmup, all datasets, CSV/JSON/logs/code
+Filesystem                                                         Size  Used Avail Use% Mounted on
+/dev/mapper/lvmdata-pvc--0b6c923f--b3c0--4548--a830--02db00491184   49G   31G   19G  63% /root/rivermind-data

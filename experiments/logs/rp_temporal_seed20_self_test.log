@@ -1,0 +1,18 @@
+{'bonafide': 0, 'A01': 1, 'A02': 2, 'A03': 3, 'A04': 4, 'A05': 5, 'A06': 6} {'en'} 25380
+RP_temporal_seed20
+UNIT_TEST_OK
+/root/rivermind-data/cross-language-ADD-with-xls-r/fairseq-a54021305d6b3c4c5959ac9395135f63202db8f1/fairseq/checkpoint_utils.py:313: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(f, map_location=torch.device("cpu"))
+/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/nn/modules/transformer.py:379: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+SELF_TEST_STEP ft 0 0.6811837553977966 0.0 1.3426011549890973
+SELF_TEST_STEP ft 1 0.2968725860118866 0.01255374401807785 0.22458600398385897
+SELF_TEST_STEP ft 2 0.18756361305713654 0.012636598199605942 0.22069579001981765
+SELF_TEST_MEMORY {"arm": "ft", "batch": 16, "pure_real_stress": true, "peak_allocated_gib": 13.127441883087158, "peak_reserved_gib": 13.65234375}
+SELF_TEST_STEP rp 0 0.6811837553977966 0.0 0.24961842596530914
+SELF_TEST_STEP rp 1 0.30459094047546387 0.01255374401807785 0.2166501299943775
+SELF_TEST_STEP rp 2 0.1953064352273941 0.012344032526016235 0.2225243980064988
+SELF_TEST_MEMORY {"arm": "rp", "batch": 16, "pure_real_stress": true, "peak_allocated_gib": 13.126984119415283, "peak_reserved_gib": 13.677734375}
+SELF_TEST_OK

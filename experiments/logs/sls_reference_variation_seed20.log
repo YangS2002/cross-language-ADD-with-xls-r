@@ -1,0 +1,37 @@
+{'bonafide': 0, 'A01': 1, 'A02': 2, 'A03': 3, 'A04': 4, 'A05': 5, 'A06': 6} {'en'} 25380
+SLS_reference_variation_seed20
+/root/rivermind-data/cross-language-ADD-with-xls-r/fairseq-a54021305d6b3c4c5959ac9395135f63202db8f1/fairseq/checkpoint_utils.py:313: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(f, map_location=torch.device("cpu"))
+/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+WARMUP_METADATA {}
+INITIAL_EQUIVALENCE fp32 0.0
+INITIAL_EQUIVALENCE bf16 0.0
+SELF_TEST_STEP 0 0.09294578433036804 102.69505310058594
+SELF_TEST_STEP 1 0.009846883825957775 2.9654788970947266
+SELF_TEST_STEP 2 0.006060256622731686 1.4797552824020386
+SELF_TEST_OK {"trainable_parameters": 358022279, "supplemental_parameters": 23395328, "reserved_gib": 13.57421875, "seconds": 24.508647772017866}
+EVIDENCE 4 20 0.00881590973585844 0.053666144609451294
+TIMING {"epoch": 4, "steps": 20, "seconds": 5.449803892057389, "estimated_epoch_seconds": 432.4419388347538, "estimate_only": true, "reserved_gib": 13.642578125}
+EVIDENCE 4 200 0.018003441393375397 0.05537674203515053
+PROGRESS {"epoch": 4, "batch": 200, "samples": 3200, "train_loss": 0.059034828461008146, "seconds": 46.61305817903485, "updated_at": "2026-10-09T06:53:58.898008+00:00"}
+EVIDENCE 4 400 0.04514126852154732 0.3905021846294403
+PROGRESS {"epoch": 4, "batch": 400, "samples": 6400, "train_loss": 0.03706532788572076, "seconds": 92.53704396111425, "updated_at": "2026-10-09T06:54:44.821916+00:00"}
+EVIDENCE 4 600 0.0875406339764595 0.6059821248054504
+PROGRESS {"epoch": 4, "batch": 600, "samples": 9600, "train_loss": 0.025647279821875296, "seconds": 138.58416348008905, "updated_at": "2026-10-09T06:55:30.869035+00:00"}
+EVIDENCE 4 800 0.06464975327253342 0.2665642499923706
+PROGRESS {"epoch": 4, "batch": 800, "samples": 12800, "train_loss": 0.019676173726178945, "seconds": 184.71693652507383, "updated_at": "2026-10-09T06:56:17.001791+00:00"}
+EVIDENCE 4 1000 0.08539124578237534 0.38972002267837524
+PROGRESS {"epoch": 4, "batch": 1000, "samples": 16000, "train_loss": 0.015797533324689313, "seconds": 230.45364006608725, "updated_at": "2026-10-09T06:57:02.738523+00:00"}
+EVIDENCE 4 1200 0.1068037897348404 0.7620824575424194
+PROGRESS {"epoch": 4, "batch": 1200, "samples": 19200, "train_loss": 0.013201692754375927, "seconds": 276.2040688440902, "updated_at": "2026-10-09T06:57:48.488949+00:00"}
+EVIDENCE 4 1400 0.10568765550851822 0.8741167187690735
+PROGRESS {"epoch": 4, "batch": 1400, "samples": 22400, "train_loss": 0.01132490976597755, "seconds": 321.9423428310547, "updated_at": "2026-10-09T06:58:34.227222+00:00"}
+EPOCH {"arm": "reference_variation", "seed": 20, "epoch": 4, "train_loss": 0.010377932437939623, "exact_weighted_nll": 0.010656672272093862, "accuracy": 0.9981875492513791, "recall_fake": 0.9985087719298246, "recall_real": 0.9953488372093023, "nll_fake": 0.005846464637720326, "nll_real": 0.0153798740701273, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 0.00014223450853023678, "seconds": 364.62927058909554, "reserved_gib": 13.671875, "selected": true, "free_bytes": 13668040704}
+EVAL {"arm": "reference_variation", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "ch", "eer": 17.088257318990756, "threshold": -4.774106502532959, "samples": 18124, "seconds": 121.73641705396585}
+EVAL {"arm": "reference_variation", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "de", "eer": 16.455698660942453, "threshold": -0.2383444905281067, "samples": 17696, "seconds": 119.09626605804078}
+EVAL {"arm": "reference_variation", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "uk", "eer": 28.375602038649394, "threshold": -1.043550968170166, "samples": 9709, "seconds": 65.7775839169044}
+EVAL {"arm": "reference_variation", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "es", "eer": 14.888386819791776, "threshold": -0.33487993478775024, "samples": 13655, "seconds": 92.0370859260438}
+EVAL {"arm": "reference_variation", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "itw", "eer": 8.571988637679775, "threshold": -3.3633573055267334, "samples": 31779, "seconds": 213.28100187599193}
+DECISION {"epoch": 4, "stop": true, "reason": "preregistered_severe_stage4_failure", "per_domain": {"ch": 17.088257318990756, "de": 16.455698660942453, "uk": 28.375602038649394, "es": 14.888386819791776, "itw": 8.571988637679775}, "historical": {"sls": {"ch": 12.54076604059407, "de": 13.969303894510887, "uk": 18.395158207687405, "es": 6.788800042932275, "itw": 8.260133989926048}, "query": {"ch": 13.093700670309872, "de": 15.257722579985689, "uk": 13.039430877043955, "es": 5.214205216271332, "itw": 10.358999965779617}, "attention": {"ch": 12.668665177967164, "de": 11.99145456403966, "uk": 12.740779358674878, "es": 5.082301169904476, "itw": 11.356744998558776}}, "gaps": {"sls": {"ch": 4.547491278396686, "de": 2.486394766431566, "uk": 9.980443830961988, "es": 8.099586776859502, "itw": 0.3118546477537265}, "query": {"ch": 3.9945566486808843, "de": 1.1979760809567637, "uk": 15.336171161605439, "es": 9.674181603520445, "itw": -1.787011328099842}, "attention": {"ch": 4.4195921410235925, "de": 4.464244096902792, "uk": 15.634822679974516, "es": 9.8060856498873, "itw": -2.784756360879001}}, "cross_mean": 19.201986209593596, "worst_cross": 28.375602038649394, "ch_de_joint": 16.771977989966604, "paper_sls_gaps": {"ch": 4.828257318990756, "de": -3.254301339057548, "uk": 7.245602038649395, "es": 5.198386819791777, "itw": 1.111988637679775}, "paper_mamba_gaps": {"ch": -0.23174268100924422, "de": -7.114301339057548, "uk": 16.485602038649393, "es": -0.9416131802082237, "itw": 1.861988637679775}, "difference_from_historical_sls_epoch4": 6.278486209593595, "promising_for_fixed_multiseed": false, "eligible_for_automatic_multiseed": false, "single_seed_is_not_stability_evidence": true}
+STOPPED_POOR_RESULTS

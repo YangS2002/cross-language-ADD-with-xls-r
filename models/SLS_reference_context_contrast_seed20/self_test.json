@@ -1,0 +1,37 @@
+{
+  "seconds": 34.9095617251005,
+  "source_mean_seconds": 9.399984920979477,
+  "source_updates": 1,
+  "self_tests": {
+    "gradcheck": true,
+    "permutation_invariant": true,
+    "constant_equals_supcon": true,
+    "empty_pairs_finite": true,
+    "one_real_finite": true,
+    "large_features_finite": true,
+    "reference_gradient": false,
+    "bounded_weights": true
+  },
+  "auxiliary_max_score_error": 0.0,
+  "source_nll": 0.09294578433036804,
+  "grad_norm": 96.40834045410156,
+  "auxiliary": {
+    "valid_fake": 8,
+    "valid_real": 8,
+    "samples_fake": 8,
+    "samples_real": 8,
+    "empty_valid": 0,
+    "context_std": 0.15451295673847198,
+    "negative_weight_mean": 0.9284033179283142,
+    "negative_weight_min": 0.8198873996734619,
+    "negative_weight_max": 1.031909465789795,
+    "positive_weight_ratio": 1.2101556062698364,
+    "classification_loss": 0.09294578433036804,
+    "contrast_loss": 2.1349964141845703,
+    "total_loss": 0.11429575085639954
+  },
+  "inference_auxiliary_disabled": true,
+  "reference_gradient": false,
+  "trainable_parameters": 284246149,
+  "reserved_gib": 8.705078125
+}

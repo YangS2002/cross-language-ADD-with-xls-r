@@ -1,0 +1,19 @@
+{
+  "epoch": 8,
+  "seed": 20,
+  "stop": false,
+  "reason": "fixed_epoch8_complete",
+  "per_domain": {
+    "ch": 16.106125732096626,
+    "de": 10.669119901870591,
+    "uk": 25.3784688893608,
+    "es": 10.926344316840185,
+    "itw": 15.641875858964676
+  },
+  "cross_mean": 15.770014710042052,
+  "worst_cross": 25.3784688893608,
+  "ch_de_joint": 13.387622816983608,
+  "relation_weight": 0.05,
+  "checkpoint_selected_by": "minimum_complete_source_classification_loss",
+  "target_checkpoint_or_seed_selection": false
+}

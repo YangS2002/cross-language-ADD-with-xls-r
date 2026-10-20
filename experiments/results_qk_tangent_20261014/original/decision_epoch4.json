@@ -1,0 +1,18 @@
+{
+  "epoch": 4,
+  "seed": 20,
+  "stop": false,
+  "reason": "continue_fixed_training",
+  "per_domain": {
+    "ch": 12.668665177967164,
+    "de": 11.99145456403966,
+    "uk": 12.740779358674878,
+    "es": 5.082301169904476,
+    "itw": 11.356744998558776
+  },
+  "cross_mean": 10.620800067646543,
+  "worst_cross": 12.740779358674878,
+  "backbone_mode": "original",
+  "eligible_for_fixed_multiseed": false,
+  "target_checkpoint_or_seed_selection": false
+}

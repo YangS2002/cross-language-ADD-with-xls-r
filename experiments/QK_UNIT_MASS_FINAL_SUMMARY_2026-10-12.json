@@ -1,0 +1,64 @@
+{
+  "seed": 20,
+  "milestone": 8,
+  "checkpoint_epoch": 8,
+  "metrics": {
+    "original_qk": {
+      "per_domain": {
+        "ch": 13.320645259339505,
+        "de": 9.623668608811203,
+        "uk": 15.26431726481206,
+        "es": 6.202930127723516,
+        "itw": 9.01243701490954
+      },
+      "cross_mean": 11.102890315171571,
+      "worst_cross": 15.26431726481206,
+      "ch_de_joint": 11.472156934075354
+    },
+    "original_query": {
+      "per_domain": {
+        "ch": 11.40590481137951,
+        "de": 13.54545129305939,
+        "uk": 21.217347632193672,
+        "es": 7.784667811527315,
+        "itw": 7.523807966539045
+      },
+      "cross_mean": 13.488342887039972,
+      "worst_cross": 21.217347632193672,
+      "ch_de_joint": 12.47567805221945
+    },
+    "unit_mass": {
+      "per_domain": {
+        "ch": 13.324806724175126,
+        "de": 11.375411427987325,
+        "uk": 23.143582501592697,
+        "es": 9.015031662552325,
+        "itw": 10.214429234707092
+      },
+      "cross_mean": 14.214708079076868,
+      "worst_cross": 23.143582501592697,
+      "ch_de_joint": 12.350109076081225
+    }
+  },
+  "gaps_vs_original_qk": {
+    "ch": 0.004161464835620521,
+    "de": 1.7517428191761226,
+    "uk": 7.879265236780636,
+    "es": 2.812101534828809,
+    "itw": 1.2019922197975514
+  },
+  "cross_mean_gap_vs_original_qk": 3.1118177639052966,
+  "decision": "failed_seed20_screen_do_not_expand",
+  "source_only_training": true,
+  "full_five_domain_evaluation": true,
+  "new_multiseed_runs_started": false,
+  "completed_status": {
+    "status": "complete",
+    "seed": 20,
+    "epoch": 8,
+    "best_epoch": 8,
+    "best_source_loss": 1.972535510134478e-06,
+    "ended_at": "2026-10-12T09:51:07.535341+00:00",
+    "eligible_for_fixed_multiseed": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "config": {
+    "exp_name": "M5_deterministic_transition",
+    "output_dir": "models/M5_deterministic_transition",
+    "train_data_path": "/root/rivermind-data/data/asv2019_la_train",
+    "train_label_path": "/root/rivermind-data/data/exp/ASVspoof2019.LA.cm.train.trn.txt",
+    "dev_data_path": "/root/rivermind-data/data",
+    "dev_label_path": "/root/rivermind-data/data/exp/decro_ch_eval.txt",
+    "test_data_path": "/root/rivermind-data/data/mlaad",
+    "test_label_path": "/root/rivermind-data/data/exp/mlaad_eval_de.txt",
+    "ssl_checkpoint": "/root/rivermind-fs/xlsr2_300m.pt",
+    "batch_size": 8,
+    "num_workers": 4,
+    "amp": true,
+    "seeds": [
+      20,
+      1001
+    ],
+    "l2": 0.001,
+    "fake_weight": 0.1,
+    "real_weight": 0.9,
+    "max_iter": 500,
+    "gradient_tolerance": 1e-06,
+    "initial_std": 0.01,
+    "feature": "normalized_adjacent_transition_mean_std"
+  },
+  "signature": {
+    "tools/run_m5_deterministic_transition.py": "430af6f5f632949f5e2988732e3a0e24824ec9076fe0c4178aba1e771953c88b",
+    "src/model.py": "63dec85e3df6fb64b1d1c0965c080a46375b979b075d6863902321b17d758c96",
+    "data.py": "5a06d003f018d746ba62fdacf3b970b0dfcc6a0f1e4bc4cd7ea590d682fb064a",
+    "ssl_checkpoint_sha256": "b08927597f2c9eb2ebd7dcc3ac78ee4b5f6021cbac4b3a6c5a9deec445d80ed9"
+  },
+  "torch": "2.5.1+cu121",
+  "numpy": "1.23.5"
+}

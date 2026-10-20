@@ -1,0 +1,70 @@
+{
+  "backbone_states": [
+    "F0: frozen original",
+    "F4: original-QK epoch4",
+    "F8: original-QK epoch8"
+  ],
+  "heads": [
+    "g3: source warmup",
+    "g4: epoch4",
+    "g8: epoch8",
+    "g8_bn4/g4_bn8: only BN running buffers crossed"
+  ],
+  "combinations": [
+    [
+      "F0",
+      "g3"
+    ],
+    [
+      "F0",
+      "g4"
+    ],
+    [
+      "F0",
+      "g8"
+    ],
+    [
+      "F4",
+      "g3"
+    ],
+    [
+      "F4",
+      "g4"
+    ],
+    [
+      "F4",
+      "g8"
+    ],
+    [
+      "F8",
+      "g3"
+    ],
+    [
+      "F8",
+      "g4"
+    ],
+    [
+      "F8",
+      "g8"
+    ],
+    [
+      "F4",
+      "g8_bn4"
+    ],
+    [
+      "F4",
+      "g4_bn8"
+    ],
+    [
+      "F8",
+      "g8_bn4"
+    ],
+    [
+      "F8",
+      "g4_bn8"
+    ]
+  ],
+  "training": false,
+  "input_protocol": "Full official uk protocol",
+  "caveat": "Endpoint hybrids may be off-distribution. This separates inference compatibility, not independent causal contributions of training. Relative parameter norms are not functional attribution."
+}

@@ -1,0 +1,11 @@
+{
+  "config": "/root/rivermind-data/cross-language-ADD-with-xls-r/experiments/configs/dual_transition_relation_seed20.yaml",
+  "seed": 2026,
+  "samples": 256,
+  "samples_per_class": 128,
+  "num_layers": 24,
+  "feature": "temporal mean + standard deviation per frozen XLS-R layer",
+  "recommended_split_after_layer": 21,
+  "minimum_adjacent_cka": 0.35805473946841143,
+  "selection_rule": "largest adjacent representation change, excluding the first and last two layers; training data only"
+}

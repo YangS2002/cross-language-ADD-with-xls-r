@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-12",
+  "destination": "root@hn01-ssh.gpuhome.cc:30307",
+  "remote_root": "/root/rivermind-data/cross-language-ADD-with-xls-r",
+  "state": "experiment_complete_failed_seed20_screen",
+  "files": [
+    {
+      "path": "tools/audit_qk_unit_support.py",
+      "bytes": 8114,
+      "sha256": "cfa05d41d8acd91145fcddc3e50753ac477170ce6973af5a35a15417c76bd7a4"
+    },
+    {
+      "path": "tools/sls_unit_mass_model.py",
+      "bytes": 9329,
+      "sha256": "6b88d05c8243bf58c8b7e1d44bb2e2752e9fb45a7402b703c25a64ddcb7d2faf"
+    },
+    {
+      "path": "tools/train_sls_unit_mass.py",
+      "bytes": 10837,
+      "sha256": "82224b70172092e893979262c669e491723e48fa1b764651b36d60f645601fa3"
+    },
+    {
+      "path": "experiments/configs/sls_unit_mass_seed20_20261012.yaml",
+      "bytes": 2229,
+      "sha256": "0baf6a109dffac32be2e70d6776bfbd56ce459eb4a84aae6c501e416f6a65858"
+    }
+  ],
+  "local_verification": {
+    "python_ast_syntax": "passed",
+    "protocol_config_block_comparison": "passed",
+    "yaml_runtime_parse": "passed_remote",
+    "torch_execution": "not_run_local_dependency_unavailable"
+  },
+  "gpu_experiment_started": true,
+  "source_unit_audit": "completed",
+  "formal_process_launched": true,
+  "formal_output": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_unit_mass_seed20_20261012_v2",
+  "cuda_preflight": "passed",
+  "initial_preflight_failures_retained": true,
+  "training_complete": true,
+  "full_five_domain_evaluation": true,
+  "new_seeds_started": false,
+  "local_result_records_synced": true
+}

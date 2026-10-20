@@ -1,0 +1,8 @@
+{
+  "pid": 6030,
+  "process_create_time": 1791557430.89,
+  "log": "/root/rivermind-data/cross-language-ADD-with-xls-r/experiments/logs/sls_relation_neighborhood_seed20.log",
+  "config": "/root/rivermind-data/cross-language-ADD-with-xls-r/experiments/configs/sls_relation_neighborhood_seed20.yaml",
+  "port": 30646,
+  "unix_started_at": 1791557431.6498268
+}

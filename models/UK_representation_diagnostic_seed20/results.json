@@ -1,0 +1,1278 @@
+{
+  "results": [
+    {
+      "kind": "native",
+      "model": "original",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "test",
+      "n": 1196,
+      "real": 125,
+      "eer": 1.5936507936507935,
+      "auc": 0.9981325863678805,
+      "eer_group_bootstrap_95": [
+        0.0,
+        2.4342838180568394
+      ],
+      "converged": true,
+      "iterations": 0
+    },
+    {
+      "kind": "native",
+      "model": "original",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 11.731191167103121,
+      "auc": 0.9513739799676525,
+      "eer_group_bootstrap_95": [
+        10.134920634920636,
+        12.946463429922868
+      ],
+      "converged": true,
+      "iterations": 0
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer08",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "validation",
+      "n": 1238,
+      "real": 114,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 74
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer08",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "test",
+      "n": 1196,
+      "real": 125,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 74
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer08",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 31.142015296526935,
+      "auc": 0.7387386634346137,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 74
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer08",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 24.272379109947234,
+      "auc": 0.84900244571842,
+      "eer_group_bootstrap_95": [
+        14.30952380952381,
+        28.11817435516842
+      ],
+      "converged": true,
+      "iterations": 74
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer08",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 15
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer08",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 15
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer16",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "validation",
+      "n": 1238,
+      "real": 114,
+      "eer": 0.8834363488793157,
+      "auc": 0.9996800274708123,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 85
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer16",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "test",
+      "n": 1196,
+      "real": 125,
+      "eer": 0.09337068160597572,
+      "auc": 0.9999626517273577,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.18181818181818182
+      ],
+      "converged": true,
+      "iterations": 85
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer16",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 37.57136289547374,
+      "auc": 0.6521795461194466,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 85
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer16",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 27.26661476396065,
+      "auc": 0.8022375833261246,
+      "eer_group_bootstrap_95": [
+        21.571428571428573,
+        33.985562310030396
+      ],
+      "converged": true,
+      "iterations": 85
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer16",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 19
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer16",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 19
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer24",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "validation",
+      "n": 1238,
+      "real": 114,
+      "eer": 0.6610164200536929,
+      "auc": 0.9999297621277393,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 111
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer24",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "test",
+      "n": 1196,
+      "real": 125,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 111
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer24",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 34.53838759560329,
+      "auc": 0.7054749864170183,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 111
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer24",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 25.322622502182274,
+      "auc": 0.8154989868486932,
+      "eer_group_bootstrap_95": [
+        19.023809523809522,
+        31.788508018544064
+      ],
+      "converged": true,
+      "iterations": 111
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer24",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 41
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer24",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 41
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "sls_aggregate",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "validation",
+      "n": 1238,
+      "real": 114,
+      "eer": 0.749984391583942,
+      "auc": 0.9999219579197104,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 119
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "sls_aggregate",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "test",
+      "n": 1196,
+      "real": 125,
+      "eer": 0.04668534080298786,
+      "auc": 0.9999850606909431,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.12022996243097904
+      ],
+      "converged": true,
+      "iterations": 119
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "sls_aggregate",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 33.81535503824132,
+      "auc": 0.7067538763739708,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 119
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "sls_aggregate",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 24.75837717539183,
+      "auc": 0.846045564284647,
+      "eer_group_bootstrap_95": [
+        13.984126984126984,
+        27.135065266704668
+      ],
+      "converged": true,
+      "iterations": 119
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "sls_aggregate",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 23
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "sls_aggregate",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 23
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "validation",
+      "n": 1238,
+      "real": 114,
+      "eer": 1.7668726977586313,
+      "auc": 0.9989152150839733,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 56
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "test",
+      "n": 1196,
+      "real": 125,
+      "eer": 0.8201680672268906,
+      "auc": 0.9989915966386554,
+      "eer_group_bootstrap_95": [
+        0.09090909090909091,
+        2.4342838180568394
+      ],
+      "converged": true,
+      "iterations": 56
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 19.002591214945458,
+      "auc": 0.8951038575667657,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 56
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 16.747666344240766,
+      "auc": 0.9143107294427275,
+      "eer_group_bootstrap_95": [
+        10.67629179331307,
+        18.472023046607955
+      ],
+      "converged": true,
+      "iterations": 56
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "classifier_embedding",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 0.1446065114723952,
+      "auc": 0.9999937309315836,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 29
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "classifier_embedding",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.16199935514819797,
+      "auc": 0.9999973786512112,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.3253968253968254
+      ],
+      "converged": true,
+      "iterations": 29
+    },
+    {
+      "kind": "native",
+      "model": "finetuned",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "test",
+      "n": 1196,
+      "real": 125,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 0
+    },
+    {
+      "kind": "native",
+      "model": "finetuned",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 25.808620567626868,
+      "auc": 0.8282544700550222,
+      "eer_group_bootstrap_95": [
+        9.648148148148147,
+        36.084592138405014
+      ],
+      "converged": true,
+      "iterations": 0
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer08",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "validation",
+      "n": 1238,
+      "real": 114,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 63
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer08",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "test",
+      "n": 1196,
+      "real": 125,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 63
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer08",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 31.28662180799933,
+      "auc": 0.7163977932879174,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 63
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer08",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 32.68533591274054,
+      "auc": 0.7385466718045104,
+      "eer_group_bootstrap_95": [
+        16.53174603174603,
+        47.0605174512523
+      ],
+      "converged": true,
+      "iterations": 63
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer08",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 16
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer08",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 16
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer16",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "validation",
+      "n": 1238,
+      "real": 114,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 48
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer16",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "test",
+      "n": 1196,
+      "real": 125,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 48
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer16",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 30.129769716220167,
+      "auc": 0.736139089731266,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 48
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer16",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 34.70757543586477,
+      "auc": 0.7156544328318692,
+      "eer_group_bootstrap_95": [
+        16.87830354044908,
+        51.45925082484459
+      ],
+      "converged": true,
+      "iterations": 48
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer16",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 17
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer16",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 17
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer24",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "validation",
+      "n": 1238,
+      "real": 114,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 54
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer24",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "test",
+      "n": 1196,
+      "real": 125,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 54
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer24",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 28.03485602039537,
+      "auc": 0.759750491077026,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 54
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer24",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 33.98133075392612,
+      "auc": 0.719222088533434,
+      "eer_group_bootstrap_95": [
+        15.013227513227513,
+        55.28486933937946
+      ],
+      "converged": true,
+      "iterations": 54
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer24",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 0.1446065114723952,
+      "auc": 0.9999958206210557,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 24
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer24",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 24
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "sls_aggregate",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "validation",
+      "n": 1238,
+      "real": 114,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 47
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "sls_aggregate",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "test",
+      "n": 1196,
+      "real": 125,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 47
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "sls_aggregate",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 27.31182346303339,
+      "auc": 0.7854327746896812,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 47
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "sls_aggregate",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 30.339097679319917,
+      "auc": 0.776357006734245,
+      "eer_group_bootstrap_95": [
+        13.007936507936508,
+        41.93675464993697
+      ],
+      "converged": true,
+      "iterations": 47
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "sls_aggregate",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 23
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "sls_aggregate",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 23
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "validation",
+      "n": 1238,
+      "real": 114,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 25
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "evaluated_on": "a",
+      "split": "test",
+      "n": 1196,
+      "real": 125,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 25
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 25.795335813098173,
+      "auc": 0.8152505537677102,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 25
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 27.26661476396065,
+      "auc": 0.8078944540123675,
+      "eer_group_bootstrap_95": [
+        11.978835978835978,
+        37.80861829127006
+      ],
+      "converged": true,
+      "iterations": 25
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "classifier_embedding",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "validation",
+      "n": 1384,
+      "real": 674,
+      "eer": 0.2892130229447904,
+      "auc": 0.99997074434739,
+      "eer_group_bootstrap_95": null,
+      "converged": true,
+      "iterations": 23
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "classifier_embedding",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.16199935514819797,
+      "auc": 0.9999947573024224,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.24250881316098707
+      ],
+      "converged": true,
+      "iterations": 23
+    }
+  ],
+  "cka": [
+    {
+      "domain": "a",
+      "stage": "layer08",
+      "subset": "both",
+      "n": 1000,
+      "cka": 0.6461114383420248
+    },
+    {
+      "domain": "a",
+      "stage": "layer08",
+      "subset": "real",
+      "n": 609,
+      "cka": 0.9931022291075985
+    },
+    {
+      "domain": "a",
+      "stage": "layer08",
+      "subset": "fake",
+      "n": 1000,
+      "cka": 0.856605725022072
+    },
+    {
+      "domain": "a",
+      "stage": "layer16",
+      "subset": "both",
+      "n": 1000,
+      "cka": 0.6313447980028217
+    },
+    {
+      "domain": "a",
+      "stage": "layer16",
+      "subset": "real",
+      "n": 609,
+      "cka": 0.9761986529839827
+    },
+    {
+      "domain": "a",
+      "stage": "layer16",
+      "subset": "fake",
+      "n": 1000,
+      "cka": 0.8661974192295887
+    },
+    {
+      "domain": "a",
+      "stage": "layer24",
+      "subset": "both",
+      "n": 1000,
+      "cka": 0.4303377545400315
+    },
+    {
+      "domain": "a",
+      "stage": "layer24",
+      "subset": "real",
+      "n": 609,
+      "cka": 0.7587718072538613
+    },
+    {
+      "domain": "a",
+      "stage": "layer24",
+      "subset": "fake",
+      "n": 1000,
+      "cka": 0.4223045612227529
+    },
+    {
+      "domain": "a",
+      "stage": "sls_aggregate",
+      "subset": "both",
+      "n": 1000,
+      "cka": 0.2182670644891999
+    },
+    {
+      "domain": "a",
+      "stage": "sls_aggregate",
+      "subset": "real",
+      "n": 609,
+      "cka": 0.5027985876304709
+    },
+    {
+      "domain": "a",
+      "stage": "sls_aggregate",
+      "subset": "fake",
+      "n": 1000,
+      "cka": 0.36770914710311237
+    },
+    {
+      "domain": "a",
+      "stage": "classifier_embedding",
+      "subset": "both",
+      "n": 1000,
+      "cka": 0.45866020399888474
+    },
+    {
+      "domain": "a",
+      "stage": "classifier_embedding",
+      "subset": "real",
+      "n": 609,
+      "cka": 0.7406617571597058
+    },
+    {
+      "domain": "a",
+      "stage": "classifier_embedding",
+      "subset": "fake",
+      "n": 1000,
+      "cka": 0.34776622538844487
+    },
+    {
+      "domain": "uk",
+      "stage": "layer08",
+      "subset": "both",
+      "n": 1000,
+      "cka": 0.8611288214718141
+    },
+    {
+      "domain": "uk",
+      "stage": "layer08",
+      "subset": "real",
+      "n": 1000,
+      "cka": 0.8817858724973757
+    },
+    {
+      "domain": "uk",
+      "stage": "layer08",
+      "subset": "fake",
+      "n": 1000,
+      "cka": 0.8637135580686457
+    },
+    {
+      "domain": "uk",
+      "stage": "layer16",
+      "subset": "both",
+      "n": 1000,
+      "cka": 0.8120307992096922
+    },
+    {
+      "domain": "uk",
+      "stage": "layer16",
+      "subset": "real",
+      "n": 1000,
+      "cka": 0.7502155161673261
+    },
+    {
+      "domain": "uk",
+      "stage": "layer16",
+      "subset": "fake",
+      "n": 1000,
+      "cka": 0.8149882763234144
+    },
+    {
+      "domain": "uk",
+      "stage": "layer24",
+      "subset": "both",
+      "n": 1000,
+      "cka": 0.5320727220980803
+    },
+    {
+      "domain": "uk",
+      "stage": "layer24",
+      "subset": "real",
+      "n": 1000,
+      "cka": 0.6804773354865541
+    },
+    {
+      "domain": "uk",
+      "stage": "layer24",
+      "subset": "fake",
+      "n": 1000,
+      "cka": 0.42471789576742286
+    },
+    {
+      "domain": "uk",
+      "stage": "sls_aggregate",
+      "subset": "both",
+      "n": 1000,
+      "cka": 0.47395901411038055
+    },
+    {
+      "domain": "uk",
+      "stage": "sls_aggregate",
+      "subset": "real",
+      "n": 1000,
+      "cka": 0.3123157103900912
+    },
+    {
+      "domain": "uk",
+      "stage": "sls_aggregate",
+      "subset": "fake",
+      "n": 1000,
+      "cka": 0.3887904494100712
+    },
+    {
+      "domain": "uk",
+      "stage": "classifier_embedding",
+      "subset": "both",
+      "n": 1000,
+      "cka": 0.3531820274481485
+    },
+    {
+      "domain": "uk",
+      "stage": "classifier_embedding",
+      "subset": "real",
+      "n": 1000,
+      "cka": 0.2041225157570282
+    },
+    {
+      "domain": "uk",
+      "stage": "classifier_embedding",
+      "subset": "fake",
+      "n": 1000,
+      "cka": 0.21284579023511024
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "scope": "synthetic FP64 mathematics only; not Torch/CUDA/fairseq or detector performance",
+  "kl": 0.5954262557747718,
+  "directional_gradient_error": 2.344794913788917e-10,
+  "zero_initial_kl": 0.0,
+  "zero_initial_gradient_norm": 0.0,
+  "hidden_gram_rotation_error": 4.440892098500626e-16,
+  "frozen_qk_rotation_kl": 14.69773724118605,
+  "null_mean_tv_valid_queries": 0.7440599369848229,
+  "null_message_change_l2": 10.082702903741735,
+  "checks": [
+    "fixed-QK KL gradient including both input paths and projection bias",
+    "masked query/key exclusion and all-masked rejection",
+    "zero initialization",
+    "hidden Gram is not fixed learned QK functionality",
+    "null row probabilities/entropy/diagonal/mask/signed bucket mass preserved",
+    "null round-trip exact",
+    "constant messages unchanged",
+    "nonconstant messages changed",
+    "Torch module AST parses; runtime remains unverified"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "pid": 1150,
+  "process_create_time": 1791794927.51,
+  "ssh_port": 30307,
+  "seed": 20,
+  "started_unix": 1791794927.7465208,
+  "automatic_restart": false,
+  "prior_attempt_failed_before_formal_training": true
+}

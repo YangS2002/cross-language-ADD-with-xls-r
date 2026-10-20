@@ -1,0 +1,13 @@
+{
+  "historical_self_test": "models/SLS_pretrained_attention_seed20/self_test.json",
+  "historical_self_test_sha256": "fbd753d9d49c84f41622e17ec0fe84f7342e22fd8891505b7228c5c2dee58336",
+  "historical_checks_reused": true,
+  "new_gpu_self_test_performed": false,
+  "source_updates_this_preflight": 0,
+  "source_samples": 25380,
+  "trainable_parameters": 284246149,
+  "required_free_bytes": 2924538563,
+  "actual_free_bytes": 3737083904,
+  "checkpoint_policy": "one_source_best_no_epoch4_weight_copy_no_Adam",
+  "no_training_or_model_change": true
+}

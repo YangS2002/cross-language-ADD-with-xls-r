@@ -1,0 +1,23 @@
+{
+  "reason": "Missing eligible_for_fixed_multiseed field caused KeyError after completed training and all evaluations",
+  "previous_status": {
+    "status": "evaluating",
+    "seed": 20,
+    "epoch": 8,
+    "best_epoch": 8,
+    "updated_at": "2026-10-14T17:38:19.211345+08:00"
+  },
+  "completed_record": {
+    "seed": 20,
+    "epoch": 8,
+    "best_epoch": 8,
+    "best_loss": 0.00012166276366837875,
+    "ended_at": "2026-10-14T17:47:55.590046+08:00"
+  },
+  "repaired_trainer_sha256": "48f619fd90a70315c62f3bce666dc39fcb276a77b02bf9cc10d8990e16c27aad",
+  "training_or_evaluation_replayed": false,
+  "remaining_seeds": [
+    1001,
+    7
+  ]
+}

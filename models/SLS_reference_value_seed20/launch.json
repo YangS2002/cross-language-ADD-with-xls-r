@@ -1,0 +1,8 @@
+{
+  "pid": 3194,
+  "process_create_time": 1791539867.47,
+  "log": "/root/rivermind-data/cross-language-ADD-with-xls-r/experiments/logs/sls_reference_value_seed20.log",
+  "config": "/root/rivermind-data/cross-language-ADD-with-xls-r/experiments/configs/sls_reference_value_seed20.yaml",
+  "port": 30646,
+  "unix_started_at": 1791539868.228773
+}

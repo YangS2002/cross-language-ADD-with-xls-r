@@ -1,0 +1,8 @@
+{
+  "epoch": 8,
+  "steps": 20,
+  "seconds": 4.351046717958525,
+  "estimated_epoch_seconds": 345.25555707000893,
+  "estimate_only": true,
+  "reserved_gib": 11.5625
+}

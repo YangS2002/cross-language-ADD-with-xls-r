@@ -1,0 +1,5 @@
+{
+  "arm": "pretrained_reference",
+  "epoch": 10,
+  "best_loss": 7.144652701194853e-07
+}

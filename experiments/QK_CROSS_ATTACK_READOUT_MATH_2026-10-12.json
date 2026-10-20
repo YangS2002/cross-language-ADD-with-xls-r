@@ -1,0 +1,53 @@
+{
+  "status": "synthetic_mathematics_only_not_speech_validation",
+  "rho": 1.0,
+  "gradient_check": {
+    "max_abs_error": 1.324560600091118e-10,
+    "support_gradient_norm": 0.07511750528006149,
+    "query_gradient_norm": 0.0695578938416208,
+    "loss": 0.6579488404066562
+  },
+  "cases": {
+    "shared_authenticity_cue": {
+      "loss": 0.4740769841801067,
+      "support_gradient_norm": 0.0,
+      "query_gradient_norm": 0.0,
+      "fitted_weight_norm": 0.5
+    },
+    "shared_source_shortcut_indistinguishable": {
+      "loss": 0.4740769841801067,
+      "support_gradient_norm": 0.0,
+      "query_gradient_norm": 0.0,
+      "fitted_weight_norm": 0.5
+    },
+    "orthogonal_attack_specific_cues": {
+      "loss": 0.6931471805599453,
+      "support_gradient_norm": 0.125,
+      "query_gradient_norm": 0.125,
+      "fitted_weight_norm": 0.5
+    },
+    "opposite_query_cue": {
+      "loss": 0.9740769841801067,
+      "support_gradient_norm": 0.0,
+      "query_gradient_norm": 0.0,
+      "fitted_weight_norm": 0.5
+    },
+    "balanced_collapsed_features": {
+      "loss": 0.6931471805599454,
+      "support_gradient_norm": 0.0,
+      "query_gradient_norm": 0.0,
+      "fitted_weight_norm": 5.551115123125783e-17
+    },
+    "distinct_fake_modes_shared_cue": {
+      "loss": 0.4842058849719485,
+      "support_gradient_norm": 0.0,
+      "query_gradient_norm": 0.02757882351963803,
+      "fitted_weight_norm": 0.5
+    }
+  },
+  "limitations": [
+    "Same source shortcut gives exactly same objective as a transferable cue.",
+    "Nonzero loss does not guarantee nonzero representation gradients.",
+    "No evidence about XLS-R, cross-language EER, or seed stability."
+  ]
+}

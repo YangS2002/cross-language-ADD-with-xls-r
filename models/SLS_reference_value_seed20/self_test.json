@@ -1,0 +1,13 @@
+{
+  "seconds": 32.34100721904542,
+  "source_updates": 1,
+  "initialization_layer_max_error": 0.0,
+  "source_nll": 0.09294578433036804,
+  "grad_norm": 96.48734283447266,
+  "selected_original_v_no_task_v_gradient": true,
+  "task_out_ffn_gradient": true,
+  "evaluation_uses_task_value_only": true,
+  "independent_replacement_rng": true,
+  "trainable_parameters": 284246149,
+  "reserved_gib": 7.564453125
+}

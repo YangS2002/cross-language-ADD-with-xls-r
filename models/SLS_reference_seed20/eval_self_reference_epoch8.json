@@ -1,0 +1,57 @@
+[
+  {
+    "arm": "self_reference",
+    "seed": 20,
+    "milestone": 8,
+    "checkpoint_epoch": 8,
+    "domain": "ch",
+    "eer": 12.751203054347615,
+    "threshold": -6.688745498657227,
+    "samples": 18124,
+    "seconds": 58.91955909499666
+  },
+  {
+    "arm": "self_reference",
+    "seed": 20,
+    "milestone": 8,
+    "checkpoint_epoch": 8,
+    "domain": "de",
+    "eer": 16.376561381989163,
+    "threshold": -0.5490548014640808,
+    "samples": 17696,
+    "seconds": 57.65112144703744
+  },
+  {
+    "arm": "self_reference",
+    "seed": 20,
+    "milestone": 8,
+    "checkpoint_epoch": 8,
+    "domain": "uk",
+    "eer": 25.996389891696747,
+    "threshold": -2.272789239883423,
+    "samples": 9709,
+    "seconds": 31.465214903000742
+  },
+  {
+    "arm": "self_reference",
+    "seed": 20,
+    "milestone": 8,
+    "checkpoint_epoch": 8,
+    "domain": "es",
+    "eer": 11.160840399270151,
+    "threshold": -0.29683318734169006,
+    "samples": 13655,
+    "seconds": 44.212517003004905
+  },
+  {
+    "arm": "self_reference",
+    "seed": 20,
+    "milestone": 8,
+    "checkpoint_epoch": 8,
+    "domain": "itw",
+    "eer": 7.211953318785319,
+    "threshold": -6.018062591552734,
+    "samples": 31779,
+    "seconds": 102.20117242698325
+  }
+]

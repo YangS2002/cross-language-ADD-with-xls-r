@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "error": "AssertionError('Tensor-likes are not close!\\n\\nMismatched elements: 6 / 411648 (0.0%)\\nGreatest absolute difference: 0.0002818107604980469 at index (0, 5, 501) (up to 0.0001 allowed)\\nGreatest relative difference: 0.011266518384218216 at index (0, 5, 203) (up to 0.0001 allowed)')",
+  "previous_status": {
+    "status": "preflight",
+    "seed": 20,
+    "updated_at": "2026-10-12T08:38:22.104412+00:00"
+  },
+  "ended_at": "2026-10-12T08:38:45.462842+00:00",
+  "automatic_restart": false
+}

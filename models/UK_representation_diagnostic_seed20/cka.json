@@ -1,0 +1,212 @@
+[
+  {
+    "domain": "a",
+    "stage": "layer08",
+    "subset": "both",
+    "n": 1000,
+    "cka": 0.6461114383420248
+  },
+  {
+    "domain": "a",
+    "stage": "layer08",
+    "subset": "real",
+    "n": 609,
+    "cka": 0.9931022291075985
+  },
+  {
+    "domain": "a",
+    "stage": "layer08",
+    "subset": "fake",
+    "n": 1000,
+    "cka": 0.856605725022072
+  },
+  {
+    "domain": "a",
+    "stage": "layer16",
+    "subset": "both",
+    "n": 1000,
+    "cka": 0.6313447980028217
+  },
+  {
+    "domain": "a",
+    "stage": "layer16",
+    "subset": "real",
+    "n": 609,
+    "cka": 0.9761986529839827
+  },
+  {
+    "domain": "a",
+    "stage": "layer16",
+    "subset": "fake",
+    "n": 1000,
+    "cka": 0.8661974192295887
+  },
+  {
+    "domain": "a",
+    "stage": "layer24",
+    "subset": "both",
+    "n": 1000,
+    "cka": 0.4303377545400315
+  },
+  {
+    "domain": "a",
+    "stage": "layer24",
+    "subset": "real",
+    "n": 609,
+    "cka": 0.7587718072538613
+  },
+  {
+    "domain": "a",
+    "stage": "layer24",
+    "subset": "fake",
+    "n": 1000,
+    "cka": 0.4223045612227529
+  },
+  {
+    "domain": "a",
+    "stage": "sls_aggregate",
+    "subset": "both",
+    "n": 1000,
+    "cka": 0.2182670644891999
+  },
+  {
+    "domain": "a",
+    "stage": "sls_aggregate",
+    "subset": "real",
+    "n": 609,
+    "cka": 0.5027985876304709
+  },
+  {
+    "domain": "a",
+    "stage": "sls_aggregate",
+    "subset": "fake",
+    "n": 1000,
+    "cka": 0.36770914710311237
+  },
+  {
+    "domain": "a",
+    "stage": "classifier_embedding",
+    "subset": "both",
+    "n": 1000,
+    "cka": 0.45866020399888474
+  },
+  {
+    "domain": "a",
+    "stage": "classifier_embedding",
+    "subset": "real",
+    "n": 609,
+    "cka": 0.7406617571597058
+  },
+  {
+    "domain": "a",
+    "stage": "classifier_embedding",
+    "subset": "fake",
+    "n": 1000,
+    "cka": 0.34776622538844487
+  },
+  {
+    "domain": "uk",
+    "stage": "layer08",
+    "subset": "both",
+    "n": 1000,
+    "cka": 0.8611288214718141
+  },
+  {
+    "domain": "uk",
+    "stage": "layer08",
+    "subset": "real",
+    "n": 1000,
+    "cka": 0.8817858724973757
+  },
+  {
+    "domain": "uk",
+    "stage": "layer08",
+    "subset": "fake",
+    "n": 1000,
+    "cka": 0.8637135580686457
+  },
+  {
+    "domain": "uk",
+    "stage": "layer16",
+    "subset": "both",
+    "n": 1000,
+    "cka": 0.8120307992096922
+  },
+  {
+    "domain": "uk",
+    "stage": "layer16",
+    "subset": "real",
+    "n": 1000,
+    "cka": 0.7502155161673261
+  },
+  {
+    "domain": "uk",
+    "stage": "layer16",
+    "subset": "fake",
+    "n": 1000,
+    "cka": 0.8149882763234144
+  },
+  {
+    "domain": "uk",
+    "stage": "layer24",
+    "subset": "both",
+    "n": 1000,
+    "cka": 0.5320727220980803
+  },
+  {
+    "domain": "uk",
+    "stage": "layer24",
+    "subset": "real",
+    "n": 1000,
+    "cka": 0.6804773354865541
+  },
+  {
+    "domain": "uk",
+    "stage": "layer24",
+    "subset": "fake",
+    "n": 1000,
+    "cka": 0.42471789576742286
+  },
+  {
+    "domain": "uk",
+    "stage": "sls_aggregate",
+    "subset": "both",
+    "n": 1000,
+    "cka": 0.47395901411038055
+  },
+  {
+    "domain": "uk",
+    "stage": "sls_aggregate",
+    "subset": "real",
+    "n": 1000,
+    "cka": 0.3123157103900912
+  },
+  {
+    "domain": "uk",
+    "stage": "sls_aggregate",
+    "subset": "fake",
+    "n": 1000,
+    "cka": 0.3887904494100712
+  },
+  {
+    "domain": "uk",
+    "stage": "classifier_embedding",
+    "subset": "both",
+    "n": 1000,
+    "cka": 0.3531820274481485
+  },
+  {
+    "domain": "uk",
+    "stage": "classifier_embedding",
+    "subset": "real",
+    "n": 1000,
+    "cka": 0.2041225157570282
+  },
+  {
+    "domain": "uk",
+    "stage": "classifier_embedding",
+    "subset": "fake",
+    "n": 1000,
+    "cka": 0.21284579023511024
+  }
+]

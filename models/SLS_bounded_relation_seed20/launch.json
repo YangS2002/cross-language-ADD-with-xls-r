@@ -1,0 +1,9 @@
+{
+  "pid": 1740,
+  "process_create_time": 1791534182.68,
+  "module": "tools.train_sls_bounded_relation",
+  "log": "/root/rivermind-data/cross-language-ADD-with-xls-r/experiments/logs/sls_bounded_relation_seed20.log",
+  "config": "/root/rivermind-data/cross-language-ADD-with-xls-r/experiments/configs/sls_bounded_relation_seed20.yaml",
+  "port": 30646,
+  "unix_started_at": 1791534183.4361014
+}

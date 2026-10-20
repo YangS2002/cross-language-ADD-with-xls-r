@@ -1,0 +1,9 @@
+{
+  "samples": 2048,
+  "real": 214,
+  "passes": 10,
+  "initial_kl": 0.769947350025177,
+  "final_kl": 0.23887380957603455,
+  "seconds": 10.34891018999042,
+  "note": "Reader calibration loss only; not proof of content causality or independent validation"
+}

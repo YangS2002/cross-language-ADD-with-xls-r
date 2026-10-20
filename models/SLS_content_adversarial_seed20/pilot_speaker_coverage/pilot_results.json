@@ -1,0 +1,111 @@
+{
+  "status": "pilot_only",
+  "selection": "speaker_round_robin_v2",
+  "sample_count": 152,
+  "fit_real": 96,
+  "holdout_real": 32,
+  "fake_audit": 24,
+  "sample_rates": {
+    "16000": 152
+  },
+  "source_protocol_sha256": "06c2862679851d816173fbea8c0919012a68f95134529b705c049beef1276d2e",
+  "fit_speakers": [
+    "LA_0079",
+    "LA_0081",
+    "LA_0082",
+    "LA_0084",
+    "LA_0085",
+    "LA_0087",
+    "LA_0088",
+    "LA_0089",
+    "LA_0091",
+    "LA_0092",
+    "LA_0093",
+    "LA_0096",
+    "LA_0097",
+    "LA_0098"
+  ],
+  "holdout_speakers": [
+    "LA_0080",
+    "LA_0083",
+    "LA_0086",
+    "LA_0090",
+    "LA_0094",
+    "LA_0095"
+  ],
+  "histories": {
+    "content": [
+      {
+        "epoch": 1,
+        "fit_ctc": 7.678523222605388
+      },
+      {
+        "epoch": 10,
+        "fit_ctc": 2.0187037785847983
+      },
+      {
+        "epoch": 50,
+        "fit_ctc": 0.6217960913976034
+      },
+      {
+        "epoch": 100,
+        "fit_ctc": 0.32274214426676434
+      }
+    ],
+    "shuffled": [
+      {
+        "epoch": 1,
+        "fit_ctc": 8.342830419540405
+      },
+      {
+        "epoch": 10,
+        "fit_ctc": 2.6852771441141763
+      },
+      {
+        "epoch": 50,
+        "fit_ctc": 1.2448690334955852
+      },
+      {
+        "epoch": 100,
+        "fit_ctc": 0.7603199581305186
+      }
+    ]
+  },
+  "metrics": {
+    "content": {
+      "holdout_pseudo_cer": 0.6632057105775471,
+      "holdout_histogram_kl": 0.6317440271377563,
+      "holdout_ctc": 4.232336521148682,
+      "valid_count": 152,
+      "nonblank_letter_mass": 0.23641762137413025,
+      "fake_histogram_kl_by_attack": {
+        "A01": 0.6591098308563232,
+        "A02": 0.8019680976867676,
+        "A03": 0.7055026292800903,
+        "A04": 0.4728708267211914,
+        "A05": 1.7782344818115234,
+        "A06": 0.7834803462028503
+      }
+    },
+    "shuffled": {
+      "holdout_pseudo_cer": 0.7910447761194029,
+      "holdout_histogram_kl": 0.8616189360618591,
+      "holdout_ctc": 5.520327568054199,
+      "valid_count": 152,
+      "nonblank_letter_mass": 0.21258844435214996,
+      "fake_histogram_kl_by_attack": {
+        "A01": 0.8109698295593262,
+        "A02": 0.7952624559402466,
+        "A03": 1.116422176361084,
+        "A04": 0.690778374671936,
+        "A05": 1.018552541732788,
+        "A06": 1.1134979724884033
+      }
+    }
+  },
+  "constant_histogram_kl": 0.4023051857948303,
+  "constant_transcript_cer": 0.772225827384815,
+  "reference_pilot_passed": false,
+  "seconds": 18.577468443021644,
+  "limitations": "Pseudo-ASR labels, 128 genuine pilot only; no verified human transcripts or target EER. A passed pilot is not full content validation or evidence of cross-language improvement."
+}

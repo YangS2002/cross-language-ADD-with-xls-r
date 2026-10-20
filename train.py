@@ -138,6 +138,8 @@ def train_one_epoch(
     total_ce_a = 0.0
     total_ce_b = 0.0
     total_relation = 0.0
+    total_residual_norm_ratio = 0.0
+    has_residual_norm_ratio = hasattr(model.detector, "current_residual_norm_ratio")
 
     total_correct_a = 0
     total_correct_b = 0
@@ -152,10 +154,20 @@ def train_one_epoch(
         optimizer.zero_grad(set_to_none=True)
 
         with torch.cuda.amp.autocast(enabled=amp):
-            logits_a, logits_b, embedding_a, embedding_b, relation_loss = (
-                model.forward_train(waveform)
-            )
+            if model.is_single_head:
+                logits_a, embedding_a = model.forward_train(waveform)
+                logits_b = logits_a
+                embedding_b = embedding_a
+                relation_loss = logits_a.new_zeros(())
+            else:
+                logits_a, logits_b, embedding_a, embedding_b, relation_loss = (
+                    model.forward_train(waveform)
+                )
 
+        if has_residual_norm_ratio:
+            total_residual_norm_ratio += (
+                model.detector.current_residual_norm_ratio() * labels.size(0)
+            )
         ce_a = criterion(logits_a.float(), labels)
         ce_b = criterion(logits_b.float(), labels)
 
@@ -197,7 +209,7 @@ def train_one_epoch(
             acc_b=f"{100.0 * total_correct_b / total_samples:.2f}%",
         )
 
-    return {
+    metrics = {
         "train_loss": total_loss / total_samples,
         "train_cls_loss": total_cls / total_samples,
         "train_ce_a": total_ce_a / total_samples,
@@ -206,6 +218,9 @@ def train_one_epoch(
         "train_acc_a": 100.0 * total_correct_a / total_samples,
         "train_acc_b": 100.0 * total_correct_b / total_samples,
     }
+    if has_residual_norm_ratio:
+        metrics["train_residual_norm_ratio"] = total_residual_norm_ratio / total_samples
+    return metrics
 
 
 @torch.no_grad()
@@ -279,6 +294,22 @@ def build_domain_metrics(
     amp,
     domain,
 ):
+    if model.is_single_head:
+        single = evaluate_head(
+            model,
+            loader,
+            criterion,
+            device,
+            amp,
+            f"{domain} Single",
+            "single",
+        )
+        return {
+            "a": dict(single),
+            "b": dict(single),
+            "ensemble": dict(single),
+        }
+
     head_a = evaluate_head(
         model,
         loader,
@@ -630,25 +661,34 @@ def main():
 
             all_rows.append(row)
 
-            print(
-                f"Head A | CH={dev['a']['eer']:.4f}% | "
-                f"DE={test['a']['eer']:.4f}% | "
-                f"joint={a_joint_eer:.4f}% | "
-                f"worst={a_worst_domain_eer:.4f}% | "
-                f"gap={a_domain_gap:.4f}%"
-            )
+            if model.is_single_head:
+                print(
+                    f"Single | CH={dev['a']['eer']:.4f}% | "
+                    f"DE={test['a']['eer']:.4f}% | "
+                    f"joint={a_joint_eer:.4f}% | "
+                    f"worst={a_worst_domain_eer:.4f}% | "
+                    f"gap={a_domain_gap:.4f}%"
+                )
+            else:
+                print(
+                    f"Head A | CH={dev['a']['eer']:.4f}% | "
+                    f"DE={test['a']['eer']:.4f}% | "
+                    f"joint={a_joint_eer:.4f}% | "
+                    f"worst={a_worst_domain_eer:.4f}% | "
+                    f"gap={a_domain_gap:.4f}%"
+                )
 
-            print(
-                f"Head B | CH={dev['b']['eer']:.4f}% | "
-                f"DE={test['b']['eer']:.4f}% | "
-                f"joint={b_joint_eer:.4f}%"
-            )
+                print(
+                    f"Head B | CH={dev['b']['eer']:.4f}% | "
+                    f"DE={test['b']['eer']:.4f}% | "
+                    f"joint={b_joint_eer:.4f}%"
+                )
 
-            print(
-                f"Ensemble | CH={dev['ensemble']['eer']:.4f}% | "
-                f"DE={test['ensemble']['eer']:.4f}% | "
-                f"joint={ensemble_joint_eer:.4f}%"
-            )
+                print(
+                    f"Ensemble | CH={dev['ensemble']['eer']:.4f}% | "
+                    f"DE={test['ensemble']['eer']:.4f}% | "
+                    f"joint={ensemble_joint_eer:.4f}%"
+                )
 
             print(
                 f"Train | loss={train_metrics['train_loss']:.6f} | "
@@ -660,6 +700,11 @@ def main():
                 print(
                     "Residual strength | "
                     f"{row['residual_strength']:.6f}"
+                )
+            if "train_residual_norm_ratio" in row:
+                print(
+                    "Residual / embedding norm | "
+                    f"{row['train_residual_norm_ratio']:.6f}"
                 )
 
             write_csv(
@@ -739,8 +784,14 @@ def main():
                 "epochs": epochs,
                 "seeds": seeds,
                 "lambda_relation": lambda_relation,
-                "primary_inference": "Head A",
-                "auxiliary_inference": ["Head B", "Ensemble"],
+                "primary_inference": (
+                    "Single" if config.get("detector_type")
+                    == "heterogeneous_multi_order" else "Head A"
+                ),
+                "auxiliary_inference": (
+                    [] if config.get("detector_type")
+                    == "heterogeneous_multi_order" else ["Head B", "Ensemble"]
+                ),
                 "model": config.get("detector_type", "dual_transition"),
             },
             f,

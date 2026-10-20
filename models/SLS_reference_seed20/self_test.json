@@ -1,0 +1,16 @@
+[
+  {
+    "arm": "self_reference",
+    "batch": 16,
+    "model_bytes": 1338507796,
+    "disk_peak_budget_bytes": 12048771854,
+    "reserved_gib": 10.083984375
+  },
+  {
+    "arm": "pretrained_reference",
+    "batch": 16,
+    "model_bytes": 1338507796,
+    "disk_peak_budget_bytes": 12048771854,
+    "reserved_gib": 12.779296875
+  }
+]

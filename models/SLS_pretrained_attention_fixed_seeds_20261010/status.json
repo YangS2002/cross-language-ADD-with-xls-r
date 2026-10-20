@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "completed_seeds": [
+    1001,
+    7
+  ],
+  "unix_ended_at": 1791631660.1593997,
+  "automatic_restart": false
+}

@@ -1,0 +1,13 @@
+{
+  "train": "ASVspoof2019-LA",
+  "dev": "DECRO-CH",
+  "test": "MLAAD-DE",
+  "epochs": 10,
+  "seeds": [
+    20
+  ],
+  "lambda_relation": 0.0,
+  "primary_inference": "Single",
+  "auxiliary_inference": [],
+  "model": "heterogeneous_multi_order"
+}

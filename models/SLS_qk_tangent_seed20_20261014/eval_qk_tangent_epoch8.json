@@ -1,0 +1,57 @@
+[
+  {
+    "arm": "qk_tangent",
+    "seed": 20,
+    "milestone": 8,
+    "checkpoint_epoch": 8,
+    "domain": "ch",
+    "eer": 18.23130319381016,
+    "threshold": -5.115396499633789,
+    "samples": 18124,
+    "seconds": 164.07937547494657
+  },
+  {
+    "arm": "qk_tangent",
+    "seed": 20,
+    "milestone": 8,
+    "checkpoint_epoch": 8,
+    "domain": "de",
+    "eer": 11.754042727179801,
+    "threshold": -2.929882287979126,
+    "samples": 17696,
+    "seconds": 160.31533028709237
+  },
+  {
+    "arm": "qk_tangent",
+    "seed": 20,
+    "milestone": 8,
+    "checkpoint_epoch": 8,
+    "domain": "uk",
+    "eer": 21.423527288171584,
+    "threshold": -3.063476800918579,
+    "samples": 9709,
+    "seconds": 88.37283807003405
+  },
+  {
+    "arm": "qk_tangent",
+    "seed": 20,
+    "milestone": 8,
+    "checkpoint_epoch": 8,
+    "domain": "es",
+    "eer": 9.183390576365783,
+    "threshold": -2.044825792312622,
+    "samples": 13655,
+    "seconds": 123.87350281397812
+  },
+  {
+    "arm": "qk_tangent",
+    "seed": 20,
+    "milestone": 8,
+    "checkpoint_epoch": 8,
+    "domain": "itw",
+    "eer": 16.5110271622678,
+    "threshold": -6.55610990524292,
+    "samples": 31779,
+    "seconds": 286.47246781596914
+  }
+]

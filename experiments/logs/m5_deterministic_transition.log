@@ -1,0 +1,70 @@
+/root/rivermind-data/cross-language-ADD-with-xls-r/fairseq-a54021305d6b3c4c5959ac9395135f63202db8f1/fairseq/checkpoint_utils.py:313: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(f, map_location=torch.device("cpu"))
+/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Loaded XLS-R: /root/rivermind-fs/xlsr2_300m.pt
+Transformer layers: 24
+Hidden dim: 1024
+{'bonafide': 0, 'A01': 1, 'A02': 2, 'A03': 3, 'A04': 4, 'A05': 5, 'A06': 6} {'en'} 25380
+M5_deterministic_transition
+EXTRACT train 8/25380 0.7s
+EXTRACT train 808/25380 7.7s
+EXTRACT train 1608/25380 14.9s
+EXTRACT train 2408/25380 21.9s
+EXTRACT train 3208/25380 29.2s
+EXTRACT train 4008/25380 36.3s
+EXTRACT train 4808/25380 43.2s
+EXTRACT train 5608/25380 50.2s
+EXTRACT train 6408/25380 57.4s
+EXTRACT train 7208/25380 64.4s
+EXTRACT train 8008/25380 70.8s
+EXTRACT train 8808/25380 77.4s
+EXTRACT train 9608/25380 84.8s
+EXTRACT train 10408/25380 91.9s
+EXTRACT train 11208/25380 98.9s
+EXTRACT train 12008/25380 105.9s
+EXTRACT train 12808/25380 112.9s
+EXTRACT train 13608/25380 120.3s
+EXTRACT train 14408/25380 127.3s
+EXTRACT train 15208/25380 134.3s
+EXTRACT train 16008/25380 141.4s
+EXTRACT train 16808/25380 148.7s
+EXTRACT train 17608/25380 155.6s
+EXTRACT train 18408/25380 162.5s
+EXTRACT train 19208/25380 168.7s
+EXTRACT train 20008/25380 175.4s
+EXTRACT train 20808/25380 182.8s
+EXTRACT train 21608/25380 189.7s
+EXTRACT train 22408/25380 196.7s
+EXTRACT train 23208/25380 203.4s
+EXTRACT train 24008/25380 209.8s
+EXTRACT train 24808/25380 217.0s
+EXTRACT train 25380/25380 222.0s
+{'baidu': 1, 'fs2mtts': 2, 'StarGAN': 3, 'vits': 4, 'hifigan': 5, 'mbmelgan': 6, 'Tacotron': 7, 'xunfei': 8, 'pwg': 9, 'nvcnet-cn': 10, 'bonafide': 0} {'zh'} 18124
+M5_deterministic_transition
+EXTRACT dev 8/18124 0.3s
+Traceback (most recent call last):
+  File "/root/rivermind-data/cross-language-ADD-with-xls-r/tools/run_m5_deterministic_transition.py", line 370, in <module>
+    main()
+  File "/root/rivermind-data/cross-language-ADD-with-xls-r/tools/run_m5_deterministic_transition.py", line 356, in main
+    caches[split],labels[split]=extract(config,split,backbone,out,signature)
+  File "/root/rivermind-data/cross-language-ADD-with-xls-r/tools/run_m5_deterministic_transition.py", line 128, in extract
+    for step, batch in enumerate(loader):
+  File "/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1465, in _next_data
+    return self._process_data(data)
+  File "/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 1491, in _process_data
+    data.reraise()
+  File "/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/_utils.py", line 715, in reraise
+    raise exception
+ValueError: Caught ValueError in DataLoader worker process 1.
+Original Traceback (most recent call last):
+  File "/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/utils/data/_utils/worker.py", line 351, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/root/rivermind-data/cross-language-ADD-with-xls-r/tools/run_m5_deterministic_transition.py", line 58, in checked_collate
+    raise ValueError(f"Unsupported sample rate/channels: {item['file_name']}")
+ValueError: Unsupported sample rate/channels: decro_raw/ch_eval/3826.wav
+

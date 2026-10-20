@@ -1,0 +1,6 @@
+{
+  "rule": "sha256 filename mod5 !=0 genuine fit",
+  "fit": 2034,
+  "genuine": 2580,
+  "classification_samples": 25380
+}

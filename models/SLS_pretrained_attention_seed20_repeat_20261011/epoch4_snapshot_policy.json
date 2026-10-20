@@ -1,0 +1,6 @@
+{
+  "copied": false,
+  "reason": "save_space_keep_one_source_best",
+  "epoch4_evaluation_and_scores_retained": true,
+  "epoch4_weight_not_retained_after_later_best_replacement": true
+}

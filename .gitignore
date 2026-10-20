@@ -1,19 +1,54 @@
-testsamples
-tortoise
-fairseq-a54021305d6b3c4c5959ac9395135f63202db8f1
-logs
-database
-scores
-keys
-tools
-*.pyc
-__pycache__
-.idea
-.vscode
-train_res
-*/__pycache__/*
-src/fairseq
+# Local dependencies, datasets and runtime directories
+/testsamples/
+/tortoise/
+/fairseq-*/
+/src/fairseq/
+/database/
+/datasets/
+/data/
+/keys/
+/logs/
+/scores/
+/train_res/
+/analysis/
+/content_eraser/
+__pycache__/
+.ipynb_checkpoints/
+.idea/
+.vscode/
+wandb/
+tensorboard/
+*.py[cod]
+# Model weights, optimizer states and binary training / diagnostic artifacts
+*.pt
 *.pth
-models
-train_res
-analysis
+*.ckpt
+*.safetensors
+*.pkl
+*.pickle
+*.bin
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.onnx
+*.tfevents.*
+# Datasets and archive bundles; publish the extracted text records instead
+*.wav
+*.flac
+*.mp3
+*.ogg
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+# Credentials and temporary connection files
+.env
+.env.*
+*.pem
+*.key
+known_hosts*
+*.tmp
+# Keep text metrics, protocols, logs and experiment metadata under models/.
+# Do not ignore tools/, experiments/ or models/ as entire directories.

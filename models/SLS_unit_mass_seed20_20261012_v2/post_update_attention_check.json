@@ -1,0 +1,149 @@
+{
+  "tolerance": 2.396106719970703e-05,
+  "attention": [
+    {
+      "layer": 1,
+      "mass_max_error": 5.960464477539062e-07,
+      "row_sum_max_error": 7.152557373046875e-07,
+      "attention_max_change": 0.0020296983420848846
+    },
+    {
+      "layer": 2,
+      "mass_max_error": 5.960464477539062e-07,
+      "row_sum_max_error": 7.152557373046875e-07,
+      "attention_max_change": 0.008973270654678345
+    },
+    {
+      "layer": 3,
+      "mass_max_error": 4.76837158203125e-07,
+      "row_sum_max_error": 5.960464477539062e-07,
+      "attention_max_change": 0.017715394496917725
+    },
+    {
+      "layer": 4,
+      "mass_max_error": 6.556510925292969e-07,
+      "row_sum_max_error": 5.364418029785156e-07,
+      "attention_max_change": 0.024960100650787354
+    },
+    {
+      "layer": 5,
+      "mass_max_error": 5.364418029785156e-07,
+      "row_sum_max_error": 4.76837158203125e-07,
+      "attention_max_change": 0.0475693941116333
+    },
+    {
+      "layer": 6,
+      "mass_max_error": 5.364418029785156e-07,
+      "row_sum_max_error": 4.76837158203125e-07,
+      "attention_max_change": 0.2618154287338257
+    },
+    {
+      "layer": 7,
+      "mass_max_error": 6.556510925292969e-07,
+      "row_sum_max_error": 6.556510925292969e-07,
+      "attention_max_change": 0.3869974911212921
+    },
+    {
+      "layer": 8,
+      "mass_max_error": 5.960464477539062e-07,
+      "row_sum_max_error": 5.364418029785156e-07,
+      "attention_max_change": 0.4286278188228607
+    },
+    {
+      "layer": 9,
+      "mass_max_error": 5.364418029785156e-07,
+      "row_sum_max_error": 5.960464477539062e-07,
+      "attention_max_change": 0.3415660560131073
+    },
+    {
+      "layer": 10,
+      "mass_max_error": 4.172325134277344e-07,
+      "row_sum_max_error": 3.5762786865234375e-07,
+      "attention_max_change": 0.3614114224910736
+    },
+    {
+      "layer": 11,
+      "mass_max_error": 5.364418029785156e-07,
+      "row_sum_max_error": 4.76837158203125e-07,
+      "attention_max_change": 0.2860856354236603
+    },
+    {
+      "layer": 12,
+      "mass_max_error": 4.76837158203125e-07,
+      "row_sum_max_error": 5.364418029785156e-07,
+      "attention_max_change": 0.38953033089637756
+    },
+    {
+      "layer": 13,
+      "mass_max_error": 4.172325134277344e-07,
+      "row_sum_max_error": 4.76837158203125e-07,
+      "attention_max_change": 0.23380188643932343
+    },
+    {
+      "layer": 14,
+      "mass_max_error": 4.172325134277344e-07,
+      "row_sum_max_error": 4.76837158203125e-07,
+      "attention_max_change": 0.26315775513648987
+    },
+    {
+      "layer": 15,
+      "mass_max_error": 5.364418029785156e-07,
+      "row_sum_max_error": 5.364418029785156e-07,
+      "attention_max_change": 0.3289092779159546
+    },
+    {
+      "layer": 16,
+      "mass_max_error": 6.556510925292969e-07,
+      "row_sum_max_error": 5.960464477539062e-07,
+      "attention_max_change": 0.4068429172039032
+    },
+    {
+      "layer": 17,
+      "mass_max_error": 6.556510925292969e-07,
+      "row_sum_max_error": 5.960464477539062e-07,
+      "attention_max_change": 0.5064398646354675
+    },
+    {
+      "layer": 18,
+      "mass_max_error": 7.748603820800781e-07,
+      "row_sum_max_error": 1.0728836059570312e-06,
+      "attention_max_change": 0.5747209191322327
+    },
+    {
+      "layer": 19,
+      "mass_max_error": 4.172325134277344e-07,
+      "row_sum_max_error": 5.960464477539062e-07,
+      "attention_max_change": 0.37858179211616516
+    },
+    {
+      "layer": 20,
+      "mass_max_error": 6.556510925292969e-07,
+      "row_sum_max_error": 7.748603820800781e-07,
+      "attention_max_change": 0.2944929301738739
+    },
+    {
+      "layer": 21,
+      "mass_max_error": 1.9073486328125e-06,
+      "row_sum_max_error": 1.7881393432617188e-06,
+      "attention_max_change": 0.9999774694442749
+    },
+    {
+      "layer": 22,
+      "mass_max_error": 1.0132789611816406e-06,
+      "row_sum_max_error": 9.5367431640625e-07,
+      "attention_max_change": 0.5185088515281677
+    },
+    {
+      "layer": 23,
+      "mass_max_error": 1.1324882507324219e-06,
+      "row_sum_max_error": 1.5497207641601562e-06,
+      "attention_max_change": 0.9999998807907104
+    },
+    {
+      "layer": 24,
+      "mass_max_error": 5.364418029785156e-07,
+      "row_sum_max_error": 7.152557373046875e-07,
+      "attention_max_change": 0.39684176445007324
+    }
+  ]
+}

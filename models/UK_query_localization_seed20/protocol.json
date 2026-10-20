@@ -1,0 +1,46 @@
+{
+  "checkpoint_sha256": "b79d1d3e39e8159592b872ea42d798a310a37d57b00d3d59ee449cf166853f5e",
+  "checkpoint_epoch": 8,
+  "base_sha256": "b08927597f2c9eb2ebd7dcc3ac78ee4b5f6021cbac4b3a6c5a9deec445d80ed9",
+  "warmup_sha256": "32454f00414be2172ca7d84bfa631c3a8b551f45d415816354b0597645904742",
+  "script_sha256": "c2362209066bf82e839ca9ff72d439aa95ca8bcc9667ca1c15170783bb030cce",
+  "group_manifest_sha256": "b6304d5cb755ceda3e967beac7f7950d12c15ffb4349747fd4177fef218d035f",
+  "inventory": {
+    "a": {
+      "domain": "a",
+      "samples": 1024,
+      "real": 103,
+      "fake": 921,
+      "label_sha256": "06c2862679851d816173fbea8c0919012a68f95134529b705c049beef1276d2e",
+      "archive": null
+    },
+    "uk": {
+      "domain": "uk",
+      "samples": 9709,
+      "real": 4709,
+      "fake": 5000,
+      "label_sha256": "a4cf6d3883a6fa94d06c79754a49ffcc480a4fbcbf5efa5ce13b39fc762ea0ab",
+      "archive": "/root/rivermind-data/datasets/mlaad_eval/mlaad_eval_uk_clip.zip"
+    },
+    "itw": {
+      "domain": "itw",
+      "samples": 1024,
+      "real": 636,
+      "fake": 388,
+      "label_sha256": "a754103b6c2de36dda3805eba34d67815c1ac30050b6dc2129d20d00321c73fa",
+      "archive": "/root/rivermind-data/datasets/itw/release_in_the_wild.zip"
+    }
+  },
+  "variants": [
+    "native",
+    "original_routing",
+    "original_value",
+    "task_warm_backend",
+    "original_task_backend",
+    "original_warm_backend"
+  ],
+  "budget_seconds": 600,
+  "target_labels": "Only EER/AUC/group summaries; no fitting or selection",
+  "preprocessing": "Unchanged data.pad64600; no resampling/noise",
+  "caveat": "Endpoint hybrid interventions are off-manifold; not a causal training attribution"
+}

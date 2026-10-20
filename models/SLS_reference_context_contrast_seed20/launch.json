@@ -1,0 +1,8 @@
+{
+  "pid": 4539,
+  "process_create_time": 1791549250.29,
+  "log": "/root/rivermind-data/cross-language-ADD-with-xls-r/experiments/logs/sls_reference_context_contrast_seed20.log",
+  "config": "/root/rivermind-data/cross-language-ADD-with-xls-r/experiments/configs/sls_reference_context_contrast_seed20.yaml",
+  "port": 30646,
+  "unix_started_at": 1791549251.0446422
+}

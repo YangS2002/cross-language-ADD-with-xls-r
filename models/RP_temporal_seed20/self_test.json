@@ -1,0 +1,16 @@
+[
+  {
+    "arm": "ft",
+    "batch": 16,
+    "pure_real_stress": true,
+    "peak_allocated_gib": 13.129554748535156,
+    "peak_reserved_gib": 14.1015625
+  },
+  {
+    "arm": "rp",
+    "batch": 16,
+    "pure_real_stress": true,
+    "peak_allocated_gib": 13.12767505645752,
+    "peak_reserved_gib": 14.11328125
+  }
+]

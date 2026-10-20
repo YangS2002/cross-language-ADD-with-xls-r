@@ -1,0 +1,173 @@
+{'bonafide': 0, 'A01': 1, 'A02': 2, 'A03': 3, 'A04': 4, 'A05': 5, 'A06': 6} {'en'} 25380
+SLS_reference_seed20
+/root/rivermind-data/cross-language-ADD-with-xls-r/fairseq-a54021305d6b3c4c5959ac9395135f63202db8f1/fairseq/checkpoint_utils.py:313: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(f, map_location=torch.device("cpu"))
+/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+PROGRESS warmup 1 200 3200 0.5993181075900793
+PROGRESS warmup 1 400 6400 0.49753049056977033
+PROGRESS warmup 1 600 9600 0.4467279005299012
+PROGRESS warmup 1 800 12800 0.40345555999316274
+PROGRESS warmup 1 1000 16000 0.37009133933112026
+PROGRESS warmup 1 1200 19200 0.34289715757283074
+PROGRESS warmup 1 1400 22400 0.32272043789071697
+EPOCH {"arm": "warmup", "seed": 20, "epoch": 1, "train_loss": 0.30694532352018955, "accuracy": 0.8769109535066982, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 23.24161720275879, "seconds": 97.84182247897843, "reserved_gib": 3.076171875}
+PROGRESS warmup 2 200 3200 0.167278434894979
+PROGRESS warmup 2 400 6400 0.16377744459081442
+PROGRESS warmup 2 600 9600 0.1614711189409718
+PROGRESS warmup 2 800 12800 0.15464688428328371
+PROGRESS warmup 2 1000 16000 0.1544250514046289
+PROGRESS warmup 2 1200 19200 0.14834531951424046
+PROGRESS warmup 2 1400 22400 0.1438413825002499
+EPOCH {"arm": "warmup", "seed": 20, "epoch": 2, "train_loss": 0.13997616930024434, "accuracy": 0.9603230890464933, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 1.2297805547714233, "seconds": 96.85793354298221, "reserved_gib": 3.076171875}
+PROGRESS warmup 3 200 3200 0.11585621093632653
+PROGRESS warmup 3 400 6400 0.10326758633251303
+PROGRESS warmup 3 600 9600 0.10595461456958825
+PROGRESS warmup 3 800 12800 0.10044402045954484
+PROGRESS warmup 3 1000 16000 0.09824141324101947
+PROGRESS warmup 3 1200 19200 0.09507228787891411
+PROGRESS warmup 3 1400 22400 0.0946294801969946
+EPOCH {"arm": "warmup", "seed": 20, "epoch": 3, "train_loss": 0.09207457864276883, "accuracy": 0.9828999211977936, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 17.01927375793457, "seconds": 96.39989406202221, "reserved_gib": 3.076171875}
+PROGRESS self_reference 4 200 3200 0.07591979190765415
+PROGRESS self_reference 4 400 6400 0.044998003358632556
+PROGRESS self_reference 4 600 9600 0.031770251761845426
+PROGRESS self_reference 4 800 12800 0.02428340835180734
+PROGRESS self_reference 4 1000 16000 0.019598218058787097
+PROGRESS self_reference 4 1200 19200 0.016959326783789946
+PROGRESS self_reference 4 1400 22400 0.01470690471773537
+EPOCH {"arm": "self_reference", "seed": 20, "epoch": 4, "train_loss": 0.015097322783686206, "accuracy": 0.9981087470449173, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 0.009839064441621304, "seconds": 251.61861531302566, "reserved_gib": 10.099609375, "selected": true, "free_bytes": 7633641472}
+EVAL {"arm": "self_reference", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "ch", "eer": 14.897049556172862, "threshold": -4.642009258270264, "samples": 18124, "seconds": 57.7532623540028}
+EVAL {"arm": "self_reference", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "de", "eer": 17.902391904323828, "threshold": -1.0741660594940186, "samples": 17696, "seconds": 56.623158402973786}
+EVAL {"arm": "self_reference", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "uk", "eer": 22.65936929284349, "threshold": -1.844057321548462, "samples": 9709, "seconds": 31.55151494202437}
+EVAL {"arm": "self_reference", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "es", "eer": 9.43968552109048, "threshold": -0.8084917664527893, "samples": 13655, "seconds": 43.89356877998216}
+EVAL {"arm": "self_reference", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "itw", "eer": 9.182225565162849, "threshold": -6.429349422454834, "samples": 31779, "seconds": 102.20853447000263}
+PROGRESS self_reference 5 200 3200 0.0001767478642182141
+PROGRESS self_reference 5 400 6400 0.005109564071473755
+PROGRESS self_reference 5 600 9600 0.0035027748864107856
+PROGRESS self_reference 5 800 12800 0.0030108394685370854
+PROGRESS self_reference 5 1000 16000 0.002589950009396489
+PROGRESS self_reference 5 1200 19200 0.0021640131198374965
+PROGRESS self_reference 5 1400 22400 0.0019106814598688158
+EPOCH {"arm": "self_reference", "seed": 20, "epoch": 5, "train_loss": 0.0016896514758844726, "accuracy": 0.9998817966903073, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 0.00020012169261462986, "seconds": 251.70268988597672, "reserved_gib": 10.099609375, "selected": true, "free_bytes": 7633620992}
+PROGRESS self_reference 6 200 3200 0.013587943878696933
+PROGRESS self_reference 6 400 6400 0.006810497822519324
+PROGRESS self_reference 6 600 9600 0.0045534414874206655
+PROGRESS self_reference 6 800 12800 0.0034206975952520225
+PROGRESS self_reference 6 1000 16000 0.002739943705615815
+PROGRESS self_reference 6 1200 19200 0.0023132751760620586
+PROGRESS self_reference 6 1400 22400 0.0020011640617398994
+EPOCH {"arm": "self_reference", "seed": 20, "epoch": 6, "train_loss": 0.0017674141072208684, "accuracy": 0.9999211977935383, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 0.0011454385239630938, "seconds": 250.88029380800435, "reserved_gib": 10.099609375, "selected": false, "free_bytes": 7633620992}
+PROGRESS self_reference 7 200 3200 8.69208925095677e-06
+PROGRESS self_reference 7 400 6400 6.876959081818512e-06
+PROGRESS self_reference 7 600 9600 6.9735602890948676e-06
+PROGRESS self_reference 7 800 12800 0.0007666383398088872
+PROGRESS self_reference 7 1000 16000 0.0006323819364523331
+PROGRESS self_reference 7 1200 19200 0.000528037616206376
+PROGRESS self_reference 7 1400 22400 0.00045326206535882817
+EPOCH {"arm": "self_reference", "seed": 20, "epoch": 7, "train_loss": 0.00040059330158120676, "accuracy": 0.9999605988967691, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 2.0903842596453615e-05, "seconds": 251.62539772200398, "reserved_gib": 10.099609375, "selected": true, "free_bytes": 7633620992}
+PROGRESS self_reference 8 200 3200 1.162071457532221e-05
+PROGRESS self_reference 8 400 6400 0.0014325043181669095
+PROGRESS self_reference 8 600 9600 0.0009617195856192495
+PROGRESS self_reference 8 800 12800 0.0007379447259899119
+PROGRESS self_reference 8 1000 16000 0.0005943811990953982
+PROGRESS self_reference 8 1200 19200 0.0004961181701356857
+PROGRESS self_reference 8 1400 22400 0.0004271291091557248
+EPOCH {"arm": "self_reference", "seed": 20, "epoch": 8, "train_loss": 0.0003817724056361098, "accuracy": 0.9998817966903073, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 5.930456570268916e-09, "seconds": 255.7726249860134, "reserved_gib": 10.099609375, "selected": true, "free_bytes": 7633620992}
+EVAL {"arm": "self_reference", "seed": 20, "milestone": 8, "checkpoint_epoch": 8, "domain": "ch", "eer": 12.751203054347615, "threshold": -6.688745498657227, "samples": 18124, "seconds": 58.91955909499666}
+EVAL {"arm": "self_reference", "seed": 20, "milestone": 8, "checkpoint_epoch": 8, "domain": "de", "eer": 16.376561381989163, "threshold": -0.5490548014640808, "samples": 17696, "seconds": 57.65112144703744}
+EVAL {"arm": "self_reference", "seed": 20, "milestone": 8, "checkpoint_epoch": 8, "domain": "uk", "eer": 25.996389891696747, "threshold": -2.272789239883423, "samples": 9709, "seconds": 31.465214903000742}
+EVAL {"arm": "self_reference", "seed": 20, "milestone": 8, "checkpoint_epoch": 8, "domain": "es", "eer": 11.160840399270151, "threshold": -0.29683318734169006, "samples": 13655, "seconds": 44.212517003004905}
+EVAL {"arm": "self_reference", "seed": 20, "milestone": 8, "checkpoint_epoch": 8, "domain": "itw", "eer": 7.211953318785319, "threshold": -6.018062591552734, "samples": 31779, "seconds": 102.20117242698325}
+PROGRESS self_reference 9 200 3200 7.367355274912057e-06
+PROGRESS self_reference 9 400 6400 5.964742824766667e-06
+PROGRESS self_reference 9 600 9600 4.896740919860439e-06
+PROGRESS self_reference 9 800 12800 4.103358776033072e-06
+PROGRESS self_reference 9 1000 16000 3.664978002257513e-06
+PROGRESS self_reference 9 1200 19200 3.900063273380254e-06
+PROGRESS self_reference 9 1400 22400 3.689949993024934e-06
+EPOCH {"arm": "self_reference", "seed": 20, "epoch": 9, "train_loss": 3.3789315326153364e-06, "accuracy": 1.0, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 0.00014974600344430655, "seconds": 252.88577369897394, "reserved_gib": 10.099609375, "selected": true, "free_bytes": 7633612800}
+PROGRESS self_reference 10 200 3200 2.8437010047310807e-06
+PROGRESS self_reference 10 400 6400 1.820548539088751e-06
+PROGRESS self_reference 10 600 9600 1.6351703132500005e-06
+PROGRESS self_reference 10 800 12800 1.6521448015638375e-06
+PROGRESS self_reference 10 1000 16000 1.452526376072072e-06
+PROGRESS self_reference 10 1200 19200 1.3526526071990414e-06
+PROGRESS self_reference 10 1400 22400 1.287437184751867e-06
+EPOCH {"arm": "self_reference", "seed": 20, "epoch": 10, "train_loss": 1.2452795787607756e-06, "accuracy": 1.0, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 8.946675345011812e-11, "seconds": 253.7678993269801, "reserved_gib": 10.099609375, "selected": true, "free_bytes": 7633612800}
+EVAL {"arm": "self_reference", "seed": 20, "milestone": 10, "checkpoint_epoch": 10, "domain": "ch", "eer": 13.964440695107, "threshold": -9.214942932128906, "samples": 18124, "seconds": 57.976737156976014}
+EVAL {"arm": "self_reference", "seed": 20, "milestone": 10, "checkpoint_epoch": 10, "domain": "de", "eer": 16.144899315138506, "threshold": -2.1683294773101807, "samples": 17696, "seconds": 56.72054141102126}
+EVAL {"arm": "self_reference", "seed": 20, "milestone": 10, "checkpoint_epoch": 10, "domain": "uk", "eer": 27.52088341473774, "threshold": -5.410728454589844, "samples": 9709, "seconds": 31.642282265995163}
+EVAL {"arm": "self_reference", "seed": 20, "milestone": 10, "checkpoint_epoch": 10, "domain": "es", "eer": 11.827133197381132, "threshold": -1.857227087020874, "samples": 13655, "seconds": 43.90636835398618}
+EVAL {"arm": "self_reference", "seed": 20, "milestone": 10, "checkpoint_epoch": 10, "domain": "itw", "eer": 7.243907321978293, "threshold": -8.09405517578125, "samples": 31779, "seconds": 101.783737285994}
+PROGRESS pretrained_reference 4 200 3200 0.057497850676300005
+PROGRESS pretrained_reference 4 400 6400 0.037641936147992966
+PROGRESS pretrained_reference 4 600 9600 0.02699046184062657
+PROGRESS pretrained_reference 4 800 12800 0.02069520475905847
+PROGRESS pretrained_reference 4 1000 16000 0.016844453189454725
+PROGRESS pretrained_reference 4 1200 19200 0.014655378273320517
+PROGRESS pretrained_reference 4 1400 22400 0.012750973461069667
+EPOCH {"arm": "pretrained_reference", "seed": 20, "epoch": 4, "train_loss": 0.013467603578694117, "accuracy": 0.9986997635933806, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 0.015223748050630093, "seconds": 331.26905865594745, "reserved_gib": 12.84375, "selected": true, "free_bytes": 6294958080}
+EVAL {"arm": "pretrained_reference", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "ch", "eer": 14.53388290009889, "threshold": -4.964040279388428, "samples": 18124, "seconds": 113.56019764603116}
+EVAL {"arm": "pretrained_reference", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "de", "eer": 17.224266584892163, "threshold": -1.3477444648742676, "samples": 17696, "seconds": 111.04940267896745}
+EVAL {"arm": "pretrained_reference", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "uk", "eer": 21.701560840942875, "threshold": -2.0041418075561523, "samples": 9709, "seconds": 61.32298275199719}
+EVAL {"arm": "pretrained_reference", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "es", "eer": 8.267945690672963, "threshold": -1.0184211730957031, "samples": 13655, "seconds": 85.93403625197243}
+EVAL {"arm": "pretrained_reference", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "itw", "eer": 9.496584846488684, "threshold": -6.119389533996582, "samples": 31779, "seconds": 199.36894098698394}
+PROGRESS pretrained_reference 5 200 3200 0.00023830380425806652
+PROGRESS pretrained_reference 5 400 6400 0.005892520989389141
+PROGRESS pretrained_reference 5 600 9600 0.004168581890370054
+PROGRESS pretrained_reference 5 800 12800 0.0032446332700021684
+PROGRESS pretrained_reference 5 1000 16000 0.0026794538113140334
+PROGRESS pretrained_reference 5 1200 19200 0.0022401971528915963
+PROGRESS pretrained_reference 5 1400 22400 0.0019267537391350028
+EPOCH {"arm": "pretrained_reference", "seed": 20, "epoch": 5, "train_loss": 0.0017031939209115673, "accuracy": 0.9999211977935383, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 0.0003193166048731655, "seconds": 330.09675776102813, "reserved_gib": 12.84375, "selected": true, "free_bytes": 6294937600}
+PROGRESS pretrained_reference 6 200 3200 0.016255754472647935
+PROGRESS pretrained_reference 6 400 6400 0.008143894511091787
+PROGRESS pretrained_reference 6 600 9600 0.0054424555757715135
+PROGRESS pretrained_reference 6 800 12800 0.004086836571042696
+PROGRESS pretrained_reference 6 1000 16000 0.003271883053352411
+PROGRESS pretrained_reference 6 1200 19200 0.0027611567133080683
+PROGRESS pretrained_reference 6 1400 22400 0.0024319213126485248
+EPOCH {"arm": "pretrained_reference", "seed": 20, "epoch": 6, "train_loss": 0.002149193669574055, "accuracy": 0.9999211977935383, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 0.0013462011702358723, "seconds": 330.6870611310005, "reserved_gib": 12.84375, "selected": false, "free_bytes": 6294937600}
+PROGRESS pretrained_reference 7 200 3200 1.317247216512385e-05
+PROGRESS pretrained_reference 7 400 6400 1.1016068794766908e-05
+PROGRESS pretrained_reference 7 600 9600 1.2302444086979374e-05
+PROGRESS pretrained_reference 7 800 12800 0.0008803554708936368
+PROGRESS pretrained_reference 7 1000 16000 0.0007062533025682285
+PROGRESS pretrained_reference 7 1200 19200 0.0005899381426180028
+PROGRESS pretrained_reference 7 1400 22400 0.0005062489521175552
+EPOCH {"arm": "pretrained_reference", "seed": 20, "epoch": 7, "train_loss": 0.00044800342964901, "accuracy": 0.9999605988967691, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 2.5631406970205717e-05, "seconds": 331.1175888819853, "reserved_gib": 12.84375, "selected": true, "free_bytes": 6294937600}
+PROGRESS pretrained_reference 8 200 3200 3.151995054757606e-06
+PROGRESS pretrained_reference 8 400 6400 7.076535481962409e-06
+PROGRESS pretrained_reference 8 600 9600 0.0002805000804017747
+PROGRESS pretrained_reference 8 800 12800 0.00021081911497576212
+PROGRESS pretrained_reference 8 1000 16000 0.0001708683681551957
+PROGRESS pretrained_reference 8 1200 19200 0.0001425483695511757
+PROGRESS pretrained_reference 8 1400 22400 0.00012259802127577237
+EPOCH {"arm": "pretrained_reference", "seed": 20, "epoch": 8, "train_loss": 0.00010837014251141653, "accuracy": 0.9999605988967691, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 2.535687235649675e-05, "seconds": 332.42444587597856, "reserved_gib": 12.84375, "selected": true, "free_bytes": 6294937600}
+EVAL {"arm": "pretrained_reference", "seed": 20, "milestone": 8, "checkpoint_epoch": 8, "domain": "ch", "eer": 12.375690287833175, "threshold": -10.862812042236328, "samples": 18124, "seconds": 113.40707760199439}
+EVAL {"arm": "pretrained_reference", "seed": 20, "milestone": 8, "checkpoint_epoch": 8, "domain": "de", "eer": 16.721276704487376, "threshold": -4.0642008781433105, "samples": 17696, "seconds": 110.93226544599747}
+EVAL {"arm": "pretrained_reference", "seed": 20, "milestone": 8, "checkpoint_epoch": 8, "domain": "uk", "eer": 24.574986196644723, "threshold": -5.286323070526123, "samples": 9709, "seconds": 61.31494102696888}
+EVAL {"arm": "pretrained_reference", "seed": 20, "milestone": 8, "checkpoint_epoch": 8, "domain": "es", "eer": 14.57346785445959, "threshold": -3.182971477508545, "samples": 13655, "seconds": 86.02735250501428}
+EVAL {"arm": "pretrained_reference", "seed": 20, "milestone": 8, "checkpoint_epoch": 8, "domain": "itw", "eer": 6.837917581513614, "threshold": -8.195588111877441, "samples": 31779, "seconds": 199.08266729401657}
+PROGRESS pretrained_reference 9 200 3200 3.7593983558226185e-06
+PROGRESS pretrained_reference 9 400 6400 2.393090457144531e-06
+PROGRESS pretrained_reference 9 600 9600 1.9417439165255365e-06
+PROGRESS pretrained_reference 9 800 12800 1.8545392820634722e-06
+PROGRESS pretrained_reference 9 1000 16000 1.5865836113717612e-06
+PROGRESS pretrained_reference 9 1200 19200 1.4502993848952706e-06
+PROGRESS pretrained_reference 9 1400 22400 1.392588200773862e-06
+EPOCH {"arm": "pretrained_reference", "seed": 20, "epoch": 9, "train_loss": 1.3762045035446076e-06, "accuracy": 1.0, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 4.609548341250047e-06, "seconds": 331.87683227000525, "reserved_gib": 12.84375, "selected": true, "free_bytes": 6294921216}
+PROGRESS pretrained_reference 10 200 3200 1.0680150422182066e-06
+PROGRESS pretrained_reference 10 400 6400 7.33244256168053e-07
+PROGRESS pretrained_reference 10 600 9600 6.682337345439067e-07
+PROGRESS pretrained_reference 10 800 12800 7.030810253608189e-07
+PROGRESS pretrained_reference 10 1000 16000 6.368929148583558e-07
+PROGRESS pretrained_reference 10 1200 19200 7.973542110719286e-07
+PROGRESS pretrained_reference 10 1400 22400 7.402677974621685e-07
+EPOCH {"arm": "pretrained_reference", "seed": 20, "epoch": 10, "train_loss": 7.144652701194853e-07, "accuracy": 1.0, "samples": 25380, "real": 2580, "fake": 22800, "steps": 1587, "grad_norm_last": 2.4659623232281547e-09, "seconds": 330.8734250519774, "reserved_gib": 12.84375, "selected": true, "free_bytes": 6294921216}
+EVAL {"arm": "pretrained_reference", "seed": 20, "milestone": 10, "checkpoint_epoch": 10, "domain": "ch", "eer": 13.048339409317226, "threshold": -12.183262825012207, "samples": 18124, "seconds": 113.49396898003761}
+EVAL {"arm": "pretrained_reference", "seed": 20, "milestone": 10, "checkpoint_epoch": 10, "domain": "de", "eer": 16.54614126546049, "threshold": -4.758614540100098, "samples": 17696, "seconds": 110.82920376298716}
+EVAL {"arm": "pretrained_reference", "seed": 20, "milestone": 10, "checkpoint_epoch": 10, "domain": "uk", "eer": 24.97672754300276, "threshold": -6.517104148864746, "samples": 9709, "seconds": 61.34347139397869}
+EVAL {"arm": "pretrained_reference", "seed": 20, "milestone": 10, "checkpoint_epoch": 10, "domain": "es", "eer": 14.368283782333368, "threshold": -3.9568092823028564, "samples": 13655, "seconds": 85.84523441299098}
+EVAL {"arm": "pretrained_reference", "seed": 20, "milestone": 10, "checkpoint_epoch": 10, "domain": "itw", "eer": 6.888353219875184, "threshold": -9.078239440917969, "samples": 31779, "seconds": 198.81903808697825}
+ALL_COMPLETE

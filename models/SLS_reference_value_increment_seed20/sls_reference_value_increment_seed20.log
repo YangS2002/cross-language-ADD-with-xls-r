@@ -1,0 +1,26 @@
+{'bonafide': 0, 'A01': 1, 'A02': 2, 'A03': 3, 'A04': 4, 'A05': 5, 'A06': 6} {'en'} 25380
+SLS_reference_value_increment_seed20
+/root/rivermind-data/cross-language-ADD-with-xls-r/fairseq-a54021305d6b3c4c5959ac9395135f63202db8f1/fairseq/checkpoint_utils.py:313: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(f, map_location=torch.device("cpu"))
+/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Traceback (most recent call last):
+  File "/opt/conda/envs/SLS/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/conda/envs/SLS/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/root/rivermind-data/cross-language-ADD-with-xls-r/tools/train_sls_reference_value_increment.py", line 233, in <module>
+    main()
+  File "/root/rivermind-data/cross-language-ADD-with-xls-r/tools/train_sls_reference_value_increment.py", line 223, in main
+    base.run(c, args.config)
+  File "/root/rivermind-data/cross-language-ADD-with-xls-r/tools/train_sls_pretrained_attention.py", line 362, in run
+    test = preflight(c, dataset, sig["pretrained"])
+  File "/root/rivermind-data/cross-language-ADD-with-xls-r/tools/train_sls_reference_value_increment.py", line 111, in preflight
+    torch.testing.assert_close(old, new, atol=c[tag+"_atol"], rtol=c[tag+"_rtol"])
+  File "/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/testing/_comparison.py", line 1530, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 15 / 411648 (0.0%)
+Greatest absolute difference: 0.00022280216217041016 at index (1, 5, 1000) (up to 0.0001 allowed)
+Greatest relative difference: 0.02183573506772518 at index (1, 5, 93) (up to 0.0001 allowed)

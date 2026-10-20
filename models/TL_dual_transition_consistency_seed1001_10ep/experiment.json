@@ -1,0 +1,16 @@
+{
+  "train": "ASVspoof2019-LA",
+  "dev": "DECRO-CH",
+  "test": "MLAAD-DE",
+  "epochs": 10,
+  "seeds": [
+    1001
+  ],
+  "lambda_relation": 0.1,
+  "primary_inference": "Head A",
+  "auxiliary_inference": [
+    "Head B",
+    "Ensemble"
+  ],
+  "model": "Dual Transition Heads + Embedding Relation Consistency"
+}

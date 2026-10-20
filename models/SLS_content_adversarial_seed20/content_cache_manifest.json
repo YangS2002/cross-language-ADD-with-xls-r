@@ -1,0 +1,79 @@
+{
+  "format": "sls_source_content_v1",
+  "source_protocol_sha256": "06c2862679851d816173fbea8c0919012a68f95134529b705c049beef1276d2e",
+  "base_sha256": "b08927597f2c9eb2ebd7dcc3ac78ee4b5f6021cbac4b3a6c5a9deec445d80ed9",
+  "readout_sha256": "b46e9ccfc25391e65be408539e6f81af80e63d2402fbc4f26a0fb49e0ad892e1",
+  "audio_stat_manifest_sha256": "327edd518568f23d434f1883134ba4ba37522e9fca162a9f27344015c4a39cc9",
+  "preprocessing": "original data.pad64600, direct torchaudio; no resampling",
+  "letters": [
+    "E",
+    "T",
+    "A",
+    "O",
+    "N",
+    "I",
+    "H",
+    "S",
+    "R",
+    "D",
+    "L",
+    "U",
+    "M",
+    "W",
+    "C",
+    "F",
+    "G",
+    "Y",
+    "P",
+    "B",
+    "V",
+    "K",
+    "X",
+    "J",
+    "Q",
+    "Z"
+  ],
+  "rows": 25380,
+  "sample_rates": {
+    "16000": 25380
+  },
+  "coverage": {
+    "bonafide": {
+      "count": 2580,
+      "valid": 2580,
+      "mean_letter_mass": 0.2660938799381256
+    },
+    "A01": {
+      "count": 3800,
+      "valid": 3800,
+      "mean_letter_mass": 0.475361168384552
+    },
+    "A02": {
+      "count": 3800,
+      "valid": 3800,
+      "mean_letter_mass": 0.30410945415496826
+    },
+    "A03": {
+      "count": 3800,
+      "valid": 3800,
+      "mean_letter_mass": 0.4154844880104065
+    },
+    "A04": {
+      "count": 3800,
+      "valid": 3800,
+      "mean_letter_mass": 0.4175199270248413
+    },
+    "A05": {
+      "count": 3800,
+      "valid": 3800,
+      "mean_letter_mass": 0.24710455536842346
+    },
+    "A06": {
+      "count": 3800,
+      "valid": 3800,
+      "mean_letter_mass": 0.23864029347896576
+    }
+  },
+  "seconds": 120.14577579498291,
+  "caveat": "CTC pseudo-content only; attack-dependent reference errors remain possible"
+}

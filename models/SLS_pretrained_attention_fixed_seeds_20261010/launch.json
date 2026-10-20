@@ -1,0 +1,15 @@
+{
+  "pid": 1616,
+  "process_create_time": 1791625412.25,
+  "log": "/root/rivermind-data/cross-language-ADD-with-xls-r/experiments/logs/sls_pretrained_attention_fixed_seeds_20261010.log",
+  "configs": [
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/experiments/configs/sls_pretrained_attention_seed1001.yaml",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/experiments/configs/sls_pretrained_attention_seed7.yaml"
+  ],
+  "fixed_seed_order": [
+    1001,
+    7
+  ],
+  "port": 30646,
+  "unix_started_at": 1791625413.0330176
+}

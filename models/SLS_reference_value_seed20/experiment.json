@@ -1,0 +1,91 @@
+{
+  "config": {
+    "exp_name": "SLS_reference_value_seed20",
+    "output_dir": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_reference_value_seed20",
+    "seed": 20,
+    "value_probability": 0.1,
+    "replacement_seed": 902020,
+    "train_data_path": "/root/rivermind-data/data/asv2019_la_train",
+    "train_label_path": "/root/rivermind-data/data/exp/ASVspoof2019.LA.cm.train.trn.txt",
+    "ssl_checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/pretrained/xlsr2_300m.pt",
+    "expected_pretrained_sha256": "b08927597f2c9eb2ebd7dcc3ac78ee4b5f6021cbac4b3a6c5a9deec445d80ed9",
+    "shared_warmup": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_conditional_residual_seed20/warmup.pth",
+    "expected_warmup_sha256": "32454f00414be2172ca7d84bfa631c3a8b551f45d415816354b0597645904742",
+    "matched_attention_results": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_pretrained_attention_seed20/evaluation_results.csv",
+    "matched_baseline_results": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_conditional_residual_seed20/evaluation_results.csv",
+    "matched_query_results": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_pretrained_query_seed20/evaluation_results.csv",
+    "head_lr": 1e-06,
+    "ssl_lr": 1e-06,
+    "weight_decay": 0.0001,
+    "batch_size": 16,
+    "eval_batch_size": 16,
+    "num_workers": 4,
+    "warmup_epochs": 3,
+    "epochs": 8,
+    "milestones": [
+      4,
+      8
+    ],
+    "max_run_seconds": 4500,
+    "initial_eval_estimate_seconds": 650,
+    "max_reserved_gib": 20,
+    "checkpoint_selection": "minimum_complete_source_classification_loss_legacy_batch_aggregation_with_value_replacement",
+    "domains": {
+      "ch": {
+        "label": "/root/rivermind-data/data/exp/decro_ch_eval.txt",
+        "root": "/root/rivermind-data/data"
+      },
+      "de": {
+        "label": "/root/rivermind-data/data/exp/mlaad_eval_de.txt",
+        "root": "/root/rivermind-data/data/mlaad"
+      },
+      "uk": {
+        "label": "/root/rivermind-data/datasets/mlaad_eval/mlaad_eval_uk.txt",
+        "archive": "/root/rivermind-data/datasets/mlaad_eval/mlaad_eval_uk_clip.zip",
+        "prefix": "data/ys/"
+      },
+      "es": {
+        "label": "/root/rivermind-data/datasets/mlaad_eval/mlaad_eval_es.txt",
+        "archive": "/root/rivermind-data/datasets/mlaad_eval/mlaad_eval_es_clip.zip",
+        "prefix": "data/ys/"
+      },
+      "itw": {
+        "label": "/root/rivermind-data/data/exp/itw.txt",
+        "archive": "/root/rivermind-data/datasets/itw/release_in_the_wild.zip",
+        "prefix": "release_in_the_wild/"
+      }
+    }
+  },
+  "signature": {
+    "config": "1e7aa3a0134c4509096828a3625011e8773080f3d9c6a8e0b71bd26aad2ce945",
+    "trainer": "0729fe609e7b467d9fd9d289c78843bd5c482b983376a5a791a081276be0a6dc",
+    "model": "8d321315065c3716e6c6bb2aaa47c6ec7702d6d807d52be3b1ed90c1f6510380",
+    "pretrained": "b08927597f2c9eb2ebd7dcc3ac78ee4b5f6021cbac4b3a6c5a9deec445d80ed9",
+    "warmup": "32454f00414be2172ca7d84bfa631c3a8b551f45d415816354b0597645904742",
+    "labels": "06c2862679851d816173fbea8c0919012a68f95134529b705c049beef1276d2e",
+    "torch_version": "2.5.1+cu121",
+    "fairseq_function_sha256": [
+      "84410048dc06fc75ae4f0b5e3b8d23660588f6276fecce5a5a67b65ba2167030",
+      "78d2dfde3b2f790ab380d4b9e4f1a582442495689c2f83f80776a7b7e2b6e6f3"
+    ],
+    "dependencies": {
+      "data.py": "5a06d003f018d746ba62fdacf3b970b0dfcc6a0f1e4bc4cd7ea590d682fb064a",
+      "train.py": "179789bbdb58de59c1eabcd3448f7b89e46b82e64dbeccc34b7812355340a234",
+      "tools/sls_reference_model.py": "6bd7da7c52572044b4e30beb17e3ea8f2faa8cf95743d708dcf1ed10e486b1f0",
+      "tools/sls_pretrained_query_model.py": "4ef8b5c6f39bafc20914c59ac4ff7e1bbd3cf16784b7f106e9c5cad226e98314",
+      "tools/train_relational_preservation.py": "bf42823faff26ad0d2c04715ca859447e45113abe886e585c7abf4501acb3d1d",
+      "tools/train_sls_reference.py": "cbc6a330d17e8ce4543c3144572599b1e841d1fa9aa63f279feb8a6651954173",
+      "tools/evaluate_relational_preservation.py": "c8090b19a99de32d26b1c67b3f82d1c08a2891cee682a6fbbcaa0550db597f4d",
+      "tools/evaluate_four_domains_shared_xlsr.py": "74ac72af5adee65a0d622b85ecec75912cb6bf7d8183c4f18646863f96006083",
+      "tools/sls_pretrained_attention_model.py": "366850c45408a2a5dffc3f56683ee5c33082e87c88fc2d1cd60b56bdf1af1a45"
+    },
+    "shared_trainer": "ff6126ebdbfb68bb67309b1f47d56f8adac6d4fb3421d1c45539df262ed4fba9"
+  },
+  "pid": 3194,
+  "started_at": "2026-10-09T09:57:59.757590+00:00",
+  "source_only_training": true,
+  "single_candidate": true,
+  "target_use": "full evaluation and predeclared termination only",
+  "recovery": "one best; NO Adam state; no exact resume",
+  "UK_is_previously_used_diagnostic_domain": true
+}

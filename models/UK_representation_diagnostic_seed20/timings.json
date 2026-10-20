@@ -1,0 +1,30 @@
+[
+  {
+    "model": "original",
+    "domain": "a",
+    "samples": 6000,
+    "seconds": 21.688589186000172,
+    "reserved_gib": 3.455078125
+  },
+  {
+    "model": "original",
+    "domain": "uk",
+    "samples": 9709,
+    "seconds": 33.967643661017064,
+    "reserved_gib": 3.455078125
+  },
+  {
+    "model": "finetuned",
+    "domain": "a",
+    "samples": 6000,
+    "seconds": 21.055568310024682,
+    "reserved_gib": 3.46484375
+  },
+  {
+    "model": "finetuned",
+    "domain": "uk",
+    "samples": 9709,
+    "seconds": 33.75335387297673,
+    "reserved_gib": 3.46484375
+  }
+]

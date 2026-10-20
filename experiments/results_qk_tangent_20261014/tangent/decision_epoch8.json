@@ -1,0 +1,18 @@
+{
+  "epoch": 8,
+  "seed": 20,
+  "stop": false,
+  "reason": "fixed_epoch8_complete",
+  "per_domain": {
+    "ch": 18.23130319381016,
+    "de": 11.754042727179801,
+    "uk": 21.423527288171584,
+    "es": 9.183390576365783,
+    "itw": 16.5110271622678
+  },
+  "cross_mean": 15.14806594638183,
+  "worst_cross": 21.423527288171584,
+  "backbone_mode": "tangent",
+  "eligible_for_fixed_multiseed": false,
+  "target_checkpoint_or_seed_selection": false
+}

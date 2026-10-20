@@ -1,0 +1,184 @@
+{
+  "user_authorized": true,
+  "time": 1791461432.6743984,
+  "targets": [
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M1_heterogeneous_multi_order_seed20_10ep/checkpoints/seed_20_best_train_loss.pth",
+      "bytes": 20134082
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M1a_local_transition_preservation_seed20_10ep/checkpoints/seed_20_best_train_loss.pth",
+      "bytes": 20134082
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M2_dual_transition_second_order_residual_seed20_10ep/checkpoints/seed_20_best_train_loss.pth",
+      "bytes": 32492810
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M2_dual_transition_second_order_residual_seed1001_10ep/checkpoints/seed_1001_best_train_loss.pth",
+      "bytes": 32493914
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M3_dual_transition_low_high_consistency_seed20_10ep/checkpoints/seed_20_best_train_loss.pth",
+      "bytes": 31121994
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M3_dual_transition_low_high_consistency_seed1001_10ep/checkpoints/seed_1001_best_train_loss.pth",
+      "bytes": 31122842
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M4_dual_transition_low_high_vector_adapter_seed20_10ep/checkpoints/seed_20_best_train_loss.pth",
+      "bytes": 31560962
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M4_dual_transition_low_high_vector_adapter_seed1001_10ep/checkpoints/seed_1001_best_train_loss.pth",
+      "bytes": 31561802
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M4b_dual_transition_low_high_vector_adapter_scale002_seed1001_10ep/checkpoints/seed_1001_best_train_loss.pth",
+      "bytes": 31561802
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M5_deterministic_transition/train_labels.npy",
+      "bytes": 203168
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M5_deterministic_transition/dev_features.partial.npy",
+      "bytes": 3414851712
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M5_deterministic_transition/train_features.npy",
+      "bytes": 4781998208
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/raw_layers_seed42/best_train_loss.pth",
+      "bytes": 7177382
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/transition_seed42/best_train_loss.pth",
+      "bytes": 7177382
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/transition_seed20/best_train_loss.pth",
+      "bytes": 7177382
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/raw_layers_seed1001/best_train_loss.pth",
+      "bytes": 7177382
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/raw_layers_seed20/best_train_loss.pth",
+      "bytes": 7177382
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/transition_seed2026/best_train_loss.pth",
+      "bytes": 7177382
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/raw_layers_seed7/best_train_loss.pth",
+      "bytes": 7177382
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/transition_seed1001/best_train_loss.pth",
+      "bytes": 7177382
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/raw_layers_seed2026/best_train_loss.pth",
+      "bytes": 7177382
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/transition_seed7/best_train_loss.pth",
+      "bytes": 7177382
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_reference_seed20/warmup.pth",
+      "bytes": 93615202
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_reference_seed20/pretrained_reference/best.pth",
+      "bytes": 1338643170
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_reference_seed20/self_reference/best.pth",
+      "bytes": 1338643170
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_conditional_residual_seed20/pretrained_residual/best.pth",
+      "bytes": 1347041246
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_conditional_residual_seed20/self_residual/best.pth",
+      "bytes": 1347041246
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_conditional_residual_seed20/correction_off_diagnostic/pretrained_residual/best.pth",
+      "bytes": 118,
+      "kind": "symlink"
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_content_adversarial_seed20/pilot_readout.pth",
+      "bytes": 125248
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_content_adversarial_seed20/source_content_targets.pth",
+      "bytes": 3657672
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_content_adversarial_seed20/source_readout/pilot_readout.pth",
+      "bytes": 125248
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_content_adversarial_seed20/pilot_speaker_coverage/pilot_readout.pth",
+      "bytes": 125248
+    },
+    {
+      "path": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_dependency_control_seed20/dependency/best.pth",
+      "bytes": 1339722718
+    }
+  ],
+  "keep": [
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_conditional_residual_seed20/sls/best.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_conditional_residual_seed20/warmup.pth"
+  ],
+  "bytes": 15339751484,
+  "free_before": 4461744128,
+  "status": "complete",
+  "scope": "Old experiment weights and feature caches only; small records, code, data and pretrained assets preserved",
+  "recovery": "Deleted artifacts are not recoverable from this operation",
+  "deleted": [
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M1_heterogeneous_multi_order_seed20_10ep/checkpoints/seed_20_best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M1a_local_transition_preservation_seed20_10ep/checkpoints/seed_20_best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M2_dual_transition_second_order_residual_seed20_10ep/checkpoints/seed_20_best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M2_dual_transition_second_order_residual_seed1001_10ep/checkpoints/seed_1001_best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M3_dual_transition_low_high_consistency_seed20_10ep/checkpoints/seed_20_best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M3_dual_transition_low_high_consistency_seed1001_10ep/checkpoints/seed_1001_best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M4_dual_transition_low_high_vector_adapter_seed20_10ep/checkpoints/seed_20_best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M4_dual_transition_low_high_vector_adapter_seed1001_10ep/checkpoints/seed_1001_best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M4b_dual_transition_low_high_vector_adapter_scale002_seed1001_10ep/checkpoints/seed_1001_best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M5_deterministic_transition/train_labels.npy",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M5_deterministic_transition/dev_features.partial.npy",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/M5_deterministic_transition/train_features.npy",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/raw_layers_seed42/best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/transition_seed42/best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/transition_seed20/best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/raw_layers_seed1001/best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/raw_layers_seed20/best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/transition_seed2026/best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/raw_layers_seed7/best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/transition_seed1001/best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/raw_layers_seed2026/best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E2_raw_vs_transition/transition_seed7/best_train_loss.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_reference_seed20/warmup.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_reference_seed20/pretrained_reference/best.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_reference_seed20/self_reference/best.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_conditional_residual_seed20/pretrained_residual/best.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_conditional_residual_seed20/self_residual/best.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_conditional_residual_seed20/correction_off_diagnostic/pretrained_residual/best.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_content_adversarial_seed20/pilot_readout.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_content_adversarial_seed20/source_content_targets.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_content_adversarial_seed20/source_readout/pilot_readout.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_content_adversarial_seed20/pilot_speaker_coverage/pilot_readout.pth",
+    "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_dependency_control_seed20/dependency/best.pth"
+  ],
+  "free_after": 19801604096
+}

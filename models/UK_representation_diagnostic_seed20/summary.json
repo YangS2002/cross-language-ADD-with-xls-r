@@ -1,0 +1,964 @@
+{
+  "native_full_uk": [
+    {
+      "model": "original",
+      "domain": "uk",
+      "n": 9709,
+      "eer": 13.080666808239542
+    },
+    {
+      "model": "finetuned",
+      "domain": "uk",
+      "n": 9709,
+      "eer": 25.780210235718837
+    }
+  ],
+  "uk_test": [
+    {
+      "kind": "native",
+      "model": "original",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 11.731191167103121,
+      "auc": 0.9513739799676525,
+      "eer_group_bootstrap_95": [
+        10.134920634920636,
+        12.946463429922868
+      ],
+      "converged": true,
+      "iterations": 0
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer08",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 24.272379109947234,
+      "auc": 0.84900244571842,
+      "eer_group_bootstrap_95": [
+        14.30952380952381,
+        28.11817435516842
+      ],
+      "converged": true,
+      "iterations": 74
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer08",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 15
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer16",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 27.26661476396065,
+      "auc": 0.8022375833261246,
+      "eer_group_bootstrap_95": [
+        21.571428571428573,
+        33.985562310030396
+      ],
+      "converged": true,
+      "iterations": 85
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer16",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 19
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer24",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 25.322622502182274,
+      "auc": 0.8154989868486932,
+      "eer_group_bootstrap_95": [
+        19.023809523809522,
+        31.788508018544064
+      ],
+      "converged": true,
+      "iterations": 111
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "layer24",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 41
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "sls_aggregate",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 24.75837717539183,
+      "auc": 0.846045564284647,
+      "eer_group_bootstrap_95": [
+        13.984126984126984,
+        27.135065266704668
+      ],
+      "converged": true,
+      "iterations": 119
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "sls_aggregate",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 23
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 16.747666344240766,
+      "auc": 0.9143107294427275,
+      "eer_group_bootstrap_95": [
+        10.67629179331307,
+        18.472023046607955
+      ],
+      "converged": true,
+      "iterations": 56
+    },
+    {
+      "kind": "linear_probe",
+      "model": "original",
+      "stage": "classifier_embedding",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.16199935514819797,
+      "auc": 0.9999973786512112,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.3253968253968254
+      ],
+      "converged": true,
+      "iterations": 29
+    },
+    {
+      "kind": "native",
+      "model": "finetuned",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 25.808620567626868,
+      "auc": 0.8282544700550222,
+      "eer_group_bootstrap_95": [
+        9.648148148148147,
+        36.084592138405014
+      ],
+      "converged": true,
+      "iterations": 0
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer08",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 32.68533591274054,
+      "auc": 0.7385466718045104,
+      "eer_group_bootstrap_95": [
+        16.53174603174603,
+        47.0605174512523
+      ],
+      "converged": true,
+      "iterations": 63
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer08",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 16
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer16",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 34.70757543586477,
+      "auc": 0.7156544328318692,
+      "eer_group_bootstrap_95": [
+        16.87830354044908,
+        51.45925082484459
+      ],
+      "converged": true,
+      "iterations": 48
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer16",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 17
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer24",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 33.98133075392612,
+      "auc": 0.719222088533434,
+      "eer_group_bootstrap_95": [
+        15.013227513227513,
+        55.28486933937946
+      ],
+      "converged": true,
+      "iterations": 54
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "layer24",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 24
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "sls_aggregate",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 30.339097679319917,
+      "auc": 0.776357006734245,
+      "eer_group_bootstrap_95": [
+        13.007936507936508,
+        41.93675464993697
+      ],
+      "converged": true,
+      "iterations": 47
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "sls_aggregate",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.0,
+      "auc": 1.0,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "converged": true,
+      "iterations": 23
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 27.26661476396065,
+      "auc": 0.8078944540123675,
+      "eer_group_bootstrap_95": [
+        11.978835978835978,
+        37.80861829127006
+      ],
+      "converged": true,
+      "iterations": 25
+    },
+    {
+      "kind": "linear_probe",
+      "model": "finetuned",
+      "stage": "classifier_embedding",
+      "trained_on": "uk",
+      "evaluated_on": "uk",
+      "split": "test",
+      "n": 1236,
+      "real": 597,
+      "eer": 0.16199935514819797,
+      "auc": 0.9999947573024224,
+      "eer_group_bootstrap_95": [
+        0.0,
+        0.24250881316098707
+      ],
+      "converged": true,
+      "iterations": 23
+    }
+  ],
+  "by_group": [
+    {
+      "model": "original",
+      "stage": "layer08",
+      "trained_on": "a",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 14.30952380952381
+    },
+    {
+      "model": "original",
+      "stage": "layer08",
+      "trained_on": "a",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 28.37910447761194
+    },
+    {
+      "model": "original",
+      "stage": "layer08",
+      "trained_on": "a",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 21.35258358662614
+    },
+    {
+      "model": "original",
+      "stage": "layer08",
+      "trained_on": "uk",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 0.0
+    },
+    {
+      "model": "original",
+      "stage": "layer08",
+      "trained_on": "uk",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 0.0
+    },
+    {
+      "model": "original",
+      "stage": "layer08",
+      "trained_on": "uk",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 0.0
+    },
+    {
+      "model": "original",
+      "stage": "layer16",
+      "trained_on": "a",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 21.626984126984127
+    },
+    {
+      "model": "original",
+      "stage": "layer16",
+      "trained_on": "a",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 29.15223880597015
+    },
+    {
+      "model": "original",
+      "stage": "layer16",
+      "trained_on": "a",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 33.985562310030396
+    },
+    {
+      "model": "original",
+      "stage": "layer16",
+      "trained_on": "uk",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 0.0
+    },
+    {
+      "model": "original",
+      "stage": "layer16",
+      "trained_on": "uk",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 0.0
+    },
+    {
+      "model": "original",
+      "stage": "layer16",
+      "trained_on": "uk",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 0.0
+    },
+    {
+      "model": "original",
+      "stage": "layer24",
+      "trained_on": "a",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 19.023809523809522
+    },
+    {
+      "model": "original",
+      "stage": "layer24",
+      "trained_on": "a",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 32.04477611940298
+    },
+    {
+      "model": "original",
+      "stage": "layer24",
+      "trained_on": "a",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 25.265957446808507
+    },
+    {
+      "model": "original",
+      "stage": "layer24",
+      "trained_on": "uk",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 0.0
+    },
+    {
+      "model": "original",
+      "stage": "layer24",
+      "trained_on": "uk",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 0.0
+    },
+    {
+      "model": "original",
+      "stage": "layer24",
+      "trained_on": "uk",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 0.0
+    },
+    {
+      "model": "original",
+      "stage": "sls_aggregate",
+      "trained_on": "a",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 13.984126984126984
+    },
+    {
+      "model": "original",
+      "stage": "sls_aggregate",
+      "trained_on": "a",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 27.219402985074627
+    },
+    {
+      "model": "original",
+      "stage": "sls_aggregate",
+      "trained_on": "a",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 21.35258358662614
+    },
+    {
+      "model": "original",
+      "stage": "sls_aggregate",
+      "trained_on": "uk",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 0.0
+    },
+    {
+      "model": "original",
+      "stage": "sls_aggregate",
+      "trained_on": "uk",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 0.0
+    },
+    {
+      "model": "original",
+      "stage": "sls_aggregate",
+      "trained_on": "uk",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 0.0
+    },
+    {
+      "model": "original",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 13.984126984126984
+    },
+    {
+      "model": "original",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 18.728358208955225
+    },
+    {
+      "model": "original",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 10.67629179331307
+    },
+    {
+      "model": "original",
+      "stage": "classifier_embedding",
+      "trained_on": "uk",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 0.3253968253968254
+    },
+    {
+      "model": "original",
+      "stage": "classifier_embedding",
+      "trained_on": "uk",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 0.0
+    },
+    {
+      "model": "original",
+      "stage": "classifier_embedding",
+      "trained_on": "uk",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 0.0
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer08",
+      "trained_on": "a",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 16.587301587301585
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer08",
+      "trained_on": "a",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 47.680597014925375
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer08",
+      "trained_on": "a",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 21.35258358662614
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer08",
+      "trained_on": "uk",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 0.0
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer08",
+      "trained_on": "uk",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 0.0
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer08",
+      "trained_on": "uk",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 0.0
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer16",
+      "trained_on": "a",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 17.07142857142857
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer16",
+      "trained_on": "a",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 51.93283582089552
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer16",
+      "trained_on": "a",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 23.309270516717326
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer16",
+      "trained_on": "uk",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 0.0
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer16",
+      "trained_on": "uk",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 0.0
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer16",
+      "trained_on": "uk",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 0.0
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer24",
+      "trained_on": "a",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 14.96031746031746
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer24",
+      "trained_on": "a",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 56.371641791044766
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer24",
+      "trained_on": "a",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 21.35258358662614
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer24",
+      "trained_on": "uk",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 0.0
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer24",
+      "trained_on": "uk",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 0.0
+    },
+    {
+      "model": "finetuned",
+      "stage": "layer24",
+      "trained_on": "uk",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 0.0
+    },
+    {
+      "model": "finetuned",
+      "stage": "sls_aggregate",
+      "trained_on": "a",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 13.007936507936508
+    },
+    {
+      "model": "finetuned",
+      "stage": "sls_aggregate",
+      "trained_on": "a",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 42.082089552238806
+    },
+    {
+      "model": "finetuned",
+      "stage": "sls_aggregate",
+      "trained_on": "a",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 21.35258358662614
+    },
+    {
+      "model": "finetuned",
+      "stage": "sls_aggregate",
+      "trained_on": "uk",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 0.0
+    },
+    {
+      "model": "finetuned",
+      "stage": "sls_aggregate",
+      "trained_on": "uk",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 0.0
+    },
+    {
+      "model": "finetuned",
+      "stage": "sls_aggregate",
+      "trained_on": "uk",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 0.0
+    },
+    {
+      "model": "finetuned",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 12.031746031746032
+    },
+    {
+      "model": "finetuned",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 38.41641791044776
+    },
+    {
+      "model": "finetuned",
+      "stage": "classifier_embedding",
+      "trained_on": "a",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 21.35258358662614
+    },
+    {
+      "model": "finetuned",
+      "stage": "classifier_embedding",
+      "trained_on": "uk",
+      "group": "female/sumska/kaydasheva",
+      "n": 615,
+      "real": 300,
+      "eer": 0.0
+    },
+    {
+      "model": "finetuned",
+      "stage": "classifier_embedding",
+      "trained_on": "uk",
+      "group": "female/sumska/mykola_djerya",
+      "n": 518,
+      "real": 250,
+      "eer": 0.0
+    },
+    {
+      "model": "finetuned",
+      "stage": "classifier_embedding",
+      "trained_on": "uk",
+      "group": "male/obruchov/koni_nevynni",
+      "n": 103,
+      "real": 47,
+      "eer": 0.0
+    }
+  ],
+  "all_probes_converged": true,
+  "analysis_script_sha256": "bb34da73394ee11b0648117bcb0451adfa8164daedf79ec9e628b5680475b4b6",
+  "original_training_checkpoint": {
+    "epoch": 10,
+    "loss": 3.560755350167836e-07,
+    "format": "sls_conditional_residual_v1"
+  },
+  "note": "UK-supervised probe performance is diagnostic, not zero-target detection; test has three book groups"
+}

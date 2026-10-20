@@ -1,0 +1,427 @@
+{
+  "4": {
+    "backbone_from_pretrained": {
+      "other": {
+        "parameters": 525312,
+        "changed_exact": 525286,
+        "reference_squared_norm": 3845.3684368133545,
+        "delta_squared_norm": 0.001002006393719057,
+        "reference_norm": 62.011034798762665,
+        "delta_norm": 0.031654484575160236,
+        "relative_l2": 0.0005104653498830478,
+        "changed_exact_fraction": 0.9999505056042886
+      },
+      "TOTAL": {
+        "parameters": 260846720,
+        "changed_exact": 260833215,
+        "reference_squared_norm": 1900906.8835574389,
+        "delta_squared_norm": 1.2796090843987713,
+        "reference_norm": 1378.7337972057692,
+        "delta_norm": 1.1311980747856545,
+        "relative_l2": 0.0008204615547092655,
+        "changed_exact_fraction": 0.9999482262993378
+      },
+      "position": {
+        "parameters": 8389760,
+        "changed_exact": 8389558,
+        "reference_squared_norm": 16699.29711151123,
+        "delta_squared_norm": 0.010686244218391039,
+        "reference_norm": 129.22576024737185,
+        "delta_norm": 0.10337429186403667,
+        "relative_l2": 0.0007999511217125075,
+        "changed_exact_fraction": 0.9999759230299794
+      },
+      "value": {
+        "parameters": 25190400,
+        "changed_exact": 25189552,
+        "reference_squared_norm": 174445.4677696228,
+        "delta_squared_norm": 0.20132996556384342,
+        "reference_norm": 417.6666945898641,
+        "delta_norm": 0.44869807840444714,
+        "relative_l2": 0.0010742970033678528,
+        "changed_exact_fraction": 0.9999663363821139
+      },
+      "attention_out": {
+        "parameters": 25190400,
+        "changed_exact": 25189487,
+        "reference_squared_norm": 173621.31100988388,
+        "delta_squared_norm": 0.1898547862193425,
+        "reference_norm": 416.6789063654217,
+        "delta_norm": 0.4357232908846422,
+        "relative_l2": 0.0010457051802437985,
+        "changed_exact_fraction": 0.9999637560340447
+      },
+      "normalization": {
+        "parameters": 101376,
+        "changed_exact": 99316,
+        "reference_squared_norm": 7867.107333183289,
+        "delta_squared_norm": 0.0005768100958789546,
+        "reference_norm": 88.69671545882231,
+        "delta_norm": 0.02401687106762566,
+        "relative_l2": 0.0002707752022539725,
+        "changed_exact_fraction": 0.9796796085858586
+      },
+      "ffn": {
+        "parameters": 201449472,
+        "changed_exact": 201440016,
+        "reference_squared_norm": 1524428.3318964243,
+        "delta_squared_norm": 0.8761592719075963,
+        "reference_norm": 1234.6774201776043,
+        "delta_norm": 0.9360337984857151,
+        "relative_l2": 0.0007581201236765711,
+        "changed_exact_fraction": 0.9999530601897035
+      }
+    },
+    "backend_from_warmup": {
+      "first_bn": {
+        "parameters": 2,
+        "changed_exact": 2,
+        "reference_squared_norm": 1.007156558875522,
+        "delta_squared_norm": 3.962021424275264e-07,
+        "reference_norm": 1.0035719002022336,
+        "delta_norm": 0.0006294459011126583,
+        "relative_l2": 0.0006272055853554849,
+        "changed_exact_fraction": 1.0
+      },
+      "TOTAL": {
+        "parameters": 23399429,
+        "changed_exact": 23399337,
+        "reference_squared_norm": 343.98373757633317,
+        "delta_squared_norm": 0.014980354088674375,
+        "reference_norm": 18.546798580249185,
+        "delta_norm": 0.12239425676343794,
+        "relative_l2": 0.006599212054514776,
+        "changed_exact_fraction": 0.9999960682801277
+      },
+      "fc0": {
+        "parameters": 1025,
+        "changed_exact": 1025,
+        "reference_squared_norm": 0.3440899346896913,
+        "delta_squared_norm": 2.6981995029373707e-06,
+        "reference_norm": 0.5865917956208485,
+        "delta_norm": 0.0016426197073386678,
+        "relative_l2": 0.0028002773301664063,
+        "changed_exact_fraction": 1.0
+      },
+      "fc1": {
+        "parameters": 23396352,
+        "changed_exact": 23396260,
+        "reference_squared_norm": 341.9355698954314,
+        "delta_squared_norm": 0.014916922779320885,
+        "reference_norm": 18.49149993633376,
+        "delta_norm": 0.1221348548913081,
+        "relative_l2": 0.006604918763313871,
+        "changed_exact_fraction": 0.9999960677630427
+      },
+      "fc3": {
+        "parameters": 2050,
+        "changed_exact": 2050,
+        "reference_squared_norm": 0.6969211873365566,
+        "delta_squared_norm": 6.0336907708125054e-05,
+        "reference_norm": 0.8348180564270017,
+        "delta_norm": 0.007767683548402642,
+        "relative_l2": 0.009304642477006443,
+        "changed_exact_fraction": 1.0
+      }
+    },
+    "batchnorm": {
+      "weight": [
+        1.004198670387268
+      ],
+      "bias": [
+        -0.0006095009157434106
+      ],
+      "running_mean": [
+        5.7076334953308105
+      ],
+      "running_var": [
+        533.2053833007812
+      ],
+      "num_batches_tracked": 6348
+    }
+  },
+  "8": {
+    "backbone_from_pretrained": {
+      "other": {
+        "parameters": 525312,
+        "changed_exact": 525295,
+        "reference_squared_norm": 3845.3684368133545,
+        "delta_squared_norm": 0.002267645195388468,
+        "reference_norm": 62.011034798762665,
+        "delta_norm": 0.04761979835518487,
+        "relative_l2": 0.0007679245880950055,
+        "changed_exact_fraction": 0.9999676382797271
+      },
+      "TOTAL": {
+        "parameters": 260846720,
+        "changed_exact": 260837494,
+        "reference_squared_norm": 1900906.8835574389,
+        "delta_squared_norm": 2.5362092205121485,
+        "reference_norm": 1378.7337972057692,
+        "delta_norm": 1.5925480276940311,
+        "relative_l2": 0.0011550801401413323,
+        "changed_exact_fraction": 0.9999646305692477
+      },
+      "position": {
+        "parameters": 8389760,
+        "changed_exact": 8389593,
+        "reference_squared_norm": 16699.29711151123,
+        "delta_squared_norm": 0.023664075875160506,
+        "reference_norm": 129.22576024737185,
+        "delta_norm": 0.15383132280247905,
+        "relative_l2": 0.0011904075666338177,
+        "changed_exact_fraction": 0.9999800947822107
+      },
+      "value": {
+        "parameters": 25190400,
+        "changed_exact": 25189832,
+        "reference_squared_norm": 174445.4677696228,
+        "delta_squared_norm": 0.3860245208084052,
+        "reference_norm": 417.6666945898641,
+        "delta_norm": 0.6213087161857664,
+        "relative_l2": 0.0014875706495962589,
+        "changed_exact_fraction": 0.9999774517276423
+      },
+      "attention_out": {
+        "parameters": 25190400,
+        "changed_exact": 25189787,
+        "reference_squared_norm": 173621.31100988388,
+        "delta_squared_norm": 0.36799429042594056,
+        "reference_norm": 416.6789063654217,
+        "delta_norm": 0.6066253295288127,
+        "relative_l2": 0.0014558580246363864,
+        "changed_exact_fraction": 0.9999756653328252
+      },
+      "normalization": {
+        "parameters": 101376,
+        "changed_exact": 99313,
+        "reference_squared_norm": 7867.107333183289,
+        "delta_squared_norm": 0.0010863670958087823,
+        "reference_norm": 88.69671545882231,
+        "delta_norm": 0.03296008337078021,
+        "relative_l2": 0.0003716043283032507,
+        "changed_exact_fraction": 0.9796500157828283
+      },
+      "ffn": {
+        "parameters": 201449472,
+        "changed_exact": 201443674,
+        "reference_squared_norm": 1524428.3318964243,
+        "delta_squared_norm": 1.755172321111445,
+        "reference_norm": 1234.6774201776043,
+        "delta_norm": 1.3248291667650758,
+        "relative_l2": 0.0010730164374225808,
+        "changed_exact_fraction": 0.9999712185892451
+      }
+    },
+    "backend_from_warmup": {
+      "first_bn": {
+        "parameters": 2,
+        "changed_exact": 2,
+        "reference_squared_norm": 1.007156558875522,
+        "delta_squared_norm": 6.68249213298111e-07,
+        "reference_norm": 1.0035719002022336,
+        "delta_norm": 0.0008174651144226958,
+        "relative_l2": 0.000814555603099255,
+        "changed_exact_fraction": 1.0
+      },
+      "TOTAL": {
+        "parameters": 23399429,
+        "changed_exact": 23399367,
+        "reference_squared_norm": 343.98373757633317,
+        "delta_squared_norm": 0.04661208351327961,
+        "reference_norm": 18.546798580249185,
+        "delta_norm": 0.2158983175323041,
+        "relative_l2": 0.011640732312811012,
+        "changed_exact_fraction": 0.9999973503626948
+      },
+      "fc0": {
+        "parameters": 1025,
+        "changed_exact": 1025,
+        "reference_squared_norm": 0.3440899346896913,
+        "delta_squared_norm": 4.425074961678099e-06,
+        "reference_norm": 0.5865917956208485,
+        "delta_norm": 0.0021035862144628396,
+        "relative_l2": 0.0035861159841767045,
+        "changed_exact_fraction": 1.0
+      },
+      "fc1": {
+        "parameters": 23396352,
+        "changed_exact": 23396290,
+        "reference_squared_norm": 341.9355698954314,
+        "delta_squared_norm": 0.04648992940701646,
+        "reference_norm": 18.49149993633376,
+        "delta_norm": 0.21561523463571972,
+        "relative_l2": 0.011660234993271667,
+        "changed_exact_fraction": 0.9999973500142244
+      },
+      "fc3": {
+        "parameters": 2050,
+        "changed_exact": 2050,
+        "reference_squared_norm": 0.6969211873365566,
+        "delta_squared_norm": 0.00011706078208817416,
+        "reference_norm": 0.8348180564270017,
+        "delta_norm": 0.01081946311459927,
+        "relative_l2": 0.012960264852087981,
+        "changed_exact_fraction": 1.0
+      }
+    },
+    "batchnorm": {
+      "weight": [
+        1.0043838024139404
+      ],
+      "bias": [
+        -0.0006470901425927877
+      ],
+      "running_mean": [
+        4.66311502456665
+      ],
+      "running_var": [
+        382.3044738769531
+      ],
+      "num_batches_tracked": 12696
+    }
+  },
+  "4_to_8": {
+    "backbone": {
+      "other": {
+        "parameters": 525312,
+        "changed_exact": 525288,
+        "reference_squared_norm": 3845.382038116455,
+        "delta_squared_norm": 0.0007606043234318349,
+        "reference_norm": 62.01114446707507,
+        "delta_norm": 0.027579055883619998,
+        "relative_l2": 0.0004447435395788115,
+        "changed_exact_fraction": 0.9999543128654971
+      },
+      "TOTAL": {
+        "parameters": 260846720,
+        "changed_exact": 260829747,
+        "reference_squared_norm": 1900908.165544033,
+        "delta_squared_norm": 0.5429207000346778,
+        "reference_norm": 1378.734262120164,
+        "delta_norm": 0.7368315275791868,
+        "relative_l2": 0.0005344260658657426,
+        "changed_exact_fraction": 0.999934931135036
+      },
+      "position": {
+        "parameters": 8389760,
+        "changed_exact": 8389469,
+        "reference_squared_norm": 16698.45500946045,
+        "delta_squared_norm": 0.008959349937079253,
+        "reference_norm": 129.22250194706976,
+        "delta_norm": 0.09465384269578944,
+        "relative_l2": 0.0007324873088632827,
+        "changed_exact_fraction": 0.9999653148600198
+      },
+      "value": {
+        "parameters": 25190400,
+        "changed_exact": 25189220,
+        "reference_squared_norm": 174445.8148021698,
+        "delta_squared_norm": 0.07211276103510045,
+        "reference_norm": 417.6671100316253,
+        "delta_norm": 0.2685381928797102,
+        "relative_l2": 0.0006429479037968223,
+        "changed_exact_fraction": 0.9999531567581301
+      },
+      "attention_out": {
+        "parameters": 25190400,
+        "changed_exact": 25189226,
+        "reference_squared_norm": 173621.47978639603,
+        "delta_squared_norm": 0.07017647651230163,
+        "reference_norm": 416.67910889123783,
+        "delta_norm": 0.2649084304288968,
+        "relative_l2": 0.0006357612483472108,
+        "changed_exact_fraction": 0.9999533949441057
+      },
+      "normalization": {
+        "parameters": 101376,
+        "changed_exact": 99312,
+        "reference_squared_norm": 7867.1604989767075,
+        "delta_squared_norm": 0.00018841373301370368,
+        "reference_norm": 88.69701516385265,
+        "delta_norm": 0.013726388199876313,
+        "relative_l2": 0.00015475592019099113,
+        "changed_exact_fraction": 0.9796401515151515
+      },
+      "ffn": {
+        "parameters": 201449472,
+        "changed_exact": 201437232,
+        "reference_squared_norm": 1524429.8734089136,
+        "delta_squared_norm": 0.390723094493751,
+        "reference_norm": 1234.6780444346266,
+        "delta_norm": 0.6250784706688841,
+        "relative_l2": 0.0005062683940047827,
+        "changed_exact_fraction": 0.9999392403470782
+      }
+    },
+    "backend": {
+      "first_bn": {
+        "parameters": 2,
+        "changed_exact": 2,
+        "reference_squared_norm": 1.0084153552407429,
+        "delta_squared_norm": 3.568681727905698e-08,
+        "reference_norm": 1.0041988623976543,
+        "delta_norm": 0.00018890954787690583,
+        "relative_l2": 0.00018811965931315628,
+        "changed_exact_fraction": 1.0
+      },
+      "TOTAL": {
+        "parameters": 23399429,
+        "changed_exact": 23399317,
+        "reference_squared_norm": 344.1153129349505,
+        "delta_squared_norm": 0.01523697453965911,
+        "reference_norm": 18.550345358913145,
+        "delta_norm": 0.1234381405387294,
+        "relative_l2": 0.006654223312312584,
+        "changed_exact_fraction": 0.9999952135584164
+      },
+      "fc0": {
+        "parameters": 1025,
+        "changed_exact": 1025,
+        "reference_squared_norm": 0.3440921084547881,
+        "delta_squared_norm": 7.213876912492978e-07,
+        "reference_norm": 0.5865936484950959,
+        "delta_norm": 0.0008493454487128884,
+        "relative_l2": 0.0014479281371216368,
+        "changed_exact_fraction": 1.0
+      },
+      "fc1": {
+        "parameters": 23396352,
+        "changed_exact": 23396240,
+        "reference_squared_norm": 342.0581545038149,
+        "delta_squared_norm": 0.01522548770276444,
+        "reference_norm": 18.49481425978144,
+        "delta_norm": 0.12339160304803742,
+        "relative_l2": 0.006671686523306322,
+        "changed_exact_fraction": 0.9999952129289216
+      },
+      "fc3": {
+        "parameters": 2050,
+        "changed_exact": 2050,
+        "reference_squared_norm": 0.7046509674401022,
+        "delta_squared_norm": 1.0729762386141317e-05,
+        "reference_norm": 0.839434909591031,
+        "delta_norm": 0.0032756316011024983,
+        "relative_l2": 0.003902186534865904,
+        "changed_exact_fraction": 1.0
+      }
+    }
+  },
+  "3": {
+    "batchnorm": {
+      "weight": [
+        1.0035717487335205
+      ],
+      "bias": [
+        -0.0005531857605092227
+      ],
+      "running_mean": [
+        3.4976000785827637
+      ],
+      "running_var": [
+        170.59632873535156
+      ],
+      "num_batches_tracked": 4761
+    }
+  }
+}

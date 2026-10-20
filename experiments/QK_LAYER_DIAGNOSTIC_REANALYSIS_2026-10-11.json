@@ -1,0 +1,151 @@
+{
+  "source": "models/UK_query_localization_seed20/layer_diagnostics.csv",
+  "definition": "KL(task Query attention || original actual QK attention), each layer averaged over samples, heads and 8 fixed query positions from linspace(0,min(200,T-1),8).long(); equal layer-weighted bands; label 1 real, 0 fake",
+  "source_sha256": "E6B02120499871A443BFED3E0B1E8C7CA27A0D3DA6E3652D54BA76DF372655CD",
+  "summaries": [
+    {
+      "domain": "a",
+      "label": 0,
+      "band": "1-8",
+      "attention_kl_mean": 0.014173346798952529,
+      "entropy_mean": 0.8256309964369485,
+      "original_entropy_mean": 0.82389011885263
+    },
+    {
+      "domain": "a",
+      "label": 0,
+      "band": "9-16",
+      "attention_kl_mean": 0.453470184978393,
+      "entropy_mean": 0.7879311107786678,
+      "original_entropy_mean": 0.7841067307676217
+    },
+    {
+      "domain": "a",
+      "label": 0,
+      "band": "17-24",
+      "attention_kl_mean": 1.63868145638193,
+      "entropy_mean": 0.761995702399493,
+      "original_entropy_mean": 0.7254580837572306
+    },
+    {
+      "domain": "a",
+      "label": 1,
+      "band": "1-8",
+      "attention_kl_mean": 0.007559040722872912,
+      "entropy_mean": 0.8295569425647699,
+      "original_entropy_mean": 0.8302087778026618
+    },
+    {
+      "domain": "a",
+      "label": 1,
+      "band": "9-16",
+      "attention_kl_mean": 0.2034118540078691,
+      "entropy_mean": 0.7791155391526453,
+      "original_entropy_mean": 0.7977958576193133
+    },
+    {
+      "domain": "a",
+      "label": 1,
+      "band": "17-24",
+      "attention_kl_mean": 0.6496555984960599,
+      "entropy_mean": 0.713918724251025,
+      "original_entropy_mean": 0.7301658549644414
+    },
+    {
+      "domain": "itw",
+      "label": 0,
+      "band": "1-8",
+      "attention_kl_mean": 0.010625297094326091,
+      "entropy_mean": 0.8381028325517768,
+      "original_entropy_mean": 0.8372863140149215
+    },
+    {
+      "domain": "itw",
+      "label": 0,
+      "band": "9-16",
+      "attention_kl_mean": 0.2987880725365555,
+      "entropy_mean": 0.7845103810205287,
+      "original_entropy_mean": 0.7818306084991116
+    },
+    {
+      "domain": "itw",
+      "label": 0,
+      "band": "17-24",
+      "attention_kl_mean": 1.1577287387035633,
+      "entropy_mean": 0.7463125169238786,
+      "original_entropy_mean": 0.7184873137661477
+    },
+    {
+      "domain": "itw",
+      "label": 1,
+      "band": "1-8",
+      "attention_kl_mean": 0.00673608473923922,
+      "entropy_mean": 0.8362030757579413,
+      "original_entropy_mean": 0.8363071069964823
+    },
+    {
+      "domain": "itw",
+      "label": 1,
+      "band": "9-16",
+      "attention_kl_mean": 0.2019615156148449,
+      "entropy_mean": 0.7698396357162943,
+      "original_entropy_mean": 0.787557932612656
+    },
+    {
+      "domain": "itw",
+      "label": 1,
+      "band": "17-24",
+      "attention_kl_mean": 0.6262146391197102,
+      "entropy_mean": 0.7126915096861761,
+      "original_entropy_mean": 0.7216101635083462
+    },
+    {
+      "domain": "uk",
+      "label": 0,
+      "band": "1-8",
+      "attention_kl_mean": 0.00745179940209382,
+      "entropy_mean": 0.8408679846286774,
+      "original_entropy_mean": 0.84078913834095
+    },
+    {
+      "domain": "uk",
+      "label": 0,
+      "band": "9-16",
+      "attention_kl_mean": 0.22177190694175658,
+      "entropy_mean": 0.7952140079259873,
+      "original_entropy_mean": 0.7960268239617347
+    },
+    {
+      "domain": "uk",
+      "label": 0,
+      "band": "17-24",
+      "attention_kl_mean": 0.7814755509633571,
+      "entropy_mean": 0.7386531052678823,
+      "original_entropy_mean": 0.7252767585992813
+    },
+    {
+      "domain": "uk",
+      "label": 1,
+      "band": "1-8",
+      "attention_kl_mean": 0.006234845929411479,
+      "entropy_mean": 0.8222281228688448,
+      "original_entropy_mean": 0.8225326618588281
+    },
+    {
+      "domain": "uk",
+      "label": 1,
+      "band": "9-16",
+      "attention_kl_mean": 0.1727937829373596,
+      "entropy_mean": 0.774614810323381,
+      "original_entropy_mean": 0.7845388383185895
+    },
+    {
+      "domain": "uk",
+      "label": 1,
+      "band": "17-24",
+      "attention_kl_mean": 1.014779313344229,
+      "entropy_mean": 0.7080141469586247,
+      "original_entropy_mean": 0.7122830322060167
+    }
+  ]
+}

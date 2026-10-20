@@ -1,0 +1,38 @@
+/root/rivermind-data/cross-language-ADD-with-xls-r/fairseq-a54021305d6b3c4c5959ac9395135f63202db8f1/fairseq/checkpoint_utils.py:313: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(f, map_location=torch.device("cpu"))
+/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+{"state": "running", "domain": "a", "samples": 16, "total": 1024, "elapsed_seconds": 26.534504661045503}
+{"state": "running", "domain": "a", "samples": 416, "total": 1024, "elapsed_seconds": 32.11301645304775}
+{"state": "running", "domain": "a", "samples": 816, "total": 1024, "elapsed_seconds": 37.69188082002802}
+DOMAIN_COMPLETE a {"native": {"eer": 0.0, "threshold": -8.46895980834961, "auc": 1.0, "samples": 1024, "real": 103, "fake": 921}, "original_routing": {"eer": 0.0, "threshold": -0.0014790082350373268, "auc": 1.0, "samples": 1024, "real": 103, "fake": 921}, "original_value": {"eer": 3.084975174725657, "threshold": -0.007488631643354893, "auc": 0.9943602879942655, "samples": 1024, "real": 103, "fake": 921}, "task_warm_backend": {"eer": 0.0, "threshold": -13.695313453674316, "auc": 1.0, "samples": 1024, "real": 103, "fake": 921}, "original_task_backend": {"eer": 3.896144966952342, "threshold": -0.004517824854701757, "auc": 0.9955725625375542, "samples": 1024, "real": 103, "fake": 921}, "original_warm_backend": {"eer": 0.9740362417380855, "threshold": -0.7617567181587219, "auc": 0.9997575450913423, "samples": 1024, "real": 103, "fake": 921}, "seconds": 15.630225762026384}
+{"state": "running", "domain": "uk", "samples": 16, "total": 9709, "elapsed_seconds": 41.53604165004799}
+{"state": "running", "domain": "uk", "samples": 416, "total": 9709, "elapsed_seconds": 47.1583889760077}
+{"state": "running", "domain": "uk", "samples": 816, "total": 9709, "elapsed_seconds": 52.78362639801344}
+{"state": "running", "domain": "uk", "samples": 1216, "total": 9709, "elapsed_seconds": 58.433104355994146}
+{"state": "running", "domain": "uk", "samples": 1616, "total": 9709, "elapsed_seconds": 64.07223254500423}
+{"state": "running", "domain": "uk", "samples": 2016, "total": 9709, "elapsed_seconds": 69.74303628999041}
+{"state": "running", "domain": "uk", "samples": 2416, "total": 9709, "elapsed_seconds": 75.43096741999034}
+{"state": "running", "domain": "uk", "samples": 2816, "total": 9709, "elapsed_seconds": 81.11748201900627}
+{"state": "running", "domain": "uk", "samples": 3216, "total": 9709, "elapsed_seconds": 86.80292496900074}
+{"state": "running", "domain": "uk", "samples": 3616, "total": 9709, "elapsed_seconds": 92.46612647804432}
+{"state": "running", "domain": "uk", "samples": 4016, "total": 9709, "elapsed_seconds": 98.09908960299799}
+{"state": "running", "domain": "uk", "samples": 4416, "total": 9709, "elapsed_seconds": 103.74905671802117}
+{"state": "running", "domain": "uk", "samples": 4816, "total": 9709, "elapsed_seconds": 109.3840061200317}
+{"state": "running", "domain": "uk", "samples": 5216, "total": 9709, "elapsed_seconds": 115.05528740800219}
+{"state": "running", "domain": "uk", "samples": 5616, "total": 9709, "elapsed_seconds": 120.79368902300484}
+{"state": "running", "domain": "uk", "samples": 6016, "total": 9709, "elapsed_seconds": 126.50043542403728}
+{"state": "running", "domain": "uk", "samples": 6416, "total": 9709, "elapsed_seconds": 132.18183051300002}
+{"state": "running", "domain": "uk", "samples": 6816, "total": 9709, "elapsed_seconds": 137.81172713899286}
+{"state": "running", "domain": "uk", "samples": 7216, "total": 9709, "elapsed_seconds": 143.47165589901851}
+{"state": "running", "domain": "uk", "samples": 7616, "total": 9709, "elapsed_seconds": 149.14982574002352}
+{"state": "running", "domain": "uk", "samples": 8016, "total": 9709, "elapsed_seconds": 154.80638020904735}
+{"state": "running", "domain": "uk", "samples": 8416, "total": 9709, "elapsed_seconds": 160.4895266930107}
+{"state": "running", "domain": "uk", "samples": 8816, "total": 9709, "elapsed_seconds": 166.19033467100235}
+{"state": "running", "domain": "uk", "samples": 9216, "total": 9709, "elapsed_seconds": 171.88895076303743}
+{"state": "running", "domain": "uk", "samples": 9616, "total": 9709, "elapsed_seconds": 177.57885840104427}
+DOMAIN_COMPLETE uk {"native": {"eer": 21.217347632193672, "threshold": -0.5623775124549866, "auc": 0.8762942662985773, "samples": 9709, "real": 4709, "fake": 5000}, "original_routing": {"eer": 13.801677638564453, "threshold": -0.0020171310752630234, "auc": 0.9376892758547462, "samples": 9709, "real": 4709, "fake": 5000}, "original_value": {"eer": 18.83813548524103, "threshold": -0.07093247771263123, "auc": 0.8681943937141645, "samples": 9709, "real": 4709, "fake": 5000}, "task_warm_backend": {"eer": 29.75576980250584, "threshold": -10.28128433227539, "auc": 0.7782302187300915, "samples": 9709, "real": 4709, "fake": 5000}, "original_task_backend": {"eer": 14.141565088129116, "threshold": -0.012221569195389748, "auc": 0.9283873433850075, "samples": 9709, "real": 4709, "fake": 5000}, "original_warm_backend": {"eer": 13.080666808239542, "threshold": -2.5149853229522705, "auc": 0.9386248248035676, "samples": 9709, "real": 4709, "fake": 5000}, "seconds": 138.36147083697142}
+{"state": "running", "domain": "itw", "samples": 16, "total": 1024, "elapsed_seconds": 180.08435099903727}
+{"state": "running", "domain": "itw", "samples": 416, "total": 1024, "elapsed_seconds": 185.7241705119959}
+{"state": "running", "domain": "itw", "samples": 816, "total": 1024, "elapsed_seconds": 191.41458583902568}
+DOMAIN_COMPLETE itw {"native": {"eer": 8.004279323088891, "threshold": -4.0181498527526855, "auc": 0.9740707871360954, "samples": 1024, "real": 636, "fake": 388}, "original_routing": {"eer": 12.39625883420865, "threshold": -0.3769513666629791, "auc": 0.9517988556052649, "samples": 1024, "real": 636, "fake": 388}, "original_value": {"eer": 27.339039097451856, "threshold": -0.2607613205909729, "auc": 0.7948234779225831, "samples": 1024, "real": 636, "fake": 388}, "task_warm_backend": {"eer": 11.61657913505803, "threshold": -12.500003814697266, "auc": 0.9520055274589898, "samples": 1024, "real": 636, "fake": 388}, "original_task_backend": {"eer": 37.39625883420865, "threshold": -0.22858573496341705, "auc": 0.6855548531414122, "samples": 1024, "real": 636, "fake": 388}, "original_warm_backend": {"eer": 34.27754003760617, "threshold": -6.158368110656738, "auc": 0.7135791512675873, "samples": 1024, "real": 636, "fake": 388}, "seconds": 15.313059617008548}

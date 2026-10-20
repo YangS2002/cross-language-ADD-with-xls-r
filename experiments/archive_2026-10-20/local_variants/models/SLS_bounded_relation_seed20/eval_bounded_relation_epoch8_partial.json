@@ -1,0 +1,35 @@
+[
+  {
+    "arm": "bounded_relation",
+    "seed": 20,
+    "milestone": 8,
+    "checkpoint_epoch": 7,
+    "domain": "ch",
+    "eer": 12.998816683488956,
+    "threshold": -6.002475738525391,
+    "samples": 18124,
+    "seconds": 133.92887674400117
+  },
+  {
+    "arm": "bounded_relation",
+    "seed": 20,
+    "milestone": 8,
+    "checkpoint_epoch": 7,
+    "domain": "de",
+    "eer": 10.075687416947767,
+    "threshold": -3.972137689590454,
+    "samples": 17696,
+    "seconds": 131.03161501907744
+  },
+  {
+    "arm": "bounded_relation",
+    "seed": 20,
+    "milestone": 8,
+    "checkpoint_epoch": 7,
+    "domain": "uk",
+    "eer": 19.919651730728393,
+    "threshold": -4.310394287109375,
+    "samples": 9709,
+    "seconds": 72.82347081892658
+  }
+]

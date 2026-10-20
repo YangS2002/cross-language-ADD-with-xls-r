@@ -1,0 +1,136 @@
+{
+  "status": "complete",
+  "started_at": "2026-10-11T11:49:43.304047+00:00",
+  "deleted": [
+    {
+      "path": "models/SLS_pretrained_attention_seed1001/pretrained_attention/best.pth",
+      "bytes": 1137089154,
+      "mtime_ns": 1791627961053152599,
+      "inode": 3018175
+    },
+    {
+      "path": "models/SLS_pretrained_attention_seed1001/pretrained_attention/source_best_at_epoch4.pth",
+      "bytes": 1137089154,
+      "mtime_ns": 1791626093855789913,
+      "inode": 3018176
+    },
+    {
+      "path": "models/SLS_pretrained_attention_seed20_repeat_20261011/pretrained_attention/best.pth",
+      "bytes": 1137089346,
+      "mtime_ns": 1791717743499940144,
+      "inode": 3018692
+    },
+    {
+      "path": "models/SLS_pretrained_attention_seed7/pretrained_attention/best.pth",
+      "bytes": 1137089154,
+      "mtime_ns": 1791631082423860558,
+      "inode": 3018241
+    },
+    {
+      "path": "models/SLS_pretrained_attention_seed7/pretrained_attention/source_best_at_epoch4.pth",
+      "bytes": 1137089154,
+      "mtime_ns": 1791629211573580191,
+      "inode": 3018242
+    },
+    {
+      "path": "models/SLS_reference_context_contrast_seed20/reference_context_contrast/best.pth",
+      "bytes": 1137188161,
+      "mtime_ns": 1791551249994602111,
+      "inode": 3018298
+    },
+    {
+      "path": "models/SLS_reference_context_contrast_seed20/reference_context_contrast/source_best_at_epoch4.pth",
+      "bytes": 1137188161,
+      "mtime_ns": 1791549658906686195,
+      "inode": 3018299
+    },
+    {
+      "path": "models/SLS_reference_context_contrast_seed20/source_reference_mean.pt",
+      "bytes": 99953,
+      "mtime_ns": 1791549292373242582,
+      "inode": 3018291
+    },
+    {
+      "path": "models/SLS_reference_difference_seed20/reference_difference/best.pth",
+      "bytes": 1137089793,
+      "mtime_ns": 1791623705974578895,
+      "inode": 3018335
+    },
+    {
+      "path": "models/SLS_reference_difference_seed20/reference_difference/source_best_at_epoch4.pth",
+      "bytes": 1137089793,
+      "mtime_ns": 1791621751553306084,
+      "inode": 3018336
+    },
+    {
+      "path": "models/SLS_reference_value_increment_seed20_v2/reference_value_increment/best.pth",
+      "bytes": 1137089410,
+      "mtime_ns": 1791713992768219667,
+      "inode": 3018665
+    },
+    {
+      "path": "models/SLS_reference_value_increment_seed20_v2/reference_value_increment/source_best_at_epoch4.pth",
+      "bytes": 1137089410,
+      "mtime_ns": 1791713993777260506,
+      "inode": 3018667
+    },
+    {
+      "path": "models/SLS_reference_value_seed20/reference_value/best.pth",
+      "bytes": 1137094849,
+      "mtime_ns": 1791542238817215120,
+      "inode": 3018389
+    },
+    {
+      "path": "models/SLS_reference_value_seed20/reference_value/source_best_at_epoch4.pth",
+      "bytes": 1137094849,
+      "mtime_ns": 1791540290871975742,
+      "inode": 3018390
+    },
+    {
+      "path": "models/SLS_relation_neighborhood_seed20/relation_neighborhood/best.pth",
+      "bytes": 1137089730,
+      "mtime_ns": 1791560628303209815,
+      "inode": 3018444
+    },
+    {
+      "path": "models/SLS_relation_neighborhood_seed20/relation_neighborhood/source_best_at_epoch4.pth",
+      "bytes": 1137089730,
+      "mtime_ns": 1791558015909795746,
+      "inode": 3018445
+    },
+    {
+      "path": "models/UK_representation_diagnostic_seed20/features_finetuned_a.npz",
+      "bytes": 221690010,
+      "mtime_ns": 1791461542476669406,
+      "inode": 3018479
+    },
+    {
+      "path": "models/UK_representation_diagnostic_seed20/features_finetuned_uk.npz",
+      "bytes": 362070038,
+      "mtime_ns": 1791461576321516093,
+      "inode": 3018480
+    },
+    {
+      "path": "models/UK_representation_diagnostic_seed20/features_original_a.npz",
+      "bytes": 221690010,
+      "mtime_ns": 1791461476792106677,
+      "inode": 3018481
+    },
+    {
+      "path": "models/UK_representation_diagnostic_seed20/features_original_uk.npz",
+      "bytes": 362070038,
+      "mtime_ns": 1791461510765901125,
+      "inode": 3018482
+    }
+  ],
+  "deleted_bytes": 18224169897,
+  "recovery": "Deleted binaries are not in the records archive; not recoverable here",
+  "ended_at": "2026-10-11T11:49:44.207079+00:00",
+  "disk_after": {
+    "total": 52521566208,
+    "used": 31714177024,
+    "free": 20790611968
+  },
+  "protected_verified": true,
+  "remaining_candidate_files": []
+}

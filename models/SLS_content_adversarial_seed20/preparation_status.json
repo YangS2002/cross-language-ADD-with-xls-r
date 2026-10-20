@@ -1,0 +1,13 @@
+{
+  "status": "source_reference_and_model_step_verified",
+  "formal_training_started": false,
+  "target_evaluation_performed": false,
+  "source_content_rows": 25380,
+  "source_cache_bytes": 3657672,
+  "source_readout_validation_passed": true,
+  "content_reference_caveat": "Pseudo-content; limited fake audit and attack-dependent recognition errors",
+  "remaining": ["adversary calibration", "independent probe", "formal training and staged evaluation runner"],
+  "gpu_processes_after_checks": 0,
+  "persistent_disk_free_bytes": 5801684992,
+  "model_updates_from_smoke_saved": false
+}

@@ -1,0 +1,5 @@
+{
+  "error": "RuntimeError('Nonzero tangent propagation mismatch: 0.7032683106247074')",
+  "ended_at": "2026-10-14T13:39:19.078086+00:00",
+  "automatic_restart": false
+}

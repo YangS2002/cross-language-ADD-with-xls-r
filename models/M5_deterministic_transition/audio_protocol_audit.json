@@ -1,0 +1,176 @@
+{
+  "train": {
+    "n": 25380,
+    "counts": {
+      "sr=16000,channels=1,label=bonafide": 2580,
+      "sr=16000,channels=1,label=spoof": 22800
+    },
+    "non_16k_mono": 0,
+    "examples": []
+  },
+  "dev": {
+    "n": 18124,
+    "counts": {
+      "sr=16000,channels=1,label=spoof": 7875,
+      "sr=22050,channels=1,label=spoof": 3000,
+      "sr=24000,channels=1,label=spoof": 1140,
+      "sr=16000,channels=1,label=bonafide": 5540,
+      "sr=44100,channels=1,label=bonafide": 569
+    },
+    "non_16k_mono": 4709,
+    "examples": [
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 57600,
+        "path": "/root/rivermind-data/data/decro_raw/ch_eval/3826.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 55296,
+        "path": "/root/rivermind-data/data/decro_raw/ch_eval/2284.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 72960,
+        "path": "/root/rivermind-data/data/decro_raw/ch_eval/13533.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 106496,
+        "path": "/root/rivermind-data/data/decro_raw/ch_eval/3024.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 100096,
+        "path": "/root/rivermind-data/data/decro_raw/ch_eval/8384.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 91904,
+        "path": "/root/rivermind-data/data/decro_raw/ch_eval/2310.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 59136,
+        "path": "/root/rivermind-data/data/decro_raw/ch_eval/2224.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 60160,
+        "path": "/root/rivermind-data/data/decro_raw/ch_eval/6183.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 72448,
+        "path": "/root/rivermind-data/data/decro_raw/ch_eval/18322.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 100608,
+        "path": "/root/rivermind-data/data/decro_raw/ch_eval/5585.wav",
+        "label": "spoof"
+      }
+    ]
+  },
+  "test": {
+    "n": 17696,
+    "counts": {
+      "sr=22050,channels=1,label=spoof": 9000,
+      "sr=16000,channels=1,label=bonafide": 7937,
+      "sr=44100,channels=1,label=bonafide": 375,
+      "sr=22050,channels=1,label=bonafide": 384
+    },
+    "non_16k_mono": 9759,
+    "examples": [
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 228800,
+        "path": "/root/rivermind-data/data/mlaad/fake/fake/de/griffin_lim/alter_afrikaner_23_f000252.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 43200,
+        "path": "/root/rivermind-data/data/mlaad/fake/fake/de/griffin_lim/reisenachtilsit_1_f000123.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 111042,
+        "path": "/root/rivermind-data/data/mlaad/fake/fake/de/griffin_lim/alter_afrikaner_02_f000109.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 153028,
+        "path": "/root/rivermind-data/data/mlaad/fake/fake/de/griffin_lim/Kanzlerin_13_17_f000008.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 203842,
+        "path": "/root/rivermind-data/data/mlaad/fake/fake/de/griffin_lim/erzaehlungen_06_poe_f000224.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 241491,
+        "path": "/root/rivermind-data/data/mlaad/fake/fake/de/griffin_lim/grune_gesicht_01_f000096.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 70995,
+        "path": "/root/rivermind-data/data/mlaad/fake/fake/de/griffin_lim/maedchenvommoorhof_7_f000100.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 103660,
+        "path": "/root/rivermind-data/data/mlaad/fake/fake/de/griffin_lim/zweiplaneten_02_lasswitz_f000109.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 114402,
+        "path": "/root/rivermind-data/data/mlaad/fake/fake/de/griffin_lim/toten_seelen_22_f000026.wav",
+        "label": "spoof"
+      },
+      {
+        "sample_rate": 22050,
+        "channels": 1,
+        "frames": 221122,
+        "path": "/root/rivermind-data/data/mlaad/fake/fake/de/griffin_lim/alter_afrikaner_04_f000310.wav",
+        "label": "spoof"
+      }
+    ]
+  }
+}

@@ -1,0 +1,176 @@
+{'bonafide': 0, 'A01': 1, 'A02': 2, 'A03': 3, 'A04': 4, 'A05': 5, 'A06': 6} {'en'} 25380
+RP_temporal_seed20
+ITW_DOWNLOAD_PENDING_SOURCE_TRAINING_ALLOWED
+START_BLOCK warmup 1 3
+/root/rivermind-data/cross-language-ADD-with-xls-r/fairseq-a54021305d6b3c4c5959ac9395135f63202db8f1/fairseq/checkpoint_utils.py:313: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(f, map_location=torch.device("cpu"))
+/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/nn/modules/transformer.py:379: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+PROGRESS warmup 1 200 3200 loss 0.21012414548080416
+PROGRESS warmup 1 400 6400 loss 0.11704971500905231
+PROGRESS warmup 1 600 9600 loss 0.0835545723271207
+PROGRESS warmup 1 800 12800 loss 0.06496917318676423
+PROGRESS warmup 1 1000 16000 loss 0.05777039887552383
+PROGRESS warmup 1 1200 19200 loss 0.048824465516857644
+PROGRESS warmup 1 1400 22400 loss 0.04656221728480887
+EPOCH {"arm": "warmup", "seed": 20, "epoch": 1, "train_loss": 0.04259937262177061, "classification_loss": 0.04197228308543699, "ce_a": 0.0433236683185955, "ce_b": 0.04062089780456562, "head_relation_loss": 0.0062708955975154, "temporal_scaled": 0.0, "real_samples": 2580, "fake_samples": 22800, "temporal_per_real": 0.0, "ce_real": 0.06222202708779869, "ce_fake": 0.02501944320533208, "empty_real_batches": 286, "optimizer_steps": 1587, "ssl_grad_norm_last": 0.0, "head_grad_norm_last": 0.026115216314792633, "peak_allocated_gib": 3.1577353477478027, "peak_reserved_gib": 3.7109375, "seconds": 134.29735020903172, "selected": true, "best_loss": 0.04259937262177061, "disk_free_gib": 13.286060333251953}
+PROGRESS warmup 2 200 3200 loss 0.007458329058572417
+PROGRESS warmup 2 400 6400 loss 0.005882287780696061
+PROGRESS warmup 2 600 9600 loss 0.005478836954765332
+PROGRESS warmup 2 800 12800 loss 0.004454181222172338
+PROGRESS warmup 2 1000 16000 loss 0.005439852556635742
+PROGRESS warmup 2 1200 19200 loss 0.005983257385632896
+PROGRESS warmup 2 1400 22400 loss 0.005452079137082494
+EPOCH {"arm": "warmup", "seed": 20, "epoch": 2, "train_loss": 0.007492484849267783, "classification_loss": 0.0071189094483524885, "ce_a": 0.007875877837772488, "ce_b": 0.006361941111637025, "head_relation_loss": 0.003735754258895456, "temporal_scaled": 0.0, "real_samples": 2580, "fake_samples": 22800, "temporal_per_real": 0.0, "ce_real": 0.011931282164325183, "ce_fake": 0.0032858206681409857, "empty_real_batches": 284, "optimizer_steps": 1587, "ssl_grad_norm_last": 0.0, "head_grad_norm_last": 0.009907824918627739, "peak_allocated_gib": 3.1577353477478027, "peak_reserved_gib": 3.7109375, "seconds": 133.76324050000403, "selected": true, "best_loss": 0.007492484849267783, "disk_free_gib": 13.286056518554688}
+PROGRESS warmup 3 200 3200 loss 0.0003108568584866589
+PROGRESS warmup 3 400 6400 loss 0.00026245696019032037
+PROGRESS warmup 3 600 9600 loss 0.000238509087600202
+PROGRESS warmup 3 800 12800 loss 0.00022638088300482194
+PROGRESS warmup 3 1000 16000 loss 0.00021404808909574057
+PROGRESS warmup 3 1200 19200 loss 0.0005507063264849421
+PROGRESS warmup 3 1400 22400 loss 0.002624431698079986
+EPOCH {"arm": "warmup", "seed": 20, "epoch": 3, "train_loss": 0.002450575963216977, "classification_loss": 0.0022520264453868184, "ce_a": 0.002163522508414907, "ce_b": 0.0023405303806211574, "head_relation_loss": 0.001985494804203839, "temporal_scaled": 0.0, "real_samples": 2580, "fake_samples": 22800, "temporal_per_real": 0.0, "ce_real": 0.004284342413638107, "ce_fake": 0.0009201348898600452, "empty_real_batches": 278, "optimizer_steps": 1587, "ssl_grad_norm_last": 0.0, "head_grad_norm_last": 0.0026151370257139206, "peak_allocated_gib": 3.1577353477478027, "peak_reserved_gib": 3.7109375, "seconds": 132.3251371239894, "selected": true, "best_loss": 0.002450575963216977, "disk_free_gib": 13.265979766845703}
+START_BLOCK frozen 4 4
+PROGRESS frozen 4 200 3200 loss 0.00833882636139606
+PROGRESS frozen 4 400 6400 loss 0.007442490257226382
+PROGRESS frozen 4 600 9600 loss 0.008775877202612416
+PROGRESS frozen 4 800 12800 loss 0.0066104088489782956
+PROGRESS frozen 4 1000 16000 loss 0.005310546021610208
+PROGRESS frozen 4 1200 19200 loss 0.004442831898316702
+PROGRESS frozen 4 1400 22400 loss 0.0038226079679615005
+EPOCH {"arm": "frozen", "seed": 20, "epoch": 4, "train_loss": 0.00520083659388471, "classification_loss": 0.005024962235431484, "ce_a": 0.006175413079708358, "ce_b": 0.0038745114710378083, "head_relation_loss": 0.0017587428627766147, "temporal_scaled": 0.0, "real_samples": 2580, "fake_samples": 22800, "temporal_per_real": 0.0, "ce_real": 0.009322590872845935, "ce_fake": 0.001909923792901489, "empty_real_batches": 291, "optimizer_steps": 1587, "ssl_grad_norm_last": 0.0, "head_grad_norm_last": 0.01043045986443758, "peak_allocated_gib": 3.1600232124328613, "peak_reserved_gib": 3.2734375, "seconds": 135.20855237101205, "selected": true, "best_loss": 0.00520083659388471, "disk_free_gib": 13.239215850830078}
+START_BLOCK ft 4 4
+PROGRESS ft 4 200 3200 loss 0.017036799511224672
+PROGRESS ft 4 400 6400 loss 0.011491914972193627
+PROGRESS ft 4 600 9600 loss 0.010019915248752417
+PROGRESS ft 4 800 12800 loss 0.0075722296034018656
+PROGRESS ft 4 1000 16000 loss 0.006958896707335953
+PROGRESS ft 4 1200 19200 loss 0.00915867166038879
+PROGRESS ft 4 1400 22400 loss 0.007884192537234672
+EPOCH {"arm": "ft", "seed": 20, "epoch": 4, "train_loss": 0.007640414638614496, "classification_loss": 0.007367809125556891, "ce_a": 0.00808226594544643, "ce_b": 0.0066533523460356936, "head_relation_loss": 0.0027260548096822413, "temporal_scaled": 0.00025484007154027196, "real_samples": 2580, "fake_samples": 22800, "temporal_per_real": 0.0002548400858485852, "ce_real": 0.014441044329676994, "ce_fake": 0.0021031528323679563, "empty_real_batches": 291, "optimizer_steps": 1587, "ssl_grad_norm_last": 0.000960234843660146, "head_grad_norm_last": 0.005303609184920788, "peak_allocated_gib": 12.374192237854004, "peak_reserved_gib": 13.392578125, "seconds": 318.1259963759803, "selected": true, "best_loss": 0.007640414638614496, "disk_free_gib": 8.528289794921875}
+START_BLOCK rp 4 4
+PROGRESS rp 4 200 3200 loss 0.01921912823108869
+PROGRESS rp 4 400 6400 loss 0.01462564790794204
+PROGRESS rp 4 600 9600 loss 0.010237732306062147
+PROGRESS rp 4 800 12800 loss 0.009316086849403292
+PROGRESS rp 4 1000 16000 loss 0.008439200840097328
+PROGRESS rp 4 1200 19200 loss 0.007135141069811652
+PROGRESS rp 4 1400 22400 loss 0.0061596276083322925
+EPOCH {"arm": "rp", "seed": 20, "epoch": 4, "train_loss": 0.007029645913170461, "classification_loss": 0.006534678670846382, "ce_a": 0.006589664887331674, "ce_b": 0.006479692435875772, "head_relation_loss": 0.002746639565995493, "temporal_scaled": 0.00022030320419871486, "real_samples": 2580, "fake_samples": 22800, "temporal_per_real": 0.000220303216850485, "ce_real": 0.011757678147654846, "ce_fake": 0.002670661048333354, "empty_real_batches": 291, "optimizer_steps": 1587, "ssl_grad_norm_last": 0.002551653189584613, "head_grad_norm_last": 0.015221905894577503, "peak_allocated_gib": 12.372294425964355, "peak_reserved_gib": 12.97265625, "seconds": 318.3067049200181, "selected": true, "best_loss": 0.007029645913170461, "disk_free_gib": 3.8173484802246094}
+WAITING_FOR_ITW 4 0
+WAITING_FOR_ITW 4 30
+WAITING_FOR_ITW 4 60
+WAITING_FOR_ITW 4 90
+WAITING_FOR_ITW 4 120
+WAITING_FOR_ITW 4 150
+WAITING_FOR_ITW 4 180
+WAITING_FOR_ITW 4 210
+WAITING_FOR_ITW 4 240
+WAITING_FOR_ITW 4 270
+WAITING_FOR_ITW 4 300
+WAITING_FOR_ITW 4 330
+WAITING_FOR_ITW 4 360
+WAITING_FOR_ITW 4 390
+WAITING_FOR_ITW 4 420
+WAITING_FOR_ITW 4 450
+WAITING_FOR_ITW 4 480
+EVAL {"arm": "frozen", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "ch", "head": "a", "eer": 10.819955031111531, "threshold": 0.995866060256958, "samples": 18124, "seconds_domain": 62.07180617202539}
+EVAL {"arm": "frozen", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "ch", "head": "b", "eer": 12.557273615870162, "threshold": 0.0004512106243055314, "samples": 18124, "seconds_domain": 62.07180617202539}
+EVAL {"arm": "frozen", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "ch", "head": "ensemble", "eer": 11.339874510275154, "threshold": 0.2538610100746155, "samples": 18124, "seconds_domain": 62.07180617202539}
+EVAL {"arm": "frozen", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "de", "head": "a", "eer": 15.500689972401105, "threshold": 0.9996699094772339, "samples": 17696, "seconds_domain": 60.77092667098623}
+EVAL {"arm": "frozen", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "de", "head": "b", "eer": 13.477619339670857, "threshold": 0.000552778597921133, "samples": 17696, "seconds_domain": 60.77092667098623}
+EVAL {"arm": "frozen", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "de", "head": "ensemble", "eer": 13.534145967494633, "threshold": 0.34510529041290283, "samples": 17696, "seconds_domain": 60.77092667098623}
+EVAL {"arm": "frozen", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "uk", "head": "a", "eer": 24.48251433425356, "threshold": 0.20529620349407196, "samples": 9709, "seconds_domain": 33.7745898780413}
+EVAL {"arm": "frozen", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "uk", "head": "b", "eer": 22.401953705669992, "threshold": 1.520683872513473e-05, "samples": 9709, "seconds_domain": 33.7745898780413}
+EVAL {"arm": "frozen", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "uk", "head": "ensemble", "eer": 23.915829263113185, "threshold": 0.021948255598545074, "samples": 9709, "seconds_domain": 33.7745898780413}
+EVAL {"arm": "frozen", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "es", "head": "a", "eer": 13.716646989374262, "threshold": 0.9998365640640259, "samples": 13655, "seconds_domain": 47.218931243987754}
+EVAL {"arm": "frozen", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "es", "head": "b", "eer": 11.402479338842975, "threshold": 0.0014779429184272885, "samples": 13655, "seconds_domain": 47.218931243987754}
+EVAL {"arm": "frozen", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "es", "head": "ensemble", "eer": 11.37316732853923, "threshold": 0.6001883149147034, "samples": 13655, "seconds_domain": 47.218931243987754}
+EVAL {"arm": "frozen", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "itw", "head": "a", "eer": 15.435124038374173, "threshold": 0.018124720081686974, "samples": 31779, "seconds_domain": 109.37501744099427}
+EVAL {"arm": "frozen", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "itw", "head": "b", "eer": 15.4031700351812, "threshold": 0.00015356240328401327, "samples": 31779, "seconds_domain": 109.37501744099427}
+EVAL {"arm": "frozen", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "itw", "head": "ensemble", "eer": 15.003916478728707, "threshold": 0.03993731737136841, "samples": 31779, "seconds_domain": 109.37501744099427}
+EVAL {"arm": "ft", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "ch", "head": "a", "eer": 12.165253274079632, "threshold": 0.27708160877227783, "samples": 18124, "seconds_domain": 62.30109957995592}
+EVAL {"arm": "ft", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "ch", "head": "b", "eer": 12.54076604059407, "threshold": 5.3075080359121785e-05, "samples": 18124, "seconds_domain": 62.30109957995592}
+EVAL {"arm": "ft", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "ch", "head": "ensemble", "eer": 12.045538782311382, "threshold": 0.005879591219127178, "samples": 18124, "seconds_domain": 62.30109957995592}
+EVAL {"arm": "ft", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "de", "head": "a", "eer": 12.15528467750179, "threshold": 0.12294380366802216, "samples": 17696, "seconds_domain": 60.8939851319883}
+EVAL {"arm": "ft", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "de", "head": "b", "eer": 12.810799345803947, "threshold": 0.00012731103925034404, "samples": 17696, "seconds_domain": 60.8939851319883}
+EVAL {"arm": "ft", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "de", "head": "ensemble", "eer": 11.912317285086374, "threshold": 0.005663864780217409, "samples": 17696, "seconds_domain": 60.8939851319883}
+EVAL {"arm": "ft", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "uk", "head": "a", "eer": 19.28111276279465, "threshold": 0.06754669547080994, "samples": 9709, "seconds_domain": 33.764239512966014}
+EVAL {"arm": "ft", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "uk", "head": "b", "eer": 21.444145253769378, "threshold": 4.985958366887644e-05, "samples": 9709, "seconds_domain": 33.764239512966014}
+EVAL {"arm": "ft", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "uk", "head": "ensemble", "eer": 19.4148205563814, "threshold": 0.0022518474142998457, "samples": 9709, "seconds_domain": 33.764239512966014}
+EVAL {"arm": "ft", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "es", "head": "a", "eer": 10.128147472362347, "threshold": 0.907312273979187, "samples": 13655, "seconds_domain": 47.33463356801076}
+EVAL {"arm": "ft", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "es", "head": "b", "eer": 10.882376301384566, "threshold": 0.00010889690747717395, "samples": 13655, "seconds_domain": 47.33463356801076}
+EVAL {"arm": "ft", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "es", "head": "ensemble", "eer": 10.040211441451111, "threshold": 0.043691057711839676, "samples": 13655, "seconds_domain": 47.33463356801076}
+EVAL {"arm": "ft", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "itw", "head": "a", "eer": 12.272100389783388, "threshold": 0.027585284784436226, "samples": 31779, "seconds_domain": 109.34240848000627}
+EVAL {"arm": "ft", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "itw", "head": "b", "eer": 12.423407304868103, "threshold": 4.832564445678145e-05, "samples": 31779, "seconds_domain": 109.34240848000627}
+EVAL {"arm": "ft", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "itw", "head": "ensemble", "eer": 12.001440562806934, "threshold": 0.0013406203361228108, "samples": 31779, "seconds_domain": 109.34240848000627}
+EVAL {"arm": "rp", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "ch", "head": "a", "eer": 12.210614535072278, "threshold": 0.9999912977218628, "samples": 18124, "seconds_domain": 62.36594866903033}
+EVAL {"arm": "rp", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "ch", "head": "b", "eer": 17.335870948132097, "threshold": 1.520683872513473e-05, "samples": 18124, "seconds_domain": 62.36594866903033}
+EVAL {"arm": "rp", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "ch", "head": "ensemble", "eer": 15.470653226000374, "threshold": 0.5544704794883728, "samples": 18124, "seconds_domain": 62.36594866903033}
+EVAL {"arm": "rp", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "de", "head": "a", "eer": 15.591132576919145, "threshold": 0.9999921321868896, "samples": 17696, "seconds_domain": 60.885803986981045}
+EVAL {"arm": "rp", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "de", "head": "b", "eer": 11.533685985893898, "threshold": 1.7778553228708915e-05, "samples": 17696, "seconds_domain": 60.885803986981045}
+EVAL {"arm": "rp", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "de", "head": "ensemble", "eer": 12.132674026372278, "threshold": 0.5698526501655579, "samples": 17696, "seconds_domain": 60.885803986981045}
+EVAL {"arm": "rp", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "uk", "head": "a", "eer": 28.09756848587811, "threshold": 0.9999842643737793, "samples": 9709, "seconds_domain": 33.8559373409953}
+EVAL {"arm": "rp", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "uk", "head": "b", "eer": 26.58369292843491, "threshold": 5.955139386060182e-06, "samples": 9709, "seconds_domain": 33.8559373409953}
+EVAL {"arm": "rp", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "uk", "head": "ensemble", "eer": 26.995434274792952, "threshold": 0.3775406777858734, "samples": 9709, "seconds_domain": 33.8559373409953}
+EVAL {"arm": "rp", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "es", "head": "a", "eer": 14.800450788880543, "threshold": 0.9999923706054688, "samples": 13655, "seconds_domain": 47.35607662895927}
+EVAL {"arm": "rp", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "es", "head": "b", "eer": 12.727922077922077, "threshold": 9.818327271204907e-06, "samples": 13655, "seconds_domain": 47.35607662895927}
+EVAL {"arm": "rp", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "es", "head": "ensemble", "eer": 12.771890093377698, "threshold": 0.531209409236908, "samples": 13655, "seconds_domain": 47.35607662895927}
+EVAL {"arm": "rp", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "itw", "head": "a", "eer": 17.527253830215557, "threshold": 0.9999810457229614, "samples": 31779, "seconds_domain": 109.17167335702106}
+EVAL {"arm": "rp", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "itw", "head": "b", "eer": 16.004166145079974, "threshold": 6.962256520637311e-06, "samples": 31779, "seconds_domain": 109.17167335702106}
+EVAL {"arm": "rp", "seed": 20, "milestone": 4, "checkpoint_epoch": 4, "domain": "itw", "head": "ensemble", "eer": 16.375697248779574, "threshold": 0.37387582659721375, "samples": 31779, "seconds_domain": 109.17167335702106}
+MILESTONE {"milestone": 4, "stop_rp": false, "cross_language_gaps": {"ch": 3.425114443688992, "de": 0.22035674128590443, "uk": 7.580613718411552, "es": 2.731678651926586}, "cross_language_mean_gap": 3.4894408888282586, "itw_gap": 4.3742566859726395}
+START_BLOCK frozen 5 8
+PROGRESS frozen 5 200 3200 loss 0.003690577751840465
+PROGRESS frozen 5 400 6400 loss 0.0019235824712268367
+PROGRESS frozen 5 600 9600 loss 0.0031824504395323553
+PROGRESS frozen 5 800 12800 loss 0.002524437647302875
+PROGRESS frozen 5 1000 16000 loss 0.0020523686667293078
+PROGRESS frozen 5 1200 19200 loss 0.0026928404494962403
+PROGRESS frozen 5 1400 22400 loss 0.00238820645326736
+EPOCH {"arm": "frozen", "seed": 20, "epoch": 5, "train_loss": 0.003596519681697908, "classification_loss": 0.0033885716826811065, "ce_a": 0.003891154855836133, "ce_b": 0.002885988467136119, "head_relation_loss": 0.0020794800401961033, "temporal_scaled": 0.0, "real_samples": 2580, "fake_samples": 22800, "temporal_per_real": 0.0, "ce_real": 0.006363111098475926, "ce_fake": 0.0012280245749631527, "empty_real_batches": 270, "optimizer_steps": 1587, "ssl_grad_norm_last": 0.0, "head_grad_norm_last": 0.0012262614909559488, "peak_allocated_gib": 3.1600232124328613, "peak_reserved_gib": 3.271484375, "seconds": 137.10827601503115, "selected": true, "best_loss": 0.003596519681697908, "disk_free_gib": 3.8173141479492188}
+PROGRESS frozen 6 200 3200 loss 0.00013376149006944616
+PROGRESS frozen 6 400 6400 loss 0.0001281924117665767
+PROGRESS frozen 6 600 9600 loss 0.00012316251363396683
+PROGRESS frozen 6 800 12800 loss 0.0013524075746909148
+PROGRESS frozen 6 1000 16000 loss 0.0011075344366836362
+PROGRESS frozen 6 1200 19200 loss 0.0012491266893539432
+PROGRESS frozen 6 1400 22400 loss 0.0019937269074970184
+EPOCH {"arm": "frozen", "seed": 20, "epoch": 6, "train_loss": 0.0019120761345665744, "classification_loss": 0.0017537819171442358, "ce_a": 0.0002733011513360596, "ce_b": 0.003234262701780386, "head_relation_loss": 0.0015829423982635365, "temporal_scaled": 0.0, "real_samples": 2580, "fake_samples": 22800, "temporal_per_real": 0.0, "ce_real": 0.003223455422576715, "ce_fake": 0.0007210081855486861, "empty_real_batches": 302, "optimizer_steps": 1587, "ssl_grad_norm_last": 0.0, "head_grad_norm_last": 0.0016547763952985406, "peak_allocated_gib": 3.160134792327881, "peak_reserved_gib": 3.271484375, "seconds": 137.55517465097364, "selected": true, "best_loss": 0.0019120761345665744, "disk_free_gib": 3.8173141479492188}
+PROGRESS frozen 7 200 3200 loss 0.007646518716865103
+PROGRESS frozen 7 400 6400 loss 0.008763150733393558
+PROGRESS frozen 7 600 9600 loss 0.00607789255232395
+PROGRESS frozen 7 800 12800 loss 0.005851010368592142
+PROGRESS frozen 7 1000 16000 loss 0.004706051692290203
+PROGRESS frozen 7 1200 19200 loss 0.004336134023736425
+PROGRESS frozen 7 1400 22400 loss 0.0042831811708830565
+EPOCH {"arm": "frozen", "seed": 20, "epoch": 7, "train_loss": 0.0037946837214552403, "classification_loss": 0.003598271010221127, "ce_a": 0.003959503987007581, "ce_b": 0.0032370380990702314, "head_relation_loss": 0.001964126880169854, "temporal_scaled": 0.0, "real_samples": 2580, "fake_samples": 22800, "temporal_per_real": 0.0, "ce_real": 0.006592171413193182, "ce_fake": 0.001282274800425448, "empty_real_batches": 280, "optimizer_steps": 1587, "ssl_grad_norm_last": 0.0, "head_grad_norm_last": 0.0018292133463546634, "peak_allocated_gib": 3.1600232124328613, "peak_reserved_gib": 3.2734375, "seconds": 132.97907402098645, "selected": false, "best_loss": 0.0019120761345665744, "disk_free_gib": 3.817310333251953}
+PROGRESS frozen 8 200 3200 loss 0.0009915242248462164
+PROGRESS frozen 8 400 6400 loss 0.0005520346843604784
+PROGRESS frozen 8 600 9600 loss 0.0004042092057049255
+PROGRESS frozen 8 800 12800 loss 0.002979605348791665
+PROGRESS frozen 8 1000 16000 loss 0.0026289003020756353
+PROGRESS frozen 8 1200 19200 loss 0.0022258627707045283
+PROGRESS frozen 8 1400 22400 loss 0.00200962473735022
+EPOCH {"arm": "frozen", "seed": 20, "epoch": 8, "train_loss": 0.002141508594331861, "classification_loss": 0.0019914425021276137, "ce_a": 0.003977144044403773, "ce_b": 5.740972755169763e-06, "head_relation_loss": 0.0015006610734712618, "temporal_scaled": 0.0, "real_samples": 2580, "fake_samples": 22800, "temporal_per_real": 0.0, "ce_real": 0.004458993223678116, "ce_fake": 0.0004844433330330694, "empty_real_batches": 293, "optimizer_steps": 1587, "ssl_grad_norm_last": 0.0, "head_grad_norm_last": 0.0016958434134721756, "peak_allocated_gib": 3.160134792327881, "peak_reserved_gib": 3.2734375, "seconds": 133.1102610050002, "selected": false, "best_loss": 0.0019120761345665744, "disk_free_gib": 3.817310333251953}
+START_BLOCK ft 5 8
+PROGRESS ft 5 200 3200 loss 0.00013600048210719252
+PROGRESS ft 5 400 6400 loss 0.00012773360552273516
+PROGRESS ft 5 600 9600 loss 0.000122827707897765
+PROGRESS ft 5 800 12800 loss 0.00012021030645428254
+PROGRESS ft 5 1000 16000 loss 0.00012030550792042049
+PROGRESS ft 5 1200 19200 loss 0.0014028443985201497
+PROGRESS ft 5 1400 22400 loss 0.0012180565884253676
+FAILED RuntimeError Insufficient space for atomic checkpoint (4124840933 bytes): /root/rivermind-data/cross-language-ADD-with-xls-r/models/RP_temporal_seed20/resume
+Traceback (most recent call last):
+  File "/root/rivermind-data/cross-language-ADD-with-xls-r/tools/train_relational_preservation.py", line 384, in <module>
+    main()
+  File "/root/rivermind-data/cross-language-ADD-with-xls-r/tools/train_relational_preservation.py", line 360, in main
+    run_block(config, dataset, fraction, arm, milestone)
+  File "/root/rivermind-data/cross-language-ADD-with-xls-r/tools/train_relational_preservation.py", line 197, in run_block
+    atomic_save(resume, resume_payload)
+  File "/root/rivermind-data/cross-language-ADD-with-xls-r/tools/train_relational_preservation.py", line 50, in atomic_save
+    raise RuntimeError(f"Insufficient space for atomic checkpoint ({needed} bytes): {path.parent}")
+RuntimeError: Insufficient space for atomic checkpoint (4124840933 bytes): /root/rivermind-data/cross-language-ADD-with-xls-r/models/RP_temporal_seed20/resume

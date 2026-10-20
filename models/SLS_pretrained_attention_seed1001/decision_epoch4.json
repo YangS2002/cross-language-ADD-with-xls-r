@@ -1,0 +1,41 @@
+{
+  "epoch": 4,
+  "seed": 1001,
+  "stop": false,
+  "reason": "continue_fixed_training",
+  "per_domain": {
+    "ch": 18.46657071251104,
+    "de": 17.82325462537054,
+    "uk": 18.385158207687407,
+    "es": 9.43968552109048,
+    "itw": 12.95799077480882
+  },
+  "cross_mean": 16.02866726666487,
+  "worst_cross": 18.46657071251104,
+  "ch_de_joint": 18.14491266894079,
+  "paper_sls_gaps": {
+    "ch": 6.20657071251104,
+    "de": -1.8867453746294593,
+    "uk": -2.7448417923125916,
+    "es": -0.2503144789095195,
+    "itw": 5.49799077480882
+  },
+  "paper_mamba_gaps": {
+    "ch": 1.1465707125110391,
+    "de": -5.746745374629459,
+    "uk": 6.495158207687407,
+    "es": -6.39031447890952,
+    "itw": 6.24799077480882
+  },
+  "fixed_seed_set": [
+    20,
+    1001,
+    7
+  ],
+  "independent_source_warmup": true,
+  "target_checkpoint_or_seed_selection": false,
+  "eligible_for_fixed_multiseed": false,
+  "further_seeds_require_user_authorization": true,
+  "single_seed_is_not_stability_evidence": true,
+  "no_matched_sls_or_query_runs_for_this_seed": true
+}

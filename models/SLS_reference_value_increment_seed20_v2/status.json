@@ -1,0 +1,10 @@
+{
+  "status": "stopped_poor_results",
+  "seed": 20,
+  "epoch": 4,
+  "best_epoch": 4,
+  "best_source_loss": 0.02198808693708903,
+  "reason": "registered_gross_failure",
+  "ended_at": "2026-10-11T10:29:58.314792+00:00",
+  "automatic_restart": false
+}

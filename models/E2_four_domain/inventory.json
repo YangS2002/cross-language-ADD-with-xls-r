@@ -1,0 +1,34 @@
+[
+  {
+    "domain": "de",
+    "samples": 17696,
+    "real": 8696,
+    "fake": 9000,
+    "label_sha256": "5241b51f69fe34e3ec8211c46a2f8b0c06978d3b99d1db1218726423d265a25f",
+    "archive": null
+  },
+  {
+    "domain": "uk",
+    "samples": 9709,
+    "real": 4709,
+    "fake": 5000,
+    "label_sha256": "a4cf6d3883a6fa94d06c79754a49ffcc480a4fbcbf5efa5ce13b39fc762ea0ab",
+    "archive": "/root/rivermind-fs/mlaad_eval_uk_clip.zip"
+  },
+  {
+    "domain": "es",
+    "samples": 13655,
+    "real": 6655,
+    "fake": 7000,
+    "label_sha256": "95775f30cae815708dc595e98b5915a751844d7bfe63f0d9179312b94ccd706b",
+    "archive": "/root/rivermind-fs/mlaad_eval_es_clip.zip"
+  },
+  {
+    "domain": "itw",
+    "samples": 31779,
+    "real": 19963,
+    "fake": 11816,
+    "label_sha256": "a754103b6c2de36dda3805eba34d67815c1ac30050b6dc2129d20d00321c73fa",
+    "archive": "/root/rivermind-fs/release_in_the_wild.zip"
+  }
+]

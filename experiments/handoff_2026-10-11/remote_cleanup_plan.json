@@ -1,0 +1,164 @@
+{
+  "created_at": "2026-10-11T11:48:46.279496+00:00",
+  "root": "/root/rivermind-data/cross-language-ADD-with-xls-r",
+  "authorization": "User requested cleanup of historical training artifacts; preserve reports/data/code/pretrained/warmup",
+  "disk_before": {
+    "total": 52521566208,
+    "used": 49938432000,
+    "free": 2566356992
+  },
+  "candidates": [
+    {
+      "path": "models/SLS_pretrained_attention_seed1001/pretrained_attention/best.pth",
+      "bytes": 1137089154,
+      "mtime_ns": 1791627961053152599,
+      "inode": 3018175
+    },
+    {
+      "path": "models/SLS_pretrained_attention_seed1001/pretrained_attention/source_best_at_epoch4.pth",
+      "bytes": 1137089154,
+      "mtime_ns": 1791626093855789913,
+      "inode": 3018176
+    },
+    {
+      "path": "models/SLS_pretrained_attention_seed20_repeat_20261011/pretrained_attention/best.pth",
+      "bytes": 1137089346,
+      "mtime_ns": 1791717743499940144,
+      "inode": 3018692
+    },
+    {
+      "path": "models/SLS_pretrained_attention_seed7/pretrained_attention/best.pth",
+      "bytes": 1137089154,
+      "mtime_ns": 1791631082423860558,
+      "inode": 3018241
+    },
+    {
+      "path": "models/SLS_pretrained_attention_seed7/pretrained_attention/source_best_at_epoch4.pth",
+      "bytes": 1137089154,
+      "mtime_ns": 1791629211573580191,
+      "inode": 3018242
+    },
+    {
+      "path": "models/SLS_reference_context_contrast_seed20/reference_context_contrast/best.pth",
+      "bytes": 1137188161,
+      "mtime_ns": 1791551249994602111,
+      "inode": 3018298
+    },
+    {
+      "path": "models/SLS_reference_context_contrast_seed20/reference_context_contrast/source_best_at_epoch4.pth",
+      "bytes": 1137188161,
+      "mtime_ns": 1791549658906686195,
+      "inode": 3018299
+    },
+    {
+      "path": "models/SLS_reference_context_contrast_seed20/source_reference_mean.pt",
+      "bytes": 99953,
+      "mtime_ns": 1791549292373242582,
+      "inode": 3018291
+    },
+    {
+      "path": "models/SLS_reference_difference_seed20/reference_difference/best.pth",
+      "bytes": 1137089793,
+      "mtime_ns": 1791623705974578895,
+      "inode": 3018335
+    },
+    {
+      "path": "models/SLS_reference_difference_seed20/reference_difference/source_best_at_epoch4.pth",
+      "bytes": 1137089793,
+      "mtime_ns": 1791621751553306084,
+      "inode": 3018336
+    },
+    {
+      "path": "models/SLS_reference_value_increment_seed20_v2/reference_value_increment/best.pth",
+      "bytes": 1137089410,
+      "mtime_ns": 1791713992768219667,
+      "inode": 3018665
+    },
+    {
+      "path": "models/SLS_reference_value_increment_seed20_v2/reference_value_increment/source_best_at_epoch4.pth",
+      "bytes": 1137089410,
+      "mtime_ns": 1791713993777260506,
+      "inode": 3018667
+    },
+    {
+      "path": "models/SLS_reference_value_seed20/reference_value/best.pth",
+      "bytes": 1137094849,
+      "mtime_ns": 1791542238817215120,
+      "inode": 3018389
+    },
+    {
+      "path": "models/SLS_reference_value_seed20/reference_value/source_best_at_epoch4.pth",
+      "bytes": 1137094849,
+      "mtime_ns": 1791540290871975742,
+      "inode": 3018390
+    },
+    {
+      "path": "models/SLS_relation_neighborhood_seed20/relation_neighborhood/best.pth",
+      "bytes": 1137089730,
+      "mtime_ns": 1791560628303209815,
+      "inode": 3018444
+    },
+    {
+      "path": "models/SLS_relation_neighborhood_seed20/relation_neighborhood/source_best_at_epoch4.pth",
+      "bytes": 1137089730,
+      "mtime_ns": 1791558015909795746,
+      "inode": 3018445
+    },
+    {
+      "path": "models/UK_representation_diagnostic_seed20/features_finetuned_a.npz",
+      "bytes": 221690010,
+      "mtime_ns": 1791461542476669406,
+      "inode": 3018479
+    },
+    {
+      "path": "models/UK_representation_diagnostic_seed20/features_finetuned_uk.npz",
+      "bytes": 362070038,
+      "mtime_ns": 1791461576321516093,
+      "inode": 3018480
+    },
+    {
+      "path": "models/UK_representation_diagnostic_seed20/features_original_a.npz",
+      "bytes": 221690010,
+      "mtime_ns": 1791461476792106677,
+      "inode": 3018481
+    },
+    {
+      "path": "models/UK_representation_diagnostic_seed20/features_original_uk.npz",
+      "bytes": 362070038,
+      "mtime_ns": 1791461510765901125,
+      "inode": 3018482
+    }
+  ],
+  "total_candidate_bytes": 18224169897,
+  "protected": [
+    {
+      "path": "models/SLS_conditional_residual_seed20/warmup.pth",
+      "bytes": 93614946,
+      "mtime_ns": 1791368793697764570,
+      "inode": 3018116
+    },
+    {
+      "path": "models/SLS_pretrained_attention_seed1001/warmup.pth",
+      "bytes": 93615138,
+      "mtime_ns": 1791625732122694721,
+      "inode": 3018172
+    },
+    {
+      "path": "models/SLS_pretrained_attention_seed7/warmup.pth",
+      "bytes": 93615074,
+      "mtime_ns": 1791628848315715555,
+      "inode": 3018238
+    },
+    {
+      "path": "models/pretrained/xlsr2_300m.pt",
+      "bytes": 3808868242,
+      "mtime_ns": 1791029079901455940,
+      "inode": 3018492
+    }
+  ],
+  "archive": "experiments/handoff_2026-10-11/remote_records_and_code.zip",
+  "archive_sha256": "9419d0c154c710f97db078f3a01ff1abd5dbafd2c4cc8469f63f06691205cf9d",
+  "archive_bytes": 26950711,
+  "archived_files": 626,
+  "per_sample_scores_retained": true
+}

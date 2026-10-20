@@ -1,0 +1,25 @@
+exp_name: E3_dual_xlsr_reference
+output_dir: models/E3_dual_xlsr_reference
+train_data_path: /root/rivermind-data/data/asv2019_la_train
+train_label_path: /root/rivermind-data/data/exp/ASVspoof2019.LA.cm.train.trn.txt
+ssl_checkpoint: /root/rivermind-fs/xlsr2_300m.pt
+arms: [self_reference, frozen_reference]
+seeds: [20, 1001, 7]
+epochs: 10
+microbatch_size: 16
+effective_batch_size: 16
+num_workers: 4
+hidden_dim: 192
+embedding_dim: 192
+num_heads: 6
+num_encoder_layers: 2
+feedforward_dim: 384
+dropout: 0.1
+ssl_lr: 0.000001
+head_lr: 0.0001
+weight_decay: 0.0001
+lambda_relation: 0.1
+fake_weight: 0.1
+real_weight: 0.9
+grad_clip: 5.0
+amp: true

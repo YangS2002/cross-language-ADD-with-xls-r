@@ -1,3 +1,7 @@
+## Research archive / 研究归档
+
+2026-10-20：服务器代码、实验记录与研究文档见 [归档索引](experiments/archive_2026-10-20/README.md)。模型权重、数据集及二进制训练产物不纳入此归档。
+
 Audio Deepfake Detection with XLS-R and SLS classfier
 ===============
 This repository contains our implementation of the paper "Audio Deepfake Detection with XLS-R and SLS classfier"
@@ -80,5 +84,6 @@ python evaluate_in_the_wild.py scores/scores_Wild.txt ./keys eval
 EER: 1.92 % on ASVspoof 2021 DF dataset.
 EER: 2.87 % on ASVspoof 2021 LA dataset.
 EER: 7.46 % on In-the-Wild dataset.
+
 
 

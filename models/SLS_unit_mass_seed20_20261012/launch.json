@@ -1,0 +1,9 @@
+{
+  "pid": 896,
+  "process_create_time": 1791794741.21,
+  "ssh_port": 30307,
+  "log": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_unit_mass_seed20_20261012/run.log",
+  "started_unix": 1791794741.448625,
+  "seed": 20,
+  "automatic_restart": false
+}

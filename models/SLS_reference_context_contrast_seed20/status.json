@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "seed": 20,
+  "epoch": 8,
+  "best_epoch": 7,
+  "best_source_loss": 5.666022060941694e-06,
+  "ended_at": "2026-10-09T13:22:48.905724+00:00",
+  "eligible_for_fixed_multiseed": false
+}

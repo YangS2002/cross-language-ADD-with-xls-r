@@ -1,0 +1,15 @@
+{
+  "status": "stopped_by_user",
+  "reason": "epoch4_reproduction_confirmed_user_requested_stop",
+  "previous_status": {
+    "status": "training",
+    "seed": 20,
+    "epoch": 6,
+    "updated_at": "2026-10-11T11:22:24.266423+00:00"
+  },
+  "ended_at": "2026-10-11T11:22:53.808756+00:00",
+  "epoch4_complete": true,
+  "epoch8_not_completed": true,
+  "automatic_restart": false,
+  "no_exact_resume": true
+}

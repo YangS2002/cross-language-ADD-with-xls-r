@@ -1,0 +1,92 @@
+{
+  "status": "pilot_only",
+  "sample_count": 152,
+  "fit_real": 96,
+  "holdout_real": 32,
+  "fake_audit": 24,
+  "sample_rates": {
+    "16000": 152
+  },
+  "source_protocol_sha256": "06c2862679851d816173fbea8c0919012a68f95134529b705c049beef1276d2e",
+  "fit_speakers": [
+    "LA_0079"
+  ],
+  "holdout_speakers": [
+    "LA_0080"
+  ],
+  "histories": {
+    "content": [
+      {
+        "epoch": 1,
+        "fit_ctc": 9.063779671986898
+      },
+      {
+        "epoch": 10,
+        "fit_ctc": 1.7680792013804119
+      },
+      {
+        "epoch": 50,
+        "fit_ctc": 0.3091566016276677
+      },
+      {
+        "epoch": 100,
+        "fit_ctc": 0.16508879015843073
+      }
+    ],
+    "shuffled": [
+      {
+        "epoch": 1,
+        "fit_ctc": 8.970609823862711
+      },
+      {
+        "epoch": 10,
+        "fit_ctc": 3.087820808092753
+      },
+      {
+        "epoch": 50,
+        "fit_ctc": 1.754307230313619
+      },
+      {
+        "epoch": 100,
+        "fit_ctc": 1.3518704771995544
+      }
+    ]
+  },
+  "metrics": {
+    "content": {
+      "holdout_pseudo_cer": 0.6108654453569172,
+      "holdout_histogram_kl": 0.5927074551582336,
+      "holdout_ctc": 4.142575740814209,
+      "valid_count": 152,
+      "nonblank_letter_mass": 0.2561667263507843,
+      "fake_histogram_kl_by_attack": {
+        "A01": 0.47332698106765747,
+        "A02": 0.6597869396209717,
+        "A03": 0.39401739835739136,
+        "A04": 0.3317418694496155,
+        "A05": 1.3122559785842896,
+        "A06": 0.7678500413894653
+      }
+    },
+    "shuffled": {
+      "holdout_pseudo_cer": 0.801010739102969,
+      "holdout_histogram_kl": 0.7462809681892395,
+      "holdout_ctc": 5.470834255218506,
+      "valid_count": 152,
+      "nonblank_letter_mass": 0.2009260356426239,
+      "fake_histogram_kl_by_attack": {
+        "A01": 1.295637607574463,
+        "A02": 0.993132472038269,
+        "A03": 0.9611555337905884,
+        "A04": 0.7898914813995361,
+        "A05": 1.2133792638778687,
+        "A06": 1.3802144527435303
+      }
+    }
+  },
+  "constant_histogram_kl": 0.3405572175979614,
+  "constant_transcript_cer": 0.7283638660770688,
+  "reference_pilot_passed": false,
+  "seconds": 19.17017711600056,
+  "limitations": "Pseudo-ASR labels, 128 genuine pilot only; no verified human transcripts or target EER. A passed pilot is not full content validation or evidence of cross-language improvement."
+}

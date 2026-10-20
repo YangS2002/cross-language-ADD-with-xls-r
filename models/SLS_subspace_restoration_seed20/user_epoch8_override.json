@@ -1,0 +1,7 @@
+{
+  "pid": 22660,
+  "start_ticks": "42275035",
+  "instruction": "User requests stop after full epoch8 evaluation if ineffective; overrides prior no-stop policy",
+  "rule": "four-language mean must beat matched SLS epoch8 and ITW <= 8.46%; otherwise stop",
+  "recorded_after_epoch4_observed": true
+}

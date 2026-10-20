@@ -1,0 +1,6 @@
+{
+  "status": "stopped_by_user_epoch8_rule",
+  "epoch": 8,
+  "decision": "user_epoch8_decision.json",
+  "partial_next_epoch_possible": true
+}

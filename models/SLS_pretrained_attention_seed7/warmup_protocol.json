@@ -1,0 +1,27 @@
+{
+  "seed": 7,
+  "epochs": 3,
+  "source_only": true,
+  "backend_initialization": "same ConditionalResidualSLS(sls) constructor as historical seed20",
+  "source_training": "same historical warmup_trainer.train_epoch and optimizers",
+  "original_encoder_frozen": true,
+  "no_teacher_or_residual_during_warmup": true,
+  "code_checks": {
+    "tools/train_sls_pretrained_attention.py": "ff6126ebdbfb68bb67309b1f47d56f8adac6d4fb3421d1c45539df262ed4fba9",
+    "tools/sls_pretrained_attention_model.py": "366850c45408a2a5dffc3f56683ee5c33082e87c88fc2d1cd60b56bdf1af1a45",
+    "data.py": "5a06d003f018d746ba62fdacf3b970b0dfcc6a0f1e4bc4cd7ea590d682fb064a",
+    "train.py": "179789bbdb58de59c1eabcd3448f7b89e46b82e64dbeccc34b7812355340a234",
+    "tools/sls_reference_model.py": "6bd7da7c52572044b4e30beb17e3ea8f2faa8cf95743d708dcf1ed10e486b1f0",
+    "tools/sls_pretrained_query_model.py": "4ef8b5c6f39bafc20914c59ac4ff7e1bbd3cf16784b7f106e9c5cad226e98314",
+    "tools/train_relational_preservation.py": "bf42823faff26ad0d2c04715ca859447e45113abe886e585c7abf4501acb3d1d",
+    "tools/train_sls_reference.py": "cbc6a330d17e8ce4543c3144572599b1e841d1fa9aa63f279feb8a6651954173",
+    "tools/evaluate_relational_preservation.py": "c8090b19a99de32d26b1c67b3f82d1c08a2891cee682a6fbbcaa0550db597f4d",
+    "tools/evaluate_four_domains_shared_xlsr.py": "74ac72af5adee65a0d622b85ecec75912cb6bf7d8183c4f18646863f96006083",
+    "tools/train_sls_conditional_residual.py": "7c69082404ac7fd33924730b9005a22e9ad09b097aa8b6c4091fe0eace124943",
+    "tools/sls_conditional_residual_model.py": "1e6a3572c595ea066582e53262406b27acf02a3c8ecca1c6edb933b8f1d68d23",
+    "/root/rivermind-data/data/exp/ASVspoof2019.LA.cm.train.trn.txt": "06c2862679851d816173fbea8c0919012a68f95134529b705c049beef1276d2e"
+  },
+  "wrapper_sha256": "8852ca99cd27b7bec1eff13d3b8e3edef2051cb2bdebf5b481608b5746d1c026",
+  "config_sha256": "cc7b2e2053ddda2d4d4cccfde037933c6244eaabf2766b4f36774a643c667d68",
+  "started_at": "2026-10-10T10:35:44.456501+00:00"
+}

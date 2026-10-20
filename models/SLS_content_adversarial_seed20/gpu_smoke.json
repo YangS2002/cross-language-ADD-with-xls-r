@@ -1,0 +1,23 @@
+{
+  "status": "disposable_one_step_only",
+  "batch_size": 16,
+  "source_real": 8,
+  "source_fake": 8,
+  "classification_loss": 0.09294576942920685,
+  "content_loss": 0.790495753288269,
+  "main_gradient_norm": 97.10807800292969,
+  "auxiliary_gradient_norm": 1.2723119258880615,
+  "valid_content": 16,
+  "detection_embedding_gradient_norm": 0.04785750433802605,
+  "reversed_content_embedding_gradient_norm": 0.001449579605832696,
+  "content_to_detection_embedding_gradient_ratio": 0.03028949350118637,
+  "seconds": 0.6743342960253358,
+  "peak_allocated_gib": 7.22679328918457,
+  "peak_reserved_gib": 7.560546875,
+  "task_trainable_parameters": 311227520,
+  "classifier_parameters": 23399429,
+  "adversary_parameters": 269594,
+  "formal_training_started": false,
+  "checkpoint_saved": false,
+  "timing_caveat": "One batch includes optimizer allocation; not a measured full epoch duration"
+}

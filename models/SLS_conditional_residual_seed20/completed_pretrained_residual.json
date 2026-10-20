@@ -1,0 +1,5 @@
+{
+  "arm": "pretrained_residual",
+  "epoch": 10,
+  "best_loss": 3.809063514339711e-07
+}

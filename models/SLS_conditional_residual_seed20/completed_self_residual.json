@@ -1,0 +1,5 @@
+{
+  "arm": "self_residual",
+  "epoch": 10,
+  "best_loss": 3.3923628040777047e-07
+}

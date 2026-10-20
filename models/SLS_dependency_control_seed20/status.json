@@ -1,0 +1,8 @@
+{
+  "status": "stopped_poor_results",
+  "seed": 20,
+  "epoch": 8,
+  "best_epoch": 8,
+  "best_source_loss": 2.7536769650383407e-06,
+  "reason": "epoch8_or_later_no_effect"
+}

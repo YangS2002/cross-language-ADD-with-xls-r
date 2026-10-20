@@ -1,0 +1,51 @@
+{
+  "signature": {
+    "config": "c1c5acc41595c36cad7672d1990b3243f7acb234f66b3872633feb9ec3adb4ea",
+    "model": "2f3fe561577363f7fa469752457b4b9941931c4defcf764223792758c349eb28",
+    "trainer": "346e13da24bbbf666d683b4bcb68cdb6c10d2e7d65b4aed6d042573aa8ff130f",
+    "test": "3998522023932a80e6fad72912300cef95583c512fb7b1308b482ded5c3260dd",
+    "original": "b08927597f2c9eb2ebd7dcc3ac78ee4b5f6021cbac4b3a6c5a9deec445d80ed9",
+    "warmup": "32454f00414be2172ca7d84bfa631c3a8b551f45d415816354b0597645904742",
+    "loader": "179789bbdb58de59c1eabcd3448f7b89e46b82e64dbeccc34b7812355340a234",
+    "data": "5a06d003f018d746ba62fdacf3b970b0dfcc6a0f1e4bc4cd7ea590d682fb064a",
+    "shared_model": "6bd7da7c52572044b4e30beb17e3ea8f2faa8cf95743d708dcf1ed10e486b1f0",
+    "source_labels": "06c2862679851d816173fbea8c0919012a68f95134529b705c049beef1276d2e",
+    "baseline": "71c37bfba45911ee0d8f42a2a3c42a14f704b6d7199794c3fc407f72ec1e8aab"
+  },
+  "training_minutes": 32.33628848179069,
+  "evaluation_compute_minutes": 24.481233621394495,
+  "io_margin_minutes": 10.0,
+  "startup_save_margin_minutes": 5.0,
+  "estimated_total_minutes": 71.81752210318518,
+  "maximum_minutes": 90,
+  "within_budget": true,
+  "disk_budget_bytes": 3280811893,
+  "free_bytes": 6184185856,
+  "pressure": {
+    "batch": 16,
+    "rank": 16,
+    "steps": 4,
+    "initial_logprob_error": 0.0,
+    "cache_equivalence_error": 0.003891468048095703,
+    "source_cache_bytes_per_input": 490060,
+    "evaluation_cache_bytes_per_input": 78412,
+    "restoration_ratio_last": 0.2532794773578644,
+    "seconds_per_step": 0.1590218404890038,
+    "cold_training_seconds_per_batch": 0.2684129450353794,
+    "inference_seconds_per_batch": 0.04986493496107869,
+    "cold_inference_seconds_per_batch": 0.15855640004156157,
+    "cache_bytes": 16936512,
+    "reserved_gib": 12.587890625,
+    "model_bytes": 1338507796,
+    "signature": {
+      "config": "c1c5acc41595c36cad7672d1990b3243f7acb234f66b3872633feb9ec3adb4ea",
+      "model": "2f3fe561577363f7fa469752457b4b9941931c4defcf764223792758c349eb28",
+      "test": "3998522023932a80e6fad72912300cef95583c512fb7b1308b482ded5c3260dd",
+      "warmup": "32454f00414be2172ca7d84bfa631c3a8b551f45d415816354b0597645904742"
+    }
+  },
+  "reference_cache_bytes": 19570313556,
+  "ram_limit_bytes": 107374182400,
+  "ram_current_bytes": 37706493952,
+  "policy": "one seed20 candidate; no baseline rerun, no target early stop, no optimizer recovery"
+}

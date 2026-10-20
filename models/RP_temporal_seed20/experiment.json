@@ -1,0 +1,78 @@
+{
+  "config": {
+    "exp_name": "RP_temporal_seed20",
+    "output_dir": "models/RP_temporal_seed20",
+    "seed": 20,
+    "train_data_path": "/root/rivermind-data/data/asv2019_la_train",
+    "train_label_path": "/root/rivermind-data/data/exp/ASVspoof2019.LA.cm.train.trn.txt",
+    "ssl_checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/pretrained/xlsr2_300m.pt",
+    "warmup_epochs": 3,
+    "epochs": 10,
+    "milestones": [
+      4,
+      8,
+      10
+    ],
+    "arms": [
+      "frozen",
+      "ft",
+      "rp"
+    ],
+    "batch_size": 16,
+    "eval_batch_size": 16,
+    "num_workers": 4,
+    "precision": "bf16",
+    "anchor_layer": 12,
+    "hidden_dim": 192,
+    "embedding_dim": 192,
+    "num_heads": 6,
+    "num_encoder_layers": 2,
+    "feedforward_dim": 384,
+    "dropout": 0.1,
+    "ssl_lr": 1e-06,
+    "head_lr": 0.0001,
+    "weight_decay": 0.0001,
+    "fake_weight": 0.1,
+    "real_weight": 0.9,
+    "lambda_head_relation": 0.1,
+    "lambda_temporal": 1.0,
+    "grad_clip": 5.0,
+    "resume_dir": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/RP_temporal_seed20/resume",
+    "domains": {
+      "ch": {
+        "label": "/root/rivermind-data/data/exp/decro_ch_eval.txt",
+        "root": "/root/rivermind-data/data"
+      },
+      "de": {
+        "label": "/root/rivermind-data/data/exp/mlaad_eval_de.txt",
+        "root": "/root/rivermind-data/data/mlaad"
+      },
+      "uk": {
+        "label": "/root/rivermind-data/datasets/mlaad_eval/mlaad_eval_uk.txt",
+        "archive": "/root/rivermind-data/datasets/mlaad_eval/mlaad_eval_uk_clip.zip",
+        "prefix": "data/ys/"
+      },
+      "es": {
+        "label": "/root/rivermind-data/datasets/mlaad_eval/mlaad_eval_es.txt",
+        "archive": "/root/rivermind-data/datasets/mlaad_eval/mlaad_eval_es_clip.zip",
+        "prefix": "data/ys/"
+      },
+      "itw": {
+        "label": "/root/rivermind-data/data/exp/itw.txt",
+        "archive": "/root/rivermind-fs/datasets/itw/release_in_the_wild.zip",
+        "prefix": "release_in_the_wild/"
+      }
+    }
+  },
+  "signature": {
+    "config_sha256": "6305ec38ad9a546da38325f629f44900ad13adacf2350d745b46fd0f51fe9405",
+    "labels_sha256": "06c2862679851d816173fbea8c0919012a68f95134529b705c049beef1276d2e",
+    "trainer_sha256": "bf42823faff26ad0d2c04715ca859447e45113abe886e585c7abf4501acb3d1d",
+    "model_sha256": "2119875382f76da78fb97af9ee4ae27623230daa74070000bb86340b7ea19401",
+    "existing_model_sha256": "63dec85e3df6fb64b1d1c0965c080a46375b979b075d6863902321b17d758c96",
+    "data_sha256": "5a06d003f018d746ba62fdacf3b970b0dfcc6a0f1e4bc4cd7ea590d682fb064a",
+    "ssl_sha256": "b08927597f2c9eb2ebd7dcc3ac78ee4b5f6021cbac4b3a6c5a9deec445d80ed9"
+  },
+  "torch_version": "2.5.1+cu121",
+  "target_use": "exploratory stopping only"
+}

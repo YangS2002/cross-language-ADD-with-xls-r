@@ -1,0 +1,23 @@
+{
+  "key": {
+    "signature": {
+      "tools/run_m5_deterministic_transition.py": "430af6f5f632949f5e2988732e3a0e24824ec9076fe0c4178aba1e771953c88b",
+      "src/model.py": "63dec85e3df6fb64b1d1c0965c080a46375b979b075d6863902321b17d758c96",
+      "data.py": "5a06d003f018d746ba62fdacf3b970b0dfcc6a0f1e4bc4cd7ea590d682fb064a",
+      "ssl_checkpoint_sha256": "b08927597f2c9eb2ebd7dcc3ac78ee4b5f6021cbac4b3a6c5a9deec445d80ed9"
+    },
+    "split": "train",
+    "n": 25380,
+    "protocol": "06c2862679851d816173fbea8c0919012a68f95134529b705c049beef1276d2e",
+    "root": "/root/rivermind-data/data/asv2019_la_train",
+    "feature": "normalized_adjacent_transition_mean_std",
+    "amp": true,
+    "batch_size": 8
+  },
+  "shape": [
+    23,
+    25380,
+    2048
+  ],
+  "seconds": 223.08524656295776
+}

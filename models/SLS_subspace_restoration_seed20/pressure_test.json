@@ -1,0 +1,23 @@
+{
+  "batch": 16,
+  "rank": 16,
+  "steps": 4,
+  "initial_logprob_error": 0.0,
+  "cache_equivalence_error": 0.003891468048095703,
+  "source_cache_bytes_per_input": 490060,
+  "evaluation_cache_bytes_per_input": 78412,
+  "restoration_ratio_last": 0.2532794773578644,
+  "seconds_per_step": 0.1590218404890038,
+  "cold_training_seconds_per_batch": 0.2684129450353794,
+  "inference_seconds_per_batch": 0.04986493496107869,
+  "cold_inference_seconds_per_batch": 0.15855640004156157,
+  "cache_bytes": 16936512,
+  "reserved_gib": 12.587890625,
+  "model_bytes": 1338507796,
+  "signature": {
+    "config": "c1c5acc41595c36cad7672d1990b3243f7acb234f66b3872633feb9ec3adb4ea",
+    "model": "2f3fe561577363f7fa469752457b4b9941931c4defcf764223792758c349eb28",
+    "test": "3998522023932a80e6fad72912300cef95583c512fb7b1308b482ded5c3260dd",
+    "warmup": "32454f00414be2172ca7d84bfa631c3a8b551f45d415816354b0597645904742"
+  }
+}

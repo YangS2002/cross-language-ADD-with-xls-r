@@ -1,0 +1,22 @@
+{
+  "epoch": 8,
+  "pid": 22660,
+  "four_language_mean": 18.13268145550024,
+  "matched_sls_mean": 15.96289728908707,
+  "itw": 9.01243701490954,
+  "effective": false,
+  "action": "terminate user-authorized ineffective run",
+  "candidate_eer": {
+    "ch": 15.470653226000374,
+    "de": 17.12251865480936,
+    "uk": 27.96386069229136,
+    "es": 11.973693248899862,
+    "itw": 9.01243701490954
+  },
+  "not_a_source_checkpoint_selection_rule": true,
+  "observed_status_before_stop": {
+    "status": "training",
+    "epoch": 9,
+    "arm": "psr"
+  }
+}

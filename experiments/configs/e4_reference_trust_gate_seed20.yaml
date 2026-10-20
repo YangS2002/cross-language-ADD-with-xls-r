@@ -1,0 +1,25 @@
+exp_name: E4_reference_trust_gate_seed20
+output_dir: models/E4_reference_trust_gate_seed20
+train_data_path: /root/rivermind-data/data/asv2019_la_train
+train_label_path: /root/rivermind-data/data/exp/ASVspoof2019.LA.cm.train.trn.txt
+ssl_checkpoint: /root/rivermind-data/cross-language-ADD-with-xls-r/models/pretrained/xlsr2_300m.pt
+arms: [task_only, reference_gate]
+seed: 20
+epochs: 10
+batch_size: 16
+effective_batch_size: 16
+num_workers: 4
+hidden_dim: 192
+embedding_dim: 192
+num_heads: 6
+num_encoder_layers: 2
+feedforward_dim: 384
+dropout: 0.1
+ssl_lr: 0.000001
+head_lr: 0.0001
+weight_decay: 0.0001
+lambda_relation: 0.1
+fake_weight: 0.1
+real_weight: 0.9
+grad_clip: 5.0
+amp: true

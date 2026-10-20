@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "samples": {
+    "a": 6000,
+    "uk": 9709
+  },
+  "target_supervision": "UK labels used ONLY for diagnostic probes; not a zero-target detector result",
+  "no_full_model_training": true
+}

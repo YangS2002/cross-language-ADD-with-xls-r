@@ -1,0 +1,59 @@
+{
+  "input_protocol": "torchaudio.load plus unchanged data.pad; no resampling/augmentation",
+  "score": "softmax(mean(head_a_logits,head_b_logits))[:,1]",
+  "head_selection": "none; ensemble is fixed primary score",
+  "checkpoint_selection": "minimum source train loss",
+  "checkpoint_manifest": "models/E3_dual_xlsr_reference/checkpoint_manifest.json",
+  "batch_size": 16,
+  "workers": 4,
+  "checkpoints": {
+    "frozen_reference_seed1001": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E3_dual_xlsr_reference/frozen_reference_seed1001/best_train_loss.pth",
+      "checkpoint_sha256": "d54ac5e787ab3c0e5332560fb6c1c8bf4f6924eba68f091e1757feef5650f24b",
+      "arm": "frozen_reference",
+      "seed": 1001,
+      "epoch": 10,
+      "source_train_loss": 9.399267250027616e-05
+    },
+    "frozen_reference_seed20": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E3_dual_xlsr_reference/frozen_reference_seed20/best_train_loss.pth",
+      "checkpoint_sha256": "32fb61d25d442f87ec2cd143f0deb72b93da47127f09d567ea8344212d10d44c",
+      "arm": "frozen_reference",
+      "seed": 20,
+      "epoch": 9,
+      "source_train_loss": 9.388044813644947e-05
+    },
+    "frozen_reference_seed7": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E3_dual_xlsr_reference/frozen_reference_seed7/best_train_loss.pth",
+      "checkpoint_sha256": "3a263f3251f20ace27dffcf8d0bc024ec9c7f5a529441941e788a76cdeaf65a5",
+      "arm": "frozen_reference",
+      "seed": 7,
+      "epoch": 10,
+      "source_train_loss": 9.684577115417486e-05
+    },
+    "self_reference_seed1001": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E3_dual_xlsr_reference/self_reference_seed1001/best_train_loss.pth",
+      "checkpoint_sha256": "02883030e8a9eba26763fe7510f17ab6855553063d25c875e31042f2aef2244a",
+      "arm": "self_reference",
+      "seed": 1001,
+      "epoch": 4,
+      "source_train_loss": 0.0002601322682278629
+    },
+    "self_reference_seed20": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E3_dual_xlsr_reference/self_reference_seed20/best_train_loss.pth",
+      "checkpoint_sha256": "030e375727ba68d93912e441a721a320b94f3aa82f7ec872987275eb1bf7bd68",
+      "arm": "self_reference",
+      "seed": 20,
+      "epoch": 9,
+      "source_train_loss": 9.580533511824309e-05
+    },
+    "self_reference_seed7": {
+      "checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/E3_dual_xlsr_reference/self_reference_seed7/best_train_loss.pth",
+      "checkpoint_sha256": "9d2f50b895edbecadadf6f78d14cfb9e19317487e24f0b989b809a5b06419421",
+      "arm": "self_reference",
+      "seed": 7,
+      "epoch": 10,
+      "source_train_loss": 0.00010044859981727114
+    }
+  }
+}

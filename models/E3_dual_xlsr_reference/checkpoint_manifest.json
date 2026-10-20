@@ -1,0 +1,8 @@
+{
+  "self_reference_seed20": "models/E3_dual_xlsr_reference/self_reference_seed20/best_train_loss.pth",
+  "frozen_reference_seed20": "models/E3_dual_xlsr_reference/frozen_reference_seed20/best_train_loss.pth",
+  "self_reference_seed1001": "models/E3_dual_xlsr_reference/self_reference_seed1001/best_train_loss.pth",
+  "frozen_reference_seed1001": "models/E3_dual_xlsr_reference/frozen_reference_seed1001/best_train_loss.pth",
+  "self_reference_seed7": "models/E3_dual_xlsr_reference/self_reference_seed7/best_train_loss.pth",
+  "frozen_reference_seed7": "models/E3_dual_xlsr_reference/frozen_reference_seed7/best_train_loss.pth"
+}

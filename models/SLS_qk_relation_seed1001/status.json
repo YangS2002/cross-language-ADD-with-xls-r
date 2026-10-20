@@ -1,0 +1,23 @@
+{
+  "status": "stopped_by_user",
+  "seed": 1001,
+  "epoch": 4,
+  "updated_at": "2026-10-14T10:48:14.8228062+00:00",
+  "reason": "User requested stopping running experiments and reanalyzing results",
+  "previous_status": {
+    "status": "training",
+    "seed": 1001,
+    "epoch": 4,
+    "updated_at": "2026-10-14T18:42:38.570936+08:00"
+  },
+  "last_observed_logged_batch": 400,
+  "last_observed_logged_samples": 6400,
+  "formal_epoch_completed": false,
+  "queue_stopped": true,
+  "cancelled_unstarted_seeds": [
+    7
+  ],
+  "processes_verified_stopped": true,
+  "gpu_compute_processes_after_stop": [],
+  "artifacts_preserved": true
+}

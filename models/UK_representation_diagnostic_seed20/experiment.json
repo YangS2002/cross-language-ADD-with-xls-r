@@ -1,0 +1,27 @@
+{
+  "seed": 20,
+  "signature": {
+    "base": "b08927597f2c9eb2ebd7dcc3ac78ee4b5f6021cbac4b3a6c5a9deec445d80ed9",
+    "best": "478bf0ffe88f5e7d81d8895e3ee655b5c2806a668124f10800c93090d8908c84",
+    "warmup": "32454f00414be2172ca7d84bfa631c3a8b551f45d415816354b0597645904742",
+    "script": "e57b285a3b41ca9ffaf0c191664a51f3590fdcb2ed887abebf3987d864bff51b"
+  },
+  "stages": [
+    "layer08",
+    "layer16",
+    "layer24",
+    "sls_aggregate",
+    "classifier_embedding"
+  ],
+  "source_cap": 6000,
+  "uk": "all protocol samples",
+  "probe": "Fixed C=1, balanced logistic regression; no hyperparameter/layer selection",
+  "preprocessing": "Unchanged data.pad64600; no resampling/no noise",
+  "limitations": [
+    "UK supervised diagnostic, not a formal zero-target result",
+    "A encoder originally saw all A training samples; A probe test is only held out from the probe",
+    "Original model uses frozen-warmup backend; later stage differences include backend adaptation",
+    "Mean/std summaries may omit temporal information; poor linear probe does not prove information absent",
+    "No epoch4 weights available; endpoint comparison, not temporal forgetting proof"
+  ]
+}

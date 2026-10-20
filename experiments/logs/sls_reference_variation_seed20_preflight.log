@@ -1,0 +1,13 @@
+{'bonafide': 0, 'A01': 1, 'A02': 2, 'A03': 3, 'A04': 4, 'A05': 5, 'A06': 6} {'en'} 25380
+SLS_reference_variation_seed20
+/root/rivermind-data/cross-language-ADD-with-xls-r/fairseq-a54021305d6b3c4c5959ac9395135f63202db8f1/fairseq/checkpoint_utils.py:313: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(f, map_location=torch.device("cpu"))
+/opt/conda/envs/SLS/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+WARMUP_METADATA {}
+INITIAL_EQUIVALENCE fp32 0.0
+INITIAL_EQUIVALENCE bf16 0.0
+SELF_TEST_STEP 0 0.09294578433036804 102.69505310058594
+SELF_TEST_STEP 1 0.009846883825957775 2.9654788970947266
+SELF_TEST_STEP 2 0.006060256622731686 1.4797552824020386
+SELF_TEST_OK {"trainable_parameters": 358022279, "supplemental_parameters": 23395328, "reserved_gib": 13.57421875, "seconds": 25.241211472079158}

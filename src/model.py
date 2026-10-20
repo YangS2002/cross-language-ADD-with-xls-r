@@ -379,6 +379,259 @@ class DualTransitionConsistencyDetector(nn.Module):
         raise ValueError(f"Unknown inference_head: {inference_head}")
 
 
+class MultiScaleLocalTransitionBranch(nn.Module):
+    def __init__(
+        self,
+        input_dim,
+        hidden_dim,
+        embedding_dim,
+        local_transition_count,
+        temporal_kernels=(3, 5, 7),
+        dropout=0.1,
+    ):
+        super().__init__()
+
+        if local_transition_count < 1:
+            raise ValueError("local_transition_count must be positive")
+        if not temporal_kernels or any(kernel % 2 == 0 for kernel in temporal_kernels):
+            raise ValueError("temporal_kernels must contain positive odd values")
+
+        self.local_transition_count = local_transition_count
+        self.temporal_kernels = tuple(int(kernel) for kernel in temporal_kernels)
+
+        self.input_projection = nn.Sequential(
+            nn.Linear(input_dim, hidden_dim),
+            nn.LayerNorm(hidden_dim),
+            nn.GELU(),
+        )
+
+        self.temporal_convolutions = nn.ModuleList([
+            nn.Sequential(
+                nn.Conv1d(
+                    hidden_dim,
+                    hidden_dim,
+                    kernel_size=kernel,
+                    padding=kernel // 2,
+                    groups=hidden_dim,
+                ),
+                nn.Conv1d(hidden_dim, hidden_dim, kernel_size=1),
+                nn.GELU(),
+                nn.Dropout(dropout),
+            )
+            for kernel in self.temporal_kernels
+        ])
+
+        statistics_dim = 3 * hidden_dim * len(self.temporal_kernels)
+        self.output = nn.Sequential(
+            nn.LayerNorm(statistics_dim),
+            nn.Linear(statistics_dim, embedding_dim),
+            nn.GELU(),
+            nn.Dropout(dropout),
+        )
+
+    def forward(self, first_order_transitions):
+        if first_order_transitions.size(1) < self.local_transition_count:
+            raise RuntimeError(
+                "Not enough first-order transitions: "
+                f"expected {self.local_transition_count}, "
+                f"got {first_order_transitions.size(1)}"
+            )
+
+        local = first_order_transitions[:, :self.local_transition_count]
+        local = local.mean(dim=1)
+        local = self.input_projection(local)
+        local = local.transpose(1, 2)
+
+        temporal_features = [
+            convolution(local).transpose(1, 2)
+            for convolution in self.temporal_convolutions
+        ]
+        temporal_features = torch.cat(temporal_features, dim=-1)
+
+        mean = temporal_features.mean(dim=1)
+        std = temporal_features.var(dim=1, unbiased=False).add(1e-6).sqrt()
+        maximum = temporal_features.amax(dim=1)
+        statistics = torch.cat([mean, std, maximum], dim=-1)
+
+        return self.output(statistics)
+
+
+class SecondOrderLayerDynamicsBranch(nn.Module):
+    def __init__(
+        self,
+        num_second_order_transitions,
+        input_dim,
+        hidden_dim,
+        embedding_dim,
+        num_heads,
+        num_encoder_layers,
+        feedforward_dim,
+        dropout=0.1,
+    ):
+        super().__init__()
+
+        if num_second_order_transitions < 1:
+            raise ValueError("At least one second-order transition is required")
+
+        self.num_second_order_transitions = num_second_order_transitions
+        self.input_projection = nn.Sequential(
+            nn.Linear(input_dim, hidden_dim),
+            nn.LayerNorm(hidden_dim),
+            nn.GELU(),
+        )
+        self.statistics_projection = nn.Sequential(
+            nn.Linear(2 * hidden_dim, hidden_dim),
+            nn.LayerNorm(hidden_dim),
+            nn.GELU(),
+            nn.Dropout(dropout),
+        )
+
+        self.layer_cls = nn.Parameter(torch.empty(1, 1, hidden_dim))
+        self.layer_position = nn.Parameter(
+            torch.empty(1, num_second_order_transitions + 1, hidden_dim)
+        )
+
+        encoder_layer = nn.TransformerEncoderLayer(
+            d_model=hidden_dim,
+            nhead=num_heads,
+            dim_feedforward=feedforward_dim,
+            dropout=dropout,
+            activation="gelu",
+            batch_first=True,
+            norm_first=True,
+        )
+        self.layer_encoder = nn.TransformerEncoder(
+            encoder_layer,
+            num_layers=num_encoder_layers,
+            norm=nn.LayerNorm(hidden_dim),
+        )
+        self.output = nn.Sequential(
+            nn.LayerNorm(hidden_dim),
+            nn.Linear(hidden_dim, embedding_dim),
+            nn.GELU(),
+            nn.Dropout(dropout),
+        )
+
+        nn.init.normal_(self.layer_cls, mean=0.0, std=0.02)
+        nn.init.normal_(self.layer_position, mean=0.0, std=0.02)
+
+    def forward(self, second_order_transitions):
+        if second_order_transitions.size(1) != self.num_second_order_transitions:
+            raise RuntimeError(
+                "Unexpected number of second-order transitions: "
+                f"expected {self.num_second_order_transitions}, "
+                f"got {second_order_transitions.size(1)}"
+            )
+
+        dynamics = self.input_projection(second_order_transitions)
+        mean = dynamics.mean(dim=2)
+        std = dynamics.var(dim=2, unbiased=False).add(1e-6).sqrt()
+        tokens = self.statistics_projection(torch.cat([mean, std], dim=-1))
+
+        cls = self.layer_cls.expand(tokens.size(0), -1, -1)
+        sequence = torch.cat([cls, tokens], dim=1)
+        sequence = sequence + self.layer_position[:, :sequence.size(1)]
+        encoded = self.layer_encoder(sequence)
+
+        return self.output(encoded[:, 0]), tokens
+
+
+class HeterogeneousMultiOrderTransitionDetector(nn.Module):
+    def __init__(
+        self,
+        num_layers,
+        input_dim=1024,
+        hidden_dim=192,
+        embedding_dim=192,
+        num_heads=6,
+        num_encoder_layers=2,
+        feedforward_dim=384,
+        local_transition_count=16,
+        temporal_kernels=(3, 5, 7),
+        dropout=0.1,
+    ):
+        super().__init__()
+
+        self.num_first_order_transitions = num_layers - 1
+        self.num_second_order_transitions = num_layers - 2
+        if local_transition_count > self.num_first_order_transitions:
+            raise ValueError(
+                f"local_transition_count={local_transition_count} exceeds "
+                f"the available {self.num_first_order_transitions} transitions"
+            )
+
+        self.layer_normalization = nn.LayerNorm(input_dim)
+        self.local_branch = MultiScaleLocalTransitionBranch(
+            input_dim=input_dim,
+            hidden_dim=hidden_dim,
+            embedding_dim=embedding_dim,
+            local_transition_count=local_transition_count,
+            temporal_kernels=temporal_kernels,
+            dropout=dropout,
+        )
+        self.dynamics_branch = SecondOrderLayerDynamicsBranch(
+            num_second_order_transitions=self.num_second_order_transitions,
+            input_dim=input_dim,
+            hidden_dim=hidden_dim,
+            embedding_dim=embedding_dim,
+            num_heads=num_heads,
+            num_encoder_layers=num_encoder_layers,
+            feedforward_dim=feedforward_dim,
+            dropout=dropout,
+        )
+
+        self.fusion = nn.Sequential(
+            nn.LayerNorm(2 * embedding_dim),
+            nn.Linear(2 * embedding_dim, embedding_dim),
+            nn.GELU(),
+            nn.Dropout(dropout),
+        )
+        self.classifier = nn.Sequential(
+            nn.LayerNorm(embedding_dim),
+            nn.Linear(embedding_dim, embedding_dim),
+            nn.GELU(),
+            nn.Dropout(dropout),
+            nn.Linear(embedding_dim, 2),
+        )
+
+    def build_multi_order_transitions(self, layers):
+        if len(layers) != self.num_first_order_transitions + 1:
+            raise RuntimeError(
+                f"Expected {self.num_first_order_transitions + 1} layers, "
+                f"got {len(layers)}"
+            )
+
+        normalized_layers = torch.stack(
+            [self.layer_normalization(layer) for layer in layers],
+            dim=1,
+        )
+        first_order = normalized_layers[:, 1:] - normalized_layers[:, :-1]
+        second_order = first_order[:, 1:] - first_order[:, :-1]
+        return first_order, second_order
+
+    def forward(self, layers, return_details=False):
+        first_order, second_order = self.build_multi_order_transitions(layers)
+        local_embedding = self.local_branch(first_order)
+        dynamics_embedding, dynamics_tokens = self.dynamics_branch(second_order)
+        embedding = self.fusion(
+            torch.cat([local_embedding, dynamics_embedding], dim=-1)
+        )
+        logits = self.classifier(embedding)
+
+        if not return_details:
+            return logits, embedding
+
+        return logits, embedding, {
+            "local_embedding": local_embedding,
+            "dynamics_embedding": dynamics_embedding,
+            "dynamics_tokens": dynamics_tokens,
+            "embedding": embedding,
+        }
+
+    def forward_train(self, layers, return_details=False):
+        return self.forward(layers, return_details=return_details)
+
+
 class LowHighConsistencyBranch(nn.Module):
     def __init__(
         self,
@@ -593,6 +846,49 @@ class DualTransitionLowHighConsistencyDetector(
         raise ValueError(f"Unknown inference_head: {inference_head}")
 
 
+class DualTransitionLowHighVectorAdapterDetector(
+    DualTransitionLowHighConsistencyDetector
+):
+    """M4: low-high residual with a zero-initialized vector adapter."""
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        input_dim = self.consistency_branch.output[0].normalized_shape[0] // 4
+        embedding_dim = self.consistency_branch.output[-1].normalized_shape[0]
+        self.consistency_branch.output = nn.Sequential(
+            nn.LayerNorm(4 * input_dim),
+            nn.Linear(4 * input_dim, embedding_dim),
+            nn.GELU(),
+            nn.Linear(embedding_dim, embedding_dim),
+        )
+        nn.init.zeros_(self.consistency_branch.output[-1].weight)
+        nn.init.zeros_(self.consistency_branch.output[-1].bias)
+        del self.residual_gate
+        self._last_residual_norm_ratio = 0.0
+
+    def current_residual_strength(self):
+        return self.head_a.layer_cls.new_tensor(self.residual_scale)
+
+    def current_residual_norm_ratio(self):
+        return self._last_residual_norm_ratio
+
+    def forward_train(self, layers, return_details=False):
+        out = super().forward_train(layers, return_details=True)
+        logits_a, logits_b, embedding_a, embedding_b, relation_loss, details = out
+        residual = self.residual_scale * details["consistency_embedding"]
+        denom = 0.5 * (
+            embedding_a.detach().norm(dim=-1).mean()
+            + embedding_b.detach().norm(dim=-1).mean()
+        )
+        self._last_residual_norm_ratio = float(
+            (residual.detach().norm(dim=-1).mean() / denom.clamp_min(1e-8)).cpu()
+        )
+        if not return_details:
+            return logits_a, logits_b, embedding_a, embedding_b, relation_loss
+        details["residual_norm_ratio"] = self._last_residual_norm_ratio
+        return logits_a, logits_b, embedding_a, embedding_b, relation_loss, details
+
+
 class Model(nn.Module):
     def __init__(self, device, config):
         super().__init__()
@@ -613,12 +909,34 @@ class Model(nn.Module):
 
         if self.detector_type == "dual_transition":
             self.detector = DualTransitionConsistencyDetector(**common_arguments)
+            self.is_single_head = False
         elif self.detector_type == "dual_transition_low_high_consistency":
             self.detector = DualTransitionLowHighConsistencyDetector(
                 **common_arguments,
                 split_after_layer=int(config.get("split_after_layer", 21)),
                 residual_scale=float(config.get("residual_scale", 0.1)),
             )
+            self.is_single_head = False
+        elif self.detector_type == "dual_transition_low_high_vector_adapter":
+            self.detector = DualTransitionLowHighVectorAdapterDetector(
+                **common_arguments,
+                split_after_layer=int(config.get("split_after_layer", 21)),
+                residual_scale=float(config.get("residual_scale", 0.1)),
+            )
+            self.is_single_head = False
+        elif self.detector_type == "heterogeneous_multi_order":
+            temporal_kernels = tuple(
+                int(kernel)
+                for kernel in config.get("temporal_kernels", [3, 5, 7])
+            )
+            self.detector = HeterogeneousMultiOrderTransitionDetector(
+                **common_arguments,
+                local_transition_count=int(
+                    config.get("local_transition_count", 16)
+                ),
+                temporal_kernels=temporal_kernels,
+            )
+            self.is_single_head = True
         else:
             raise ValueError(f"Unknown detector_type: {self.detector_type}")
 
@@ -645,6 +963,12 @@ class Model(nn.Module):
 
         with torch.no_grad():
             layers = self.ssl_model.extract_layers(waveform)
+
+        if self.is_single_head:
+            output = self.detector(layers, return_details=return_details)
+            if return_details:
+                return output
+            return output[0]
 
         return self.detector(
             layers,

@@ -1,0 +1,63 @@
+{
+  "config": {
+    "exp_name": "SLS_conditional_residual_seed20",
+    "output_dir": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_conditional_residual_seed20",
+    "seed": 20,
+    "train_data_path": "/root/rivermind-data/data/asv2019_la_train",
+    "train_label_path": "/root/rivermind-data/data/exp/ASVspoof2019.LA.cm.train.trn.txt",
+    "ssl_checkpoint": "/root/rivermind-data/cross-language-ADD-with-xls-r/models/pretrained/xlsr2_300m.pt",
+    "warmup_epochs": 3,
+    "epochs": 10,
+    "milestones": [
+      4,
+      8,
+      10
+    ],
+    "arms": [
+      "sls",
+      "self_residual",
+      "pretrained_residual"
+    ],
+    "batch_size": 16,
+    "eval_batch_size": 16,
+    "num_workers": 4,
+    "head_lr": 1e-06,
+    "ssl_lr": 1e-06,
+    "predictor_lr": 0.0001,
+    "weight_decay": 0.0001,
+    "domains": {
+      "ch": {
+        "label": "/root/rivermind-data/data/exp/decro_ch_eval.txt",
+        "root": "/root/rivermind-data/data"
+      },
+      "de": {
+        "label": "/root/rivermind-data/data/exp/mlaad_eval_de.txt",
+        "root": "/root/rivermind-data/data/mlaad"
+      },
+      "uk": {
+        "label": "/root/rivermind-data/datasets/mlaad_eval/mlaad_eval_uk.txt",
+        "archive": "/root/rivermind-data/datasets/mlaad_eval/mlaad_eval_uk_clip.zip",
+        "prefix": "data/ys/"
+      },
+      "es": {
+        "label": "/root/rivermind-data/datasets/mlaad_eval/mlaad_eval_es.txt",
+        "archive": "/root/rivermind-data/datasets/mlaad_eval/mlaad_eval_es_clip.zip",
+        "prefix": "data/ys/"
+      },
+      "itw": {
+        "label": "/root/rivermind-data/data/exp/itw.txt",
+        "archive": "/root/rivermind-data/datasets/itw/release_in_the_wild.zip",
+        "prefix": "release_in_the_wild/"
+      }
+    }
+  },
+  "signature": {
+    "config": "74963b884e02de8a8951784c517129882291a63d3cfdd65b0bc92dad63f6b0c6",
+    "model": "1e6a3572c595ea066582e53262406b27acf02a3c8ecca1c6edb933b8f1d68d23",
+    "trainer": "9a6f376b4bebf667dabc903fc87234dd441ba3194cfbf07aa7e9911ce64f4a47",
+    "original": "b08927597f2c9eb2ebd7dcc3ac78ee4b5f6021cbac4b3a6c5a9deec445d80ed9",
+    "source_labels": "06c2862679851d816173fbea8c0919012a68f95134529b705c049beef1276d2e"
+  },
+  "execution": "sequential complete arms; CPU last-state during evaluation; NO disk Adam resumes",
+  "target_use": "fixed evaluations and exploratory stopping only; no target selection"
+}

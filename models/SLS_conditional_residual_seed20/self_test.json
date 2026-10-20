@@ -1,0 +1,23 @@
+{
+  "arms": [
+    {
+      "arm": "sls",
+      "batch": 16,
+      "model_bytes": 1338507796,
+      "reserved_gib": 10.123046875
+    },
+    {
+      "arm": "self_residual",
+      "batch": 16,
+      "model_bytes": 1346904596,
+      "reserved_gib": 10.212890625
+    },
+    {
+      "arm": "pretrained_residual",
+      "batch": 16,
+      "model_bytes": 1346904596,
+      "reserved_gib": 18.73046875
+    }
+  ],
+  "disk_budget_bytes": 6059179755
+}

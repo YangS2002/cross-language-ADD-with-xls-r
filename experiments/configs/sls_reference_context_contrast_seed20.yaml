@@ -1,0 +1,45 @@
+exp_name: SLS_reference_context_contrast_seed20
+output_dir: /root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_reference_context_contrast_seed20
+seed: 20
+train_data_path: /root/rivermind-data/data/asv2019_la_train
+train_label_path: /root/rivermind-data/data/exp/ASVspoof2019.LA.cm.train.trn.txt
+ssl_checkpoint: /root/rivermind-data/cross-language-ADD-with-xls-r/models/pretrained/xlsr2_300m.pt
+expected_pretrained_sha256: b08927597f2c9eb2ebd7dcc3ac78ee4b5f6021cbac4b3a6c5a9deec445d80ed9
+shared_warmup: /root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_conditional_residual_seed20/warmup.pth
+expected_warmup_sha256: 32454f00414be2172ca7d84bfa631c3a8b551f45d415816354b0597645904742
+matched_attention_results: /root/rivermind-data/cross-language-ADD-with-xls-r/models/SLS_pretrained_attention_seed20/evaluation_results.csv
+contrast_weight: 0.01
+contrast_temperature: 0.1
+contrast_beta: 0.6931471805599453
+head_lr: 0.000001
+ssl_lr: 0.000001
+weight_decay: 0.0001
+batch_size: 16
+eval_batch_size: 16
+num_workers: 4
+warmup_epochs: 3
+epochs: 8
+milestones: [4, 8]
+max_run_seconds: 4500
+initial_eval_estimate_seconds: 600
+max_reserved_gib: 20
+checkpoint_selection: minimum_complete_source_classification_loss_legacy_batch_aggregation
+domains:
+  ch:
+    label: /root/rivermind-data/data/exp/decro_ch_eval.txt
+    root: /root/rivermind-data/data
+  de:
+    label: /root/rivermind-data/data/exp/mlaad_eval_de.txt
+    root: /root/rivermind-data/data/mlaad
+  uk:
+    label: /root/rivermind-data/datasets/mlaad_eval/mlaad_eval_uk.txt
+    archive: /root/rivermind-data/datasets/mlaad_eval/mlaad_eval_uk_clip.zip
+    prefix: data/ys/
+  es:
+    label: /root/rivermind-data/datasets/mlaad_eval/mlaad_eval_es.txt
+    archive: /root/rivermind-data/datasets/mlaad_eval/mlaad_eval_es_clip.zip
+    prefix: data/ys/
+  itw:
+    label: /root/rivermind-data/data/exp/itw.txt
+    archive: /root/rivermind-data/datasets/itw/release_in_the_wild.zip
+    prefix: release_in_the_wild/

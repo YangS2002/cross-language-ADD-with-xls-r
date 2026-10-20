@@ -1,0 +1,65 @@
+kind,model,stage,trained_on,evaluated_on,split,n,real,eer,auc,eer_group_bootstrap_95,converged,iterations
+native,original,classifier_embedding,a,a,test,1196,125,1.5936507936507935,0.9981325863678805,"[0.0, 2.4342838180568394]",True,0
+native,original,classifier_embedding,a,uk,test,1236,597,11.731191167103121,0.9513739799676525,"[10.134920634920636, 12.946463429922868]",True,0
+linear_probe,original,layer08,a,a,validation,1238,114,0.0,1.0,,True,74
+linear_probe,original,layer08,a,a,test,1196,125,0.0,1.0,"[0.0, 0.0]",True,74
+linear_probe,original,layer08,a,uk,validation,1384,674,31.142015296526935,0.7387386634346137,,True,74
+linear_probe,original,layer08,a,uk,test,1236,597,24.272379109947234,0.84900244571842,"[14.30952380952381, 28.11817435516842]",True,74
+linear_probe,original,layer08,uk,uk,validation,1384,674,0.0,1.0,,True,15
+linear_probe,original,layer08,uk,uk,test,1236,597,0.0,1.0,"[0.0, 0.0]",True,15
+linear_probe,original,layer16,a,a,validation,1238,114,0.8834363488793157,0.9996800274708123,,True,85
+linear_probe,original,layer16,a,a,test,1196,125,0.09337068160597572,0.9999626517273577,"[0.0, 0.18181818181818182]",True,85
+linear_probe,original,layer16,a,uk,validation,1384,674,37.57136289547374,0.6521795461194466,,True,85
+linear_probe,original,layer16,a,uk,test,1236,597,27.26661476396065,0.8022375833261246,"[21.571428571428573, 33.985562310030396]",True,85
+linear_probe,original,layer16,uk,uk,validation,1384,674,0.0,1.0,,True,19
+linear_probe,original,layer16,uk,uk,test,1236,597,0.0,1.0,"[0.0, 0.0]",True,19
+linear_probe,original,layer24,a,a,validation,1238,114,0.6610164200536929,0.9999297621277393,,True,111
+linear_probe,original,layer24,a,a,test,1196,125,0.0,1.0,"[0.0, 0.0]",True,111
+linear_probe,original,layer24,a,uk,validation,1384,674,34.53838759560329,0.7054749864170183,,True,111
+linear_probe,original,layer24,a,uk,test,1236,597,25.322622502182274,0.8154989868486932,"[19.023809523809522, 31.788508018544064]",True,111
+linear_probe,original,layer24,uk,uk,validation,1384,674,0.0,1.0,,True,41
+linear_probe,original,layer24,uk,uk,test,1236,597,0.0,1.0,"[0.0, 0.0]",True,41
+linear_probe,original,sls_aggregate,a,a,validation,1238,114,0.749984391583942,0.9999219579197104,,True,119
+linear_probe,original,sls_aggregate,a,a,test,1196,125,0.04668534080298786,0.9999850606909431,"[0.0, 0.12022996243097904]",True,119
+linear_probe,original,sls_aggregate,a,uk,validation,1384,674,33.81535503824132,0.7067538763739708,,True,119
+linear_probe,original,sls_aggregate,a,uk,test,1236,597,24.75837717539183,0.846045564284647,"[13.984126984126984, 27.135065266704668]",True,119
+linear_probe,original,sls_aggregate,uk,uk,validation,1384,674,0.0,1.0,,True,23
+linear_probe,original,sls_aggregate,uk,uk,test,1236,597,0.0,1.0,"[0.0, 0.0]",True,23
+linear_probe,original,classifier_embedding,a,a,validation,1238,114,1.7668726977586313,0.9989152150839733,,True,56
+linear_probe,original,classifier_embedding,a,a,test,1196,125,0.8201680672268906,0.9989915966386554,"[0.09090909090909091, 2.4342838180568394]",True,56
+linear_probe,original,classifier_embedding,a,uk,validation,1384,674,19.002591214945458,0.8951038575667657,,True,56
+linear_probe,original,classifier_embedding,a,uk,test,1236,597,16.747666344240766,0.9143107294427275,"[10.67629179331307, 18.472023046607955]",True,56
+linear_probe,original,classifier_embedding,uk,uk,validation,1384,674,0.1446065114723952,0.9999937309315836,,True,29
+linear_probe,original,classifier_embedding,uk,uk,test,1236,597,0.16199935514819797,0.9999973786512112,"[0.0, 0.3253968253968254]",True,29
+native,finetuned,classifier_embedding,a,a,test,1196,125,0.0,1.0,"[0.0, 0.0]",True,0
+native,finetuned,classifier_embedding,a,uk,test,1236,597,25.808620567626868,0.8282544700550222,"[9.648148148148147, 36.084592138405014]",True,0
+linear_probe,finetuned,layer08,a,a,validation,1238,114,0.0,1.0,,True,63
+linear_probe,finetuned,layer08,a,a,test,1196,125,0.0,1.0,"[0.0, 0.0]",True,63
+linear_probe,finetuned,layer08,a,uk,validation,1384,674,31.28662180799933,0.7163977932879174,,True,63
+linear_probe,finetuned,layer08,a,uk,test,1236,597,32.68533591274054,0.7385466718045104,"[16.53174603174603, 47.0605174512523]",True,63
+linear_probe,finetuned,layer08,uk,uk,validation,1384,674,0.0,1.0,,True,16
+linear_probe,finetuned,layer08,uk,uk,test,1236,597,0.0,1.0,"[0.0, 0.0]",True,16
+linear_probe,finetuned,layer16,a,a,validation,1238,114,0.0,1.0,,True,48
+linear_probe,finetuned,layer16,a,a,test,1196,125,0.0,1.0,"[0.0, 0.0]",True,48
+linear_probe,finetuned,layer16,a,uk,validation,1384,674,30.129769716220167,0.736139089731266,,True,48
+linear_probe,finetuned,layer16,a,uk,test,1236,597,34.70757543586477,0.7156544328318692,"[16.87830354044908, 51.45925082484459]",True,48
+linear_probe,finetuned,layer16,uk,uk,validation,1384,674,0.0,1.0,,True,17
+linear_probe,finetuned,layer16,uk,uk,test,1236,597,0.0,1.0,"[0.0, 0.0]",True,17
+linear_probe,finetuned,layer24,a,a,validation,1238,114,0.0,1.0,,True,54
+linear_probe,finetuned,layer24,a,a,test,1196,125,0.0,1.0,"[0.0, 0.0]",True,54
+linear_probe,finetuned,layer24,a,uk,validation,1384,674,28.03485602039537,0.759750491077026,,True,54
+linear_probe,finetuned,layer24,a,uk,test,1236,597,33.98133075392612,0.719222088533434,"[15.013227513227513, 55.28486933937946]",True,54
+linear_probe,finetuned,layer24,uk,uk,validation,1384,674,0.1446065114723952,0.9999958206210557,,True,24
+linear_probe,finetuned,layer24,uk,uk,test,1236,597,0.0,1.0,"[0.0, 0.0]",True,24
+linear_probe,finetuned,sls_aggregate,a,a,validation,1238,114,0.0,1.0,,True,47
+linear_probe,finetuned,sls_aggregate,a,a,test,1196,125,0.0,1.0,"[0.0, 0.0]",True,47
+linear_probe,finetuned,sls_aggregate,a,uk,validation,1384,674,27.31182346303339,0.7854327746896812,,True,47
+linear_probe,finetuned,sls_aggregate,a,uk,test,1236,597,30.339097679319917,0.776357006734245,"[13.007936507936508, 41.93675464993697]",True,47
+linear_probe,finetuned,sls_aggregate,uk,uk,validation,1384,674,0.0,1.0,,True,23
+linear_probe,finetuned,sls_aggregate,uk,uk,test,1236,597,0.0,1.0,"[0.0, 0.0]",True,23
+linear_probe,finetuned,classifier_embedding,a,a,validation,1238,114,0.0,1.0,,True,25
+linear_probe,finetuned,classifier_embedding,a,a,test,1196,125,0.0,1.0,"[0.0, 0.0]",True,25
+linear_probe,finetuned,classifier_embedding,a,uk,validation,1384,674,25.795335813098173,0.8152505537677102,,True,25
+linear_probe,finetuned,classifier_embedding,a,uk,test,1236,597,27.26661476396065,0.8078944540123675,"[11.978835978835978, 37.80861829127006]",True,25
+linear_probe,finetuned,classifier_embedding,uk,uk,validation,1384,674,0.2892130229447904,0.99997074434739,,True,23
+linear_probe,finetuned,classifier_embedding,uk,uk,test,1236,597,0.16199935514819797,0.9999947573024224,"[0.0, 0.24250881316098707]",True,23

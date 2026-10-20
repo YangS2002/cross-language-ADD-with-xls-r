@@ -1,0 +1,1047 @@
+{
+  "domain_results": {
+    "a": {
+      "native": {
+        "eer": 0.0,
+        "threshold": -8.46895980834961,
+        "auc": 1.0,
+        "samples": 1024,
+        "real": 103,
+        "fake": 921
+      },
+      "original_routing": {
+        "eer": 0.0,
+        "threshold": -0.0014790082350373268,
+        "auc": 1.0,
+        "samples": 1024,
+        "real": 103,
+        "fake": 921
+      },
+      "original_value": {
+        "eer": 3.084975174725657,
+        "threshold": -0.007488631643354893,
+        "auc": 0.9943602879942655,
+        "samples": 1024,
+        "real": 103,
+        "fake": 921
+      },
+      "task_warm_backend": {
+        "eer": 0.0,
+        "threshold": -13.695313453674316,
+        "auc": 1.0,
+        "samples": 1024,
+        "real": 103,
+        "fake": 921
+      },
+      "original_task_backend": {
+        "eer": 3.896144966952342,
+        "threshold": -0.004517824854701757,
+        "auc": 0.9955725625375542,
+        "samples": 1024,
+        "real": 103,
+        "fake": 921
+      },
+      "original_warm_backend": {
+        "eer": 0.9740362417380855,
+        "threshold": -0.7617567181587219,
+        "auc": 0.9997575450913423,
+        "samples": 1024,
+        "real": 103,
+        "fake": 921
+      },
+      "seconds": 15.630225762026384
+    },
+    "uk": {
+      "native": {
+        "eer": 21.217347632193672,
+        "threshold": -0.5623775124549866,
+        "auc": 0.8762942662985773,
+        "samples": 9709,
+        "real": 4709,
+        "fake": 5000
+      },
+      "original_routing": {
+        "eer": 13.801677638564453,
+        "threshold": -0.0020171310752630234,
+        "auc": 0.9376892758547462,
+        "samples": 9709,
+        "real": 4709,
+        "fake": 5000
+      },
+      "original_value": {
+        "eer": 18.83813548524103,
+        "threshold": -0.07093247771263123,
+        "auc": 0.8681943937141645,
+        "samples": 9709,
+        "real": 4709,
+        "fake": 5000
+      },
+      "task_warm_backend": {
+        "eer": 29.75576980250584,
+        "threshold": -10.28128433227539,
+        "auc": 0.7782302187300915,
+        "samples": 9709,
+        "real": 4709,
+        "fake": 5000
+      },
+      "original_task_backend": {
+        "eer": 14.141565088129116,
+        "threshold": -0.012221569195389748,
+        "auc": 0.9283873433850075,
+        "samples": 9709,
+        "real": 4709,
+        "fake": 5000
+      },
+      "original_warm_backend": {
+        "eer": 13.080666808239542,
+        "threshold": -2.5149853229522705,
+        "auc": 0.9386248248035676,
+        "samples": 9709,
+        "real": 4709,
+        "fake": 5000
+      },
+      "seconds": 138.36147083697142
+    },
+    "itw": {
+      "native": {
+        "eer": 8.004279323088891,
+        "threshold": -4.0181498527526855,
+        "auc": 0.9740707871360954,
+        "samples": 1024,
+        "real": 636,
+        "fake": 388
+      },
+      "original_routing": {
+        "eer": 12.39625883420865,
+        "threshold": -0.3769513666629791,
+        "auc": 0.9517988556052649,
+        "samples": 1024,
+        "real": 636,
+        "fake": 388
+      },
+      "original_value": {
+        "eer": 27.339039097451856,
+        "threshold": -0.2607613205909729,
+        "auc": 0.7948234779225831,
+        "samples": 1024,
+        "real": 636,
+        "fake": 388
+      },
+      "task_warm_backend": {
+        "eer": 11.61657913505803,
+        "threshold": -12.500003814697266,
+        "auc": 0.9520055274589898,
+        "samples": 1024,
+        "real": 636,
+        "fake": 388
+      },
+      "original_task_backend": {
+        "eer": 37.39625883420865,
+        "threshold": -0.22858573496341705,
+        "auc": 0.6855548531414122,
+        "samples": 1024,
+        "real": 636,
+        "fake": 388
+      },
+      "original_warm_backend": {
+        "eer": 34.27754003760617,
+        "threshold": -6.158368110656738,
+        "auc": 0.7135791512675873,
+        "samples": 1024,
+        "real": 636,
+        "fake": 388
+      },
+      "seconds": 15.313059617008548
+    },
+    "elapsed_seconds": 195.44210986502003,
+    "max_reserved_gib": 4.740234375,
+    "uk_groups": 13
+  },
+  "book_comparisons": {
+    "native": {
+      "improved_groups": 0,
+      "worsened_groups": 0,
+      "sample_weighted_group_eer": 19.713483101072423,
+      "groups": [
+        {
+          "group": "male/obruchov/fata_morgana",
+          "eer": 40.132897092676274,
+          "samples": 613,
+          "auc": 0.6605902037684371,
+          "delta_vs_native": 0.0
+        },
+        {
+          "group": "female/sumska/mykola_djerya",
+          "eer": 37.256716417910454,
+          "samples": 518,
+          "auc": 0.6854253731343283,
+          "delta_vs_native": 0.0
+        },
+        {
+          "group": "male/obruchov/tini_zabutyh_predkiv",
+          "eer": 35.136452241715396,
+          "samples": 222,
+          "auc": 0.7277452891487979,
+          "delta_vs_native": 0.0
+        },
+        {
+          "group": "male/miskun/15_y_o_capitan",
+          "eer": 27.14870872055283,
+          "samples": 1396,
+          "auc": 0.8111519215125594,
+          "delta_vs_native": 0.0
+        },
+        {
+          "group": "male/loboda/chorna_rada",
+          "eer": 25.3709338435961,
+          "samples": 875,
+          "auc": 0.8138429687254933,
+          "delta_vs_native": 0.0
+        },
+        {
+          "group": "male/obruchov/voly",
+          "eer": 18.145254954853694,
+          "samples": 1791,
+          "auc": 0.9093533400771796,
+          "delta_vs_native": 0.0
+        },
+        {
+          "group": "male/loboda/zahar_berkut",
+          "eer": 14.818593275423192,
+          "samples": 776,
+          "auc": 0.9251842645700272,
+          "delta_vs_native": 0.0
+        },
+        {
+          "group": "male/obruchov/koni_nevynni",
+          "eer": 12.632978723404253,
+          "samples": 103,
+          "auc": 0.9471884498480243,
+          "delta_vs_native": 0.0
+        },
+        {
+          "group": "male/shepel/zvirobij",
+          "eer": 11.25647939682706,
+          "samples": 2212,
+          "auc": 0.9578356523901774,
+          "delta_vs_native": 0.0
+        },
+        {
+          "group": "male/obruchov/dorogoyu_tsinoyu",
+          "eer": 10.799319727891156,
+          "samples": 287,
+          "auc": 0.9652818270165209,
+          "delta_vs_native": 0.0
+        },
+        {
+          "group": "female/sumska/kaydasheva",
+          "eer": 8.619047619047619,
+          "samples": 615,
+          "auc": 0.9741111111111111,
+          "delta_vs_native": 0.0
+        },
+        {
+          "group": "male/pysariev/transformations",
+          "eer": 3.3908045977011496,
+          "samples": 236,
+          "auc": 0.9954022988505747,
+          "delta_vs_native": 0.0
+        },
+        {
+          "group": "male/pysariev/minestreli",
+          "eer": 3.077651515151515,
+          "samples": 65,
+          "auc": 0.9962121212121212,
+          "delta_vs_native": 0.0
+        }
+      ]
+    },
+    "original_routing": {
+      "improved_groups": 11,
+      "worsened_groups": 1,
+      "sample_weighted_group_eer": 12.812143044931924,
+      "groups": [
+        {
+          "group": "female/sumska/mykola_djerya",
+          "eer": 27.992537313432837,
+          "samples": 518,
+          "auc": 0.7974477611940298,
+          "delta_vs_native": -9.264179104477616
+        },
+        {
+          "group": "male/loboda/chorna_rada",
+          "eer": 20.227527003147316,
+          "samples": 875,
+          "auc": 0.8884898104290181,
+          "delta_vs_native": -5.143406840448783
+        },
+        {
+          "group": "male/obruchov/fata_morgana",
+          "eer": 18.9231818569358,
+          "samples": 613,
+          "auc": 0.8856360303521188,
+          "delta_vs_native": -21.209715235740475
+        },
+        {
+          "group": "male/obruchov/tini_zabutyh_predkiv",
+          "eer": 16.666666666666664,
+          "samples": 222,
+          "auc": 0.8903914879792073,
+          "delta_vs_native": -18.469785575048732
+        },
+        {
+          "group": "male/miskun/15_y_o_capitan",
+          "eer": 13.682919614464959,
+          "samples": 1396,
+          "auc": 0.9423053220598023,
+          "delta_vs_native": -13.46578910608787
+        },
+        {
+          "group": "male/obruchov/voly",
+          "eer": 12.785770484432957,
+          "samples": 1791,
+          "auc": 0.9390518651730295,
+          "delta_vs_native": -5.359484470420737
+        },
+        {
+          "group": "female/sumska/kaydasheva",
+          "eer": 10.079365079365079,
+          "samples": 615,
+          "auc": 0.963920634920635,
+          "delta_vs_native": 1.4603174603174605
+        },
+        {
+          "group": "male/obruchov/dorogoyu_tsinoyu",
+          "eer": 9.404761904761905,
+          "samples": 287,
+          "auc": 0.9720845481049563,
+          "delta_vs_native": -1.3945578231292508
+        },
+        {
+          "group": "male/loboda/zahar_berkut",
+          "eer": 8.503751752922645,
+          "samples": 776,
+          "auc": 0.9731927450602473,
+          "delta_vs_native": -6.314841522500547
+        },
+        {
+          "group": "male/shepel/zvirobij",
+          "eer": 8.092046704015917,
+          "samples": 2212,
+          "auc": 0.9756732191475994,
+          "delta_vs_native": -3.1644326928111433
+        },
+        {
+          "group": "male/obruchov/koni_nevynni",
+          "eer": 6.7629179331307,
+          "samples": 103,
+          "auc": 0.9726443768996961,
+          "delta_vs_native": -5.870060790273554
+        },
+        {
+          "group": "male/pysariev/minestreli",
+          "eer": 3.077651515151515,
+          "samples": 65,
+          "auc": 0.9990530303030303,
+          "delta_vs_native": 0.0
+        },
+        {
+          "group": "male/pysariev/transformations",
+          "eer": 2.543103448275862,
+          "samples": 236,
+          "auc": 0.9975574712643678,
+          "delta_vs_native": -0.8477011494252875
+        }
+      ]
+    },
+    "original_value": {
+      "improved_groups": 6,
+      "worsened_groups": 6,
+      "sample_weighted_group_eer": 17.705458902821334,
+      "groups": [
+        {
+          "group": "male/obruchov/koni_nevynni",
+          "eer": 21.35258358662614,
+          "samples": 103,
+          "auc": 0.8432750759878419,
+          "delta_vs_native": 8.719604863221885
+        },
+        {
+          "group": "male/miskun/15_y_o_capitan",
+          "eer": 20.774274656740698,
+          "samples": 1396,
+          "auc": 0.8392248214887306,
+          "delta_vs_native": -6.3744340638121315
+        },
+        {
+          "group": "male/obruchov/fata_morgana",
+          "eer": 19.903124733566376,
+          "samples": 613,
+          "auc": 0.861411885071191,
+          "delta_vs_native": -20.229772359109898
+        },
+        {
+          "group": "male/loboda/chorna_rada",
+          "eer": 19.42998002865,
+          "samples": 875,
+          "auc": 0.8428354088898649,
+          "delta_vs_native": -5.9409538149460985
+        },
+        {
+          "group": "female/sumska/kaydasheva",
+          "eer": 18.047619047619044,
+          "samples": 615,
+          "auc": 0.8736825396825396,
+          "delta_vs_native": 9.428571428571425
+        },
+        {
+          "group": "female/sumska/mykola_djerya",
+          "eer": 17.955223880597014,
+          "samples": 518,
+          "auc": 0.870455223880597,
+          "delta_vs_native": -19.30149253731344
+        },
+        {
+          "group": "male/shepel/zvirobij",
+          "eer": 17.947274726425466,
+          "samples": 2212,
+          "auc": 0.8682731262107966,
+          "delta_vs_native": 6.690795329598405
+        },
+        {
+          "group": "male/obruchov/tini_zabutyh_predkiv",
+          "eer": 17.568226120857698,
+          "samples": 222,
+          "auc": 0.8571312540610787,
+          "delta_vs_native": -17.568226120857698
+        },
+        {
+          "group": "male/obruchov/voly",
+          "eer": 16.24836087070548,
+          "samples": 1791,
+          "auc": 0.9037596942789704,
+          "delta_vs_native": -1.8968940841482151
+        },
+        {
+          "group": "male/loboda/zahar_berkut",
+          "eer": 15.592205392687902,
+          "samples": 776,
+          "auc": 0.8903418116081695,
+          "delta_vs_native": 0.7736121172647099
+        },
+        {
+          "group": "male/pysariev/minestreli",
+          "eer": 15.388257575757574,
+          "samples": 65,
+          "auc": 0.9176136363636364,
+          "delta_vs_native": 12.310606060606059
+        },
+        {
+          "group": "male/obruchov/dorogoyu_tsinoyu",
+          "eer": 10.799319727891156,
+          "samples": 287,
+          "auc": 0.9466472303206996,
+          "delta_vs_native": 0.0
+        },
+        {
+          "group": "male/pysariev/transformations",
+          "eer": 9.32471264367816,
+          "samples": 236,
+          "auc": 0.9433189655172414,
+          "delta_vs_native": 5.9339080459770095
+        }
+      ]
+    },
+    "task_warm_backend": {
+      "improved_groups": 0,
+      "worsened_groups": 12,
+      "sample_weighted_group_eer": 28.199864900618103,
+      "groups": [
+        {
+          "group": "male/obruchov/fata_morgana",
+          "eer": 50.73215960439935,
+          "samples": 613,
+          "auc": 0.48603887799471396,
+          "delta_vs_native": 10.599262511723076
+        },
+        {
+          "group": "male/obruchov/tini_zabutyh_predkiv",
+          "eer": 44.590643274853804,
+          "samples": 222,
+          "auc": 0.5873131903833658,
+          "delta_vs_native": 9.454191033138407
+        },
+        {
+          "group": "female/sumska/mykola_djerya",
+          "eer": 44.014925373134325,
+          "samples": 518,
+          "auc": 0.5723656716417911,
+          "delta_vs_native": 6.758208955223871
+        },
+        {
+          "group": "male/miskun/15_y_o_capitan",
+          "eer": 39.397786378090565,
+          "samples": 1396,
+          "auc": 0.6640239192775738,
+          "delta_vs_native": 12.249077657537736
+        },
+        {
+          "group": "male/loboda/chorna_rada",
+          "eer": 36.912753432249026,
+          "samples": 875,
+          "auc": 0.6830436964773048,
+          "delta_vs_native": 11.541819588652928
+        },
+        {
+          "group": "male/obruchov/voly",
+          "eer": 27.973848862912586,
+          "samples": 1791,
+          "auc": 0.8064828344135976,
+          "delta_vs_native": 9.828593908058892
+        },
+        {
+          "group": "male/loboda/zahar_berkut",
+          "eer": 26.67466420315958,
+          "samples": 776,
+          "auc": 0.8097970929730232,
+          "delta_vs_native": 11.856070927736388
+        },
+        {
+          "group": "male/obruchov/koni_nevynni",
+          "eer": 17.439209726443767,
+          "samples": 103,
+          "auc": 0.8639817629179332,
+          "delta_vs_native": 4.806231003039514
+        },
+        {
+          "group": "male/shepel/zvirobij",
+          "eer": 16.998435781978113,
+          "samples": 2212,
+          "auc": 0.9059603905963662,
+          "delta_vs_native": 5.7419563851510524
+        },
+        {
+          "group": "male/obruchov/dorogoyu_tsinoyu",
+          "eer": 11.496598639455783,
+          "samples": 287,
+          "auc": 0.9360544217687075,
+          "delta_vs_native": 0.6972789115646272
+        },
+        {
+          "group": "female/sumska/kaydasheva",
+          "eer": 11.055555555555555,
+          "samples": 615,
+          "auc": 0.9412063492063493,
+          "delta_vs_native": 2.4365079365079367
+        },
+        {
+          "group": "male/pysariev/transformations",
+          "eer": 9.32471264367816,
+          "samples": 236,
+          "auc": 0.9791666666666666,
+          "delta_vs_native": 5.9339080459770095
+        },
+        {
+          "group": "male/pysariev/minestreli",
+          "eer": 3.077651515151515,
+          "samples": 65,
+          "auc": 0.990530303030303,
+          "delta_vs_native": 0.0
+        }
+      ]
+    },
+    "original_task_backend": {
+      "improved_groups": 7,
+      "worsened_groups": 5,
+      "sample_weighted_group_eer": 14.018228444138307,
+      "groups": [
+        {
+          "group": "female/sumska/mykola_djerya",
+          "eer": 19.501492537313432,
+          "samples": 518,
+          "auc": 0.865634328358209,
+          "delta_vs_native": -17.755223880597022
+        },
+        {
+          "group": "male/obruchov/dorogoyu_tsinoyu",
+          "eer": 17.07482993197279,
+          "samples": 287,
+          "auc": 0.9071671525753158,
+          "delta_vs_native": 6.275510204081634
+        },
+        {
+          "group": "male/loboda/chorna_rada",
+          "eer": 15.541579095956587,
+          "samples": 875,
+          "auc": 0.9226659138199651,
+          "delta_vs_native": -9.829354747639512
+        },
+        {
+          "group": "female/sumska/kaydasheva",
+          "eer": 14.634920634920634,
+          "samples": 615,
+          "auc": 0.9281322751322751,
+          "delta_vs_native": 6.015873015873016
+        },
+        {
+          "group": "male/obruchov/koni_nevynni",
+          "eer": 14.58966565349544,
+          "samples": 103,
+          "auc": 0.9356003039513677,
+          "delta_vs_native": 1.9566869300911858
+        },
+        {
+          "group": "male/shepel/zvirobij",
+          "eer": 14.420912089638199,
+          "samples": 2212,
+          "auc": 0.9239701685952145,
+          "delta_vs_native": 3.164432692811138
+        },
+        {
+          "group": "male/miskun/15_y_o_capitan",
+          "eer": 14.03932588885876,
+          "samples": 1396,
+          "auc": 0.9240525961167123,
+          "delta_vs_native": -13.109382831694068
+        },
+        {
+          "group": "male/obruchov/tini_zabutyh_predkiv",
+          "eer": 13.961988304093568,
+          "samples": 222,
+          "auc": 0.9374187784275503,
+          "delta_vs_native": -21.17446393762183
+        },
+        {
+          "group": "male/obruchov/fata_morgana",
+          "eer": 13.865738767158325,
+          "samples": 613,
+          "auc": 0.9356722653252623,
+          "delta_vs_native": -26.267158325517947
+        },
+        {
+          "group": "male/obruchov/voly",
+          "eer": 13.456783185343374,
+          "samples": 1791,
+          "auc": 0.9380889937931637,
+          "delta_vs_native": -4.68847176951032
+        },
+        {
+          "group": "male/loboda/zahar_berkut",
+          "eer": 11.082458810471676,
+          "samples": 776,
+          "auc": 0.9524933040016482,
+          "delta_vs_native": -3.7361344649515154
+        },
+        {
+          "group": "male/pysariev/transformations",
+          "eer": 4.238505747126436,
+          "samples": 236,
+          "auc": 0.9914511494252873,
+          "delta_vs_native": 0.8477011494252866
+        },
+        {
+          "group": "male/pysariev/minestreli",
+          "eer": 3.077651515151515,
+          "samples": 65,
+          "auc": 0.9962121212121212,
+          "delta_vs_native": 0.0
+        }
+      ]
+    },
+    "original_warm_backend": {
+      "improved_groups": 9,
+      "worsened_groups": 4,
+      "sample_weighted_group_eer": 12.40064477596006,
+      "groups": [
+        {
+          "group": "male/obruchov/voly",
+          "eer": 17.867820613690007,
+          "samples": 1791,
+          "auc": 0.9005638604773145,
+          "delta_vs_native": -0.27743434116368704
+        },
+        {
+          "group": "male/loboda/chorna_rada",
+          "eer": 16.91395589573073,
+          "samples": 875,
+          "auc": 0.9061790938653449,
+          "delta_vs_native": -8.456977947865369
+        },
+        {
+          "group": "male/pysariev/transformations",
+          "eer": 16.522988505747126,
+          "samples": 236,
+          "auc": 0.9195043103448276,
+          "delta_vs_native": 13.132183908045976
+        },
+        {
+          "group": "male/loboda/zahar_berkut",
+          "eer": 15.076463981178097,
+          "samples": 776,
+          "auc": 0.9247024185347893,
+          "delta_vs_native": 0.25787070575490567
+        },
+        {
+          "group": "female/sumska/mykola_djerya",
+          "eer": 13.129850746268657,
+          "samples": 518,
+          "auc": 0.9434179104477612,
+          "delta_vs_native": -24.126865671641795
+        },
+        {
+          "group": "male/obruchov/fata_morgana",
+          "eer": 11.905853013897177,
+          "samples": 613,
+          "auc": 0.9451679597578652,
+          "delta_vs_native": -28.227044078779095
+        },
+        {
+          "group": "male/obruchov/koni_nevynni",
+          "eer": 10.67629179331307,
+          "samples": 103,
+          "auc": 0.9669452887537994,
+          "delta_vs_native": -1.956686930091184
+        },
+        {
+          "group": "female/sumska/kaydasheva",
+          "eer": 10.079365079365079,
+          "samples": 615,
+          "auc": 0.9572222222222222,
+          "delta_vs_native": 1.4603174603174605
+        },
+        {
+          "group": "male/shepel/zvirobij",
+          "eer": 9.312333106445363,
+          "samples": 2212,
+          "auc": 0.9639129502853553,
+          "delta_vs_native": -1.9441462903816973
+        },
+        {
+          "group": "male/miskun/15_y_o_capitan",
+          "eer": 8.525196999202963,
+          "samples": 1396,
+          "auc": 0.9585356734948768,
+          "delta_vs_native": -18.623511721349864
+        },
+        {
+          "group": "male/obruchov/dorogoyu_tsinoyu",
+          "eer": 8.010204081632653,
+          "samples": 287,
+          "auc": 0.9666666666666667,
+          "delta_vs_native": -2.7891156462585034
+        },
+        {
+          "group": "male/obruchov/tini_zabutyh_predkiv",
+          "eer": 6.310916179337231,
+          "samples": 222,
+          "auc": 0.9793697205977908,
+          "delta_vs_native": -28.825536062378166
+        },
+        {
+          "group": "male/pysariev/minestreli",
+          "eer": 6.15530303030303,
+          "samples": 65,
+          "auc": 0.9943181818181819,
+          "delta_vs_native": 3.077651515151515
+        }
+      ]
+    }
+  },
+  "auc_pair_decomposition": {
+    "native": {
+      "within_group": {
+        "auc": 0.8978404650097753,
+        "pairs": 3157439,
+        "pair_error_rate": 0.10215953499022468
+      },
+      "cross_group": {
+        "auc": 0.8729573880858039,
+        "pairs": 20387561,
+        "pair_error_rate": 0.12704261191419608
+      },
+      "all": {
+        "auc": 0.8762942662985772,
+        "pairs": 23545000,
+        "pair_error_rate": 0.1237057337014228
+      }
+    },
+    "original_warm_backend": {
+      "within_group": {
+        "auc": 0.9403554589653197,
+        "pairs": 3157439,
+        "pair_error_rate": 0.05964454103468031
+      },
+      "cross_group": {
+        "auc": 0.9383568000115364,
+        "pairs": 20387561,
+        "pair_error_rate": 0.06164319998846357
+      },
+      "all": {
+        "auc": 0.9386248248035677,
+        "pairs": 23545000,
+        "pair_error_rate": 0.06137517519643232
+      }
+    }
+  },
+  "layer_summary": {
+    "a": {
+      "0": {
+        "attention_kl": {
+          "mean_over_layers": 0.7021083293864252,
+          "mean_excluding_layer23": 0.27432529066143957,
+          "layer8": 0.06416677289625203,
+          "layer16": 0.6065201831821769,
+          "layer23": 10.541118220061096,
+          "layer24": 0.18291562970375783
+        },
+        "entropy": {
+          "mean_over_layers": 0.7918526032050365,
+          "mean_excluding_layer23": 0.8096971926932035,
+          "layer8": 0.7969845337924688,
+          "layer16": 0.765224153910087,
+          "layer23": 0.3814270449771943,
+          "layer24": 0.9618422459572327
+        },
+        "original_entropy": {
+          "mean_over_layers": 0.7778183111258273,
+          "mean_excluding_layer23": 0.7995993694963984,
+          "layer8": 0.791428341280495,
+          "layer16": 0.7378367016033293,
+          "layer23": 0.2768539686026972,
+          "layer24": 0.9598986742680288
+        },
+        "key_relative_l2": {
+          "mean_over_layers": 0.47852976957603705,
+          "mean_excluding_layer23": 0.4912174315875602,
+          "layer8": 0.424024815409243,
+          "layer16": 0.7987209707336758,
+          "layer23": 0.18671354331100415,
+          "layer24": 0.503326898806776
+        },
+        "value_relative_l2": {
+          "mean_over_layers": 0.6342312255523724,
+          "mean_excluding_layer23": 0.6423315368179463,
+          "layer8": 0.569064399189074,
+          "layer16": 1.041650237788595,
+          "layer23": 0.4479240664441733,
+          "layer24": 0.44201537840529453
+        }
+      },
+      "1": {
+        "attention_kl": {
+          "mean_over_layers": 0.2868754977422673,
+          "mean_excluding_layer23": 0.11356999934206231,
+          "layer8": 0.03247790978950204,
+          "layer16": 0.1792996427387867,
+          "layer23": 4.272901960946982,
+          "layer24": 0.12337895533413563
+        },
+        "entropy": {
+          "mean_over_layers": 0.7741970686561467,
+          "mean_excluding_layer23": 0.7959597689434162,
+          "layer8": 0.7938961056829656,
+          "layer16": 0.7385004654671382,
+          "layer23": 0.27365496204894724,
+          "layer24": 0.9443109660472685
+        },
+        "original_entropy": {
+          "mean_over_layers": 0.7860568301288056,
+          "mean_excluding_layer23": 0.808175136087916,
+          "layer8": 0.7963714923673463,
+          "layer16": 0.7607066098926136,
+          "layer23": 0.2773357930692654,
+          "layer24": 0.9521196791269246
+        },
+        "key_relative_l2": {
+          "mean_over_layers": 0.25895311825375245,
+          "mean_excluding_layer23": 0.26570833137879246,
+          "layer8": 0.2160391958014479,
+          "layer16": 0.4095281744466245,
+          "layer23": 0.10358321637783235,
+          "layer24": 0.29485534117059803
+        },
+        "value_relative_l2": {
+          "mean_over_layers": 0.3260529072394649,
+          "mean_excluding_layer23": 0.32755976628532585,
+          "layer8": 0.27971722778764746,
+          "layer16": 0.4504260854813659,
+          "layer23": 0.29139514918466214,
+          "layer24": 0.2921196430632212
+        }
+      }
+    },
+    "uk": {
+      "0": {
+        "attention_kl": {
+          "mean_over_layers": 0.33689975243573583,
+          "mean_excluding_layer23": 0.1391683886669532,
+          "layer8": 0.03237599163353443,
+          "layer16": 0.24811497163772583,
+          "layer23": 4.884721119117737,
+          "layer24": 0.14426206742227077
+        },
+        "entropy": {
+          "mean_over_layers": 0.791578365940849,
+          "mean_excluding_layer23": 0.812077103847006,
+          "layer8": 0.8024601287841797,
+          "layer16": 0.7864406030654907,
+          "layer23": 0.32010739409923555,
+          "layer24": 0.9544180981636048
+        },
+        "original_entropy": {
+          "mean_over_layers": 0.7873642403006554,
+          "mean_excluding_layer23": 0.8107640335456184,
+          "layer8": 0.8018662699699401,
+          "layer16": 0.7846135578155518,
+          "layer23": 0.2491689956665039,
+          "layer24": 0.9516524312019348
+        },
+        "key_relative_l2": {
+          "mean_over_layers": 0.3386152968619329,
+          "mean_excluding_layer23": 0.3474970593420384,
+          "layer8": 0.2882931576967239,
+          "layer16": 0.5848736675262451,
+          "layer23": 0.1343347598195076,
+          "layer24": 0.3357224704504013
+        },
+        "value_relative_l2": {
+          "mean_over_layers": 0.42763528696652503,
+          "mean_excluding_layer23": 0.432023875898965,
+          "layer8": 0.36155222201347353,
+          "layer16": 0.7037596522331238,
+          "layer23": 0.3266977415204048,
+          "layer24": 0.31871597615480424
+        }
+      },
+      "1": {
+        "attention_kl": {
+          "mean_over_layers": 0.39793598073700015,
+          "mean_excluding_layer23": 0.10808194778509606,
+          "layer8": 0.026240646714148032,
+          "layer16": 0.16471778060453768,
+          "layer23": 7.064578738630793,
+          "layer24": 0.16482504651054858
+        },
+        "entropy": {
+          "mean_over_layers": 0.7682856933836169,
+          "mean_excluding_layer23": 0.7883412367537659,
+          "layer8": 0.7894277687056552,
+          "layer16": 0.7323362623260492,
+          "layer23": 0.30700819587018946,
+          "layer24": 0.9491897208545335
+        },
+        "original_entropy": {
+          "mean_over_layers": 0.7731181774611448,
+          "mean_excluding_layer23": 0.7951477564869178,
+          "layer8": 0.7914645712855111,
+          "layer16": 0.7464572699314521,
+          "layer23": 0.2664378598683654,
+          "layer24": 0.9578748943193574
+        },
+        "key_relative_l2": {
+          "mean_over_layers": 0.2729432555476899,
+          "mean_excluding_layer23": 0.27890909050470913,
+          "layer8": 0.2300065062967018,
+          "layer16": 0.44968701421543655,
+          "layer23": 0.13572905153624695,
+          "layer24": 0.3695179824237738
+        },
+        "value_relative_l2": {
+          "mean_over_layers": 0.3409534832821301,
+          "mean_excluding_layer23": 0.3412859385532922,
+          "layer8": 0.28353186318463747,
+          "layer16": 0.5204803861106473,
+          "layer23": 0.3333070120454012,
+          "layer24": 0.37550560500014735
+        }
+      }
+    },
+    "itw": {
+      "0": {
+        "attention_kl": {
+          "mean_over_layers": 0.48904736944481497,
+          "mean_excluding_layer23": 0.19464367866079482,
+          "layer8": 0.04834910295903683,
+          "layer16": 0.3962411396589476,
+          "layer23": 7.260332257477279,
+          "layer24": 0.15034040228761347
+        },
+        "entropy": {
+          "mean_over_layers": 0.7896419101653946,
+          "mean_excluding_layer23": 0.8080265156921386,
+          "layer8": 0.797626405954361,
+          "layer16": 0.7478702298759186,
+          "layer23": 0.3667959830502874,
+          "layer24": 0.9589715188311547
+        },
+        "original_entropy": {
+          "mean_over_layers": 0.7792014120933937,
+          "mean_excluding_layer23": 0.8015933270306931,
+          "layer8": 0.7948312630358431,
+          "layer16": 0.7355039350150787,
+          "layer23": 0.2641873685355039,
+          "layer24": 0.9562245115791399
+        },
+        "key_relative_l2": {
+          "mean_over_layers": 0.41414776381966895,
+          "mean_excluding_layer23": 0.4257273900143949,
+          "layer8": 0.37710550150920435,
+          "layer16": 0.6797928988319082,
+          "layer23": 0.14781636134097256,
+          "layer24": 0.4116400607775167
+        },
+        "value_relative_l2": {
+          "mean_over_layers": 0.5230529374083747,
+          "mean_excluding_layer23": 0.5299663840484581,
+          "layer8": 0.46247387884818403,
+          "layer16": 0.8440421537025687,
+          "layer23": 0.3640436646864586,
+          "layer24": 0.3717254369529252
+        }
+      },
+      "1": {
+        "attention_kl": {
+          "mean_over_layers": 0.2783040798245981,
+          "mean_excluding_layer23": 0.10914350745762001,
+          "layer8": 0.029104170582766802,
+          "layer16": 0.18422686228962065,
+          "layer23": 4.168997244265094,
+          "layer24": 0.07864668538922784
+        },
+        "entropy": {
+          "mean_over_layers": 0.7729114070534706,
+          "mean_excluding_layer23": 0.7946901602565117,
+          "layer8": 0.7948333246153105,
+          "layer16": 0.7194510398420898,
+          "layer23": 0.2720000833835242,
+          "layer24": 0.9549097160123429
+        },
+        "original_entropy": {
+          "mean_over_layers": 0.7818250677058282,
+          "mean_excluding_layer23": 0.8049849460351197,
+          "layer8": 0.7968311118629744,
+          "layer16": 0.7374679521194794,
+          "layer23": 0.24914786613212442,
+          "layer24": 0.9613082776279569
+        },
+        "key_relative_l2": {
+          "mean_over_layers": 0.2457839485730847,
+          "mean_excluding_layer23": 0.2528656704197486,
+          "layer8": 0.22500457047666395,
+          "layer16": 0.39349016228561884,
+          "layer23": 0.08290434609981454,
+          "layer24": 0.2377076857494858
+        },
+        "value_relative_l2": {
+          "mean_over_layers": 0.2971037620658043,
+          "mean_excluding_layer23": 0.30038903492824004,
+          "layer8": 0.26516022116133253,
+          "layer16": 0.4472551117153288,
+          "layer23": 0.2215424862297826,
+          "layer24": 0.23467492907302184
+        }
+      }
+    }
+  },
+  "interpretation_caveat": "Different group thresholds: weighted group EER is not global EER"
+}

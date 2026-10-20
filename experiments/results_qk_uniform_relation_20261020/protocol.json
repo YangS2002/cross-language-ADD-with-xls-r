@@ -1,0 +1,19 @@
+{
+  "modes": [
+    "full",
+    "last_no_uniform",
+    "last_no_relation",
+    "all_no_uniform",
+    "all_no_relation"
+  ],
+  "checkpoints": [
+    8,
+    4
+  ],
+  "batch_size": 16,
+  "source_fraction": 0.025,
+  "target_per_class": 128,
+  "training": false,
+  "interpretation": "Fixed-weight component intervention; not a trained candidate or formal full-set EER. Source subset retains attack/class proportions; target subsets are fixed class-stratified samples. No target selection or optimization.",
+  "decomposition": "M=A0 V=J V+(A0-J)V; intervene after output projection, retaining its bias and the residual/FFN. Diagnostic head features use float32 aggregation of BF16 Q/K/V."
+}
